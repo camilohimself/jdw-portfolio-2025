@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réflexion autour de... - Jean-David Waeber | Organiste & Chef de Chœur</title>
+    <meta name="description" content="Réflexions philosophiques et spirituelles de Jean-David Waeber sur la musique sacrée, l'art, la transmission et la spiritualité dans l'interprétation musicale.">
+    <meta name="keywords" content="réflexion, philosophie musicale, musique sacrée, spiritualité, art, transmission, Jean-David Waeber">
+    <meta name="author" content="Jean-David Waeber">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jdwaeber.ch/reflection.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Réflexion autour de... - Jean-David Waeber | Organiste & Chef de Chœur">
+    <meta property="og:description" content="Réflexions philosophiques et spirituelles sur la musique sacrée et l'art musical.">
+    <meta property="og:url" content="https://jdwaeber.ch/reflection.html">
+    <meta property="og:image" content="https://jdwaeber.ch/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Réflexion autour de... - Jean-David Waeber | Organiste & Chef de Chœur">
+    <meta name="twitter:description" content="Réflexions philosophiques et spirituelles sur la musique sacrée et l'art musical.">
+    <meta name="twitter:image" content="https://jdwaeber.ch/images/og-image.jpg">
+    
+    <!-- Performance Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Font Loading Strategy -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"></noscript>
+    
+    <!-- Font Fallback for better CLS -->
+    <style>
+        @font-face {
+            font-family: 'InterFallback';
+            src: local('Arial'), local('Helvetica');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'PlayfairFallback';
+            src: local('Times New Roman'), local('serif');
+            font-display: swap;
+        }
+    </style>
+    
+    <!-- Icons -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    
+    <style>
+        /**
+         * ===============================================
+         * DESIGN SYSTEM LUXURY - JEAN-DAVID WAEBER
+         * Reflection Page - Performance Optimized
+         * ===============================================
+         */
+
+        /* === DESIGN TOKENS === */
+        :root {
+            /* Brand Colors */
+            --brand-primary: #d4af37;
+            --brand-primary-light: #e6c757;
+            --brand-primary-dark: #b8941f;
+            --brand-primary-alpha: rgba(212, 175, 55, 0.1);
+            
+            /* Neutral Scale */
+            --neutral-50: #fafafa;
+            --neutral-100: #f5f5f5;
+            --neutral-200: #e5e5e5;
+            --neutral-300: #d4d4d4;
+            --neutral-400: #a3a3a3;
+            --neutral-500: #737373;
+            --neutral-600: #525252;
+            --neutral-700: #404040;
+            --neutral-800: #262626;
+            --neutral-900: #171717;
+            --neutral-950: #0a0a0a;
+            
+            /* Semantic Colors */
+            --text-primary: var(--neutral-50);
+            --text-secondary: var(--neutral-200);
+            --text-muted: var(--neutral-400);
+            --text-inverse: var(--neutral-950);
+            
+            /* Background System */
+            --bg-primary: var(--neutral-950);
+            --bg-secondary: var(--neutral-900);
+            --bg-tertiary: var(--neutral-800);
+            --bg-elevated: var(--neutral-700);
+            --bg-overlay: rgba(10, 10, 10, 0.9);
+            --bg-glass: rgba(255, 255, 255, 0.05);
+            
+            /* Border System */
+            --border-subtle: var(--neutral-800);
+            --border-default: var(--neutral-700);
+            --border-strong: var(--neutral-600);
+            --border-brand: var(--brand-primary);
+            
+            /* Typography System */
+            --font-sans: 'Inter', 'InterFallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            --font-serif: 'Playfair Display', 'PlayfairFallback', Georgia, 'Times New Roman', Times, serif;
+            
+            /* Fluid Type Scale */
+            --text-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.8rem);
+            --text-sm: clamp(0.875rem, 0.8rem + 0.3vw, 0.9rem);
+            --text-base: clamp(1rem, 0.9rem + 0.4vw, 1.1rem);
+            --text-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+            --text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+            --text-2xl: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
+            --text-3xl: clamp(2rem, 1.7rem + 1.2vw, 2.5rem);
+            --text-4xl: clamp(2.5rem, 2rem + 2vw, 4rem);
+            
+            /* Spacing Scale */
+            --space-px: 1px;
+            --space-0: 0;
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            
+            /* Shadow System */
+            --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.12);
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.16);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.24);
+            --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.28);
+            --shadow-brand: 0 4px 12px rgba(212, 175, 55, 0.15);
+            
+            /* Animation System */
+            --duration-instant: 0ms;
+            --duration-fast: 150ms;
+            --duration-normal: 250ms;
+            --duration-slow: 400ms;
+            --duration-slower: 600ms;
+            
+            --ease-linear: linear;
+            --ease-in: cubic-bezier(0.4, 0, 1, 1);
+            --ease-out: cubic-bezier(0, 0, 0.2, 1);
+            --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+            --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+            
+            /* Radius System */
+            --radius-none: 0;
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+            --radius-full: 9999px;
+            
+            /* Z-index Scale */
+            --z-hide: -1;
+            --z-base: 0;
+            --z-docked: 10;
+            --z-dropdown: 1000;
+            --z-sticky: 1100;
+            --z-banner: 1200;
+            --z-overlay: 1300;
+            --z-modal: 1400;
+            --z-popover: 1500;
+            --z-skipLink: 1600;
+            --z-toast: 1700;
+            --z-tooltip: 1800;
+        }
+
+        /* === RESET & BASE === */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--space-20);
+            -webkit-text-size-adjust: 100%;
+            tab-size: 4;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-size: var(--text-base);
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-feature-settings: 'kern' 1;
+        }
+
+        /* Enhanced Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--brand-primary);
+            border-radius: var(--radius-full);
+            transition: background var(--duration-fast) var(--ease-out);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--brand-primary-light);
+        }
+
+        ::selection {
+            background: var(--brand-primary);
+            color: var(--text-inverse);
+        }
+
+        :focus {
+            outline: none;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 2px;
+            border-radius: var(--radius-sm);
+        }
+
+        /* === SKIP LINKS === */
+        .skip-links {
+            position: fixed;
+            top: var(--space-4);
+            left: var(--space-4);
+            z-index: var(--z-skipLink);
+        }
+
+        .skip-link {
+            position: absolute;
+            transform: translateY(-100%);
+            background: var(--brand-primary);
+            color: var(--text-inverse);
+            padding: var(--space-3) var(--space-6);
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: var(--text-sm);
+            transition: transform var(--duration-fast) var(--ease-out);
+            white-space: nowrap;
+        }
+
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
+        /* === NAVIGATION === */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--bg-overlay);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: var(--z-sticky);
+            padding: var(--space-4) 0;
+            border-bottom: 1px solid var(--border-subtle);
+            transition: all var(--duration-normal) var(--ease-out);
+            will-change: background-color, padding;
+        }
+
+        .navbar.scrolled {
+            background: var(--bg-overlay);
+            box-shadow: var(--shadow-md);
+            padding: var(--space-3) 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color var(--duration-fast) var(--ease-out);
+        }
+
+        .logo:hover,
+        .logo:focus-visible {
+            color: var(--brand-primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--space-6);
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--text-sm);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-md);
+            transition: all var(--duration-fast) var(--ease-out);
+            position: relative;
+        }
+
+        .nav-menu a::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--bg-glass);
+            border-radius: var(--radius-md);
+            opacity: 0;
+            transition: opacity var(--duration-fast) var(--ease-out);
+        }
+
+        .nav-menu a:hover::before,
+        .nav-menu a:focus-visible::before {
+            opacity: 1;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a:focus-visible,
+        .nav-menu a.active {
+            color: var(--brand-primary);
+        }
+
+        .nav-menu a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background: var(--brand-primary);
+            border-radius: 50%;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: var(--text-lg);
+            cursor: pointer;
+            padding: var(--space-2);
+            border-radius: var(--radius-md);
+            transition: all var(--duration-fast) var(--ease-out);
+            position: relative;
+            z-index: var(--z-popover);
+        }
+
+        .nav-toggle:hover,
+        .nav-toggle:focus-visible {
+            color: var(--brand-primary);
+            background: var(--bg-glass);
+        }
+
+        /* === MAIN CONTENT === */
+        main {
+            padding-top: var(--space-20);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+
+        .section {
+            padding: var(--space-20) 0;
+            position: relative;
+        }
+
+        .section-alt {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-16);
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: calc(-1 * var(--space-2));
+            left: 50%;
+            transform: translateX(-50%);
+            width: var(--space-12);
+            height: 2px;
+            background: var(--brand-primary);
+            border-radius: var(--radius-full);
+        }
+
+        .section-subtitle {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* === REFLECTION ARTICLES === */
+        .reflection-intro {
+            max-width: 800px;
+            margin: 0 auto var(--space-16);
+            text-align: center;
+        }
+
+        .reflection-intro p {
+            font-size: var(--text-lg);
+            line-height: 1.7;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .articles-grid {
+            display: grid;
+            gap: var(--space-12);
+            margin-top: var(--space-16);
+        }
+
+        .article-card {
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-2xl);
+            border: 1px solid var(--border-subtle);
+            overflow: hidden;
+            transition: all var(--duration-normal) var(--ease-out);
+        }
+
+        .article-card:hover {
+            border-color: var(--border-brand);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .article-content {
+            padding: var(--space-10);
+        }
+
+        .article-category {
+            font-size: var(--text-xs);
+            color: var(--brand-primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--space-3);
+        }
+
+        .article-title {
+            font-family: var(--font-serif);
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+            line-height: 1.2;
+        }
+
+        .article-excerpt {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--space-6);
+            font-style: italic;
+        }
+
+        .article-body {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: var(--space-8);
+        }
+
+        .article-body p {
+            margin-bottom: var(--space-6);
+        }
+
+        .article-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-quote {
+            background: var(--bg-glass);
+            border-left: 4px solid var(--brand-primary);
+            padding: var(--space-6);
+            margin: var(--space-8) 0;
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+            font-style: italic;
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        .article-quote::before {
+            content: '"';
+            font-family: var(--font-serif);
+            font-size: var(--text-4xl);
+            color: var(--brand-primary);
+            position: absolute;
+            top: var(--space-2);
+            left: var(--space-4);
+            line-height: 1;
+        }
+
+        .article-quote p {
+            margin-left: var(--space-8);
+            margin-bottom: 0;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-subtle);
+            padding-top: var(--space-6);
+        }
+
+        .article-meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-1);
+        }
+
+        /* === FEATURED QUOTE === */
+        .featured-quote {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-12);
+            text-align: center;
+            position: relative;
+            margin: var(--space-16) 0;
+        }
+
+        .featured-quote::before {
+            content: '"';
+            font-family: var(--font-serif);
+            font-size: clamp(4rem, 8vw, 8rem);
+            color: var(--brand-primary);
+            position: absolute;
+            top: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            line-height: 1;
+            opacity: 0.3;
+        }
+
+        .featured-quote-text {
+            font-family: var(--font-serif);
+            font-size: var(--text-xl);
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin-bottom: var(--space-4);
+        }
+
+        .featured-quote-author {
+            font-size: var(--text-sm);
+            color: var(--brand-primary);
+            font-weight: 600;
+        }
+
+        /* === THEMES GRID === */
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-8);
+            margin-top: var(--space-16);
+        }
+
+        .theme-card {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            text-align: center;
+            transition: all var(--duration-normal) var(--ease-out);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--brand-primary);
+            transform: scaleX(0);
+            transition: transform var(--duration-normal) var(--ease-out);
+        }
+
+        .theme-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-brand);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .theme-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .theme-icon {
+            font-size: var(--text-3xl);
+            color: var(--brand-primary);
+            margin-bottom: var(--space-4);
+        }
+
+        .theme-title {
+            font-family: var(--font-serif);
+            font-size: var(--text-xl);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-3);
+        }
+
+        .theme-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: var(--text-sm);
+        }
+
+        /* === FOOTER === */
+        .footer {
+            background: var(--bg-secondary);
+            padding: var(--space-20) 0 var(--space-8);
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+        }
+
+        .footer-bottom a {
+            color: var(--brand-primary);
+            text-decoration: none;
+            transition: color var(--duration-fast) var(--ease-out);
+        }
+
+        .footer-bottom a:hover {
+            color: var(--brand-primary-light);
+        }
+
+        /* === ANIMATIONS === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all var(--duration-slower) var(--ease-out);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all var(--duration-slower) var(--ease-out);
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all var(--duration-slower) var(--ease-out);
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-overlay);
+                backdrop-filter: blur(16px);
+                flex-direction: column;
+                gap: 0;
+                padding: var(--space-6) 0;
+                box-shadow: var(--shadow-xl);
+                border-top: 1px solid var(--border-subtle);
+                transform: translateY(-10px);
+                opacity: 0;
+                visibility: hidden;
+                transition: all var(--duration-normal) var(--ease-out);
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-menu a {
+                padding: var(--space-4) var(--space-6);
+                border-bottom: 1px solid var(--border-subtle);
+                text-align: center;
+                width: 100%;
+            }
+
+            .nav-menu a:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-toggle {
+                display: block;
+            }
+
+            .themes-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-6);
+            }
+
+            .article-content {
+                padding: var(--space-8);
+            }
+
+            .featured-quote {
+                padding: var(--space-8);
+            }
+
+            .container {
+                padding: 0 var(--space-4);
+            }
+
+            .nav-container {
+                padding: 0 var(--space-4);
+            }
+
+            .section {
+                padding: var(--space-16) 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-content {
+                padding: var(--space-6);
+            }
+
+            .featured-quote {
+                padding: var(--space-6);
+            }
+
+            .theme-card {
+                padding: var(--space-6);
+            }
+        }
+
+        /* === ACCESSIBILITY === */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+            .fade-in,
+            .slide-in-left,
+            .slide-in-right {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .text-balance {
+            text-wrap: balance;
+        }
+
+        .text-pretty {
+            text-wrap: pretty;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Skip Links -->
+    <div class="skip-links">
+        <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+        <a href="#navigation" class="skip-link">Aller à la navigation</a>
+        <a href="#reflections" class="skip-link">Aller aux réflexions</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navigation" role="navigation" aria-label="Navigation principale">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Jean-David Waeber - Retour à l'accueil">
+                Jean-David Waeber
+            </a>
+            
+            <button class="nav-toggle" 
+                    id="nav-toggle" 
+                    aria-label="Ouvrir le menu de navigation" 
+                    aria-expanded="false"
+                    aria-controls="nav-menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none">
+                    <a href="index.html" role="menuitem">Accueil</a>
+                </li>
+                <li role="none">
+                    <a href="events.html" role="menuitem">Agenda</a>
+                </li>
+                <li role="none">
+                    <a href="gallery.html" role="menuitem">Galerie</a>
+                </li>
+                <li role="none">
+                    <a href="about.html" role="menuitem">Biographie</a>
+                </li>
+                <li role="none">
+                    <a href="contact.html" role="menuitem">Contact</a>
+                </li>
+                <li role="none">
+                    <a href="media.html" role="menuitem">Média</a>
+                </li>
+                <li role="none">
+                    <a href="reflection.html" class="active" role="menuitem" aria-current="page">Réflexion autour de...</a>
+                </li>
+                <li role="none">
+                    <a href="ensembles.html" role="menuitem">Ensembles</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Reflection Header Section -->
+        <section class="section" id="reflections" aria-labelledby="reflection-title">
+            <div class="container">
+                <header class="section-header">
+                    <h1 class="section-title text-balance" id="reflection-title">Réflexion autour de...</h1>
+                    <p class="section-subtitle text-pretty">
+                        Pensées et méditations sur la musique sacrée, l'art de l'interprétation et la spiritualité dans la création musicale.
+                    </p>
+                </header>
+
+                <div class="reflection-intro fade-in">
+                    <p class="text-pretty">
+                        « La musique sacrée n'est pas seulement un art, c'est un pont entre l'humain et le divin, 
+                        un langage universel qui transcende les mots et touche directement l'âme. »
+                    </p>
+                </div>
+
+                <!-- Featured Quote -->
+                <div class="featured-quote fade-in">
+                    <p class="featured-quote-text text-balance">
+                        La tradition n'est pas la préservation de cendres mortes, mais la transmission d'un feu vivant qui éclaire chaque génération nouvelle.
+                    </p>
+                    <p class="featured-quote-author">Jean-David Waeber</p>
+                </div>
+
+                <!-- Main Articles -->
+                <div class="articles-grid">
+                    <!-- Article 1: La Spiritualité -->
+                    <article class="article-card fade-in">
+                        <div class="article-content">
+                            <div class="article-category">Spiritualité</div>
+                            <h2 class="article-title text-balance">Le Silence et la Résonance</h2>
+                            <p class="article-excerpt text-pretty">
+                                Dans l'art musical sacré, le silence n'est pas une absence mais une présence intense, 
+                                un espace où l'âme peut rencontrer l'ineffable.
+                            </p>
+                            <div class="article-body">
+                                <p>
+                                    Lorsque je dirige un chœur dans l'interprétation d'une pièce sacrée, je suis constamment 
+                                    frappé par la puissance du silence. Ce n'est pas le silence de l'absence, mais celui de 
+                                    la plénitude, celui qui précède et suit chaque note, qui donne son sens à la musique.
+                                </p>
+                                <p>
+                                    Dans le chant grégorien, par exemple, les neumes ne sont pas seulement des indications 
+                                    mélodiques, mais des invitations à entrer dans un dialogue spirituel. Chaque phrase 
+                                    musicale devient une prière, chaque respiration un moment de communion.
+                                </p>
+                                
+                                <div class="article-quote">
+                                    <p>
+                                        « Le musicien sacré n'interprète pas seulement des notes, il sert de médiateur 
+                                        entre la terre et le ciel, permettant au divin de se manifester à travers l'art humain. »
+                                    </p>
+                                </div>
+                                
+                                <p>
+                                    Cette responsabilité du musicien sacré va bien au-delà de la technique. Elle exige 
+                                    une préparation intérieure, une disponibilité de l'âme qui permet à la musique 
+                                    de devenir véritablement prière. C'est dans cette perspective que j'aborde chaque 
+                                    concert, chaque répétition avec la Maîtrise cathédrale.
+                                </p>
+                            </div>
+                            <div class="article-meta">
+                                <div class="article-meta-item">
+                                    <i class="fas fa-calendar" aria-hidden="true"></i>
+                                    <span>Janvier 2025</span>
+                                </div>
+                                <div class="article-meta-item">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    <span>5 min de lecture</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2: La Transmission -->
+                    <article class="article-card slide-in-left">
+                        <div class="article-content">
+                            <div class="article-category">Transmission</div>
+                            <h2 class="article-title text-balance">L'Art de Transmettre : Entre Tradition et Innovation</h2>
+                            <p class="article-excerpt text-pretty">
+                                Comment former les jeunes musiciens d'aujourd'hui à un patrimoine millénaire 
+                                tout en gardant vivante la flamme créatrice ?
+                            </p>
+                            <div class="article-body">
+                                <p>
+                                    Dans mon travail avec l'École maîtrisienne de la cathédrale de Sion, je suis quotidiennement 
+                                    confronté à cette question fondamentale : comment transmettre un héritage musical 
+                                    qui s'enracine dans plus de mille ans d'histoire tout en préparant ces jeunes 
+                                    voix aux défis musicaux du XXIe siècle ?
+                                </p>
+                                <p>
+                                    La tradition, je l'ai compris, n'est pas un musée. Elle est un fleuve vivant qui 
+                                    doit constamment se renouveler pour ne pas stagner. Enseigner le chant grégorien 
+                                    aujourd'hui, c'est permettre à ces mélodies séculaires de rencontrer la sensibilité 
+                                    contemporaine, de toucher des cœurs formés par une culture différente.
+                                </p>
+                                
+                                <div class="article-quote">
+                                    <p>
+                                        « Un maître n'est pas celui qui impose sa vision, mais celui qui révèle à chaque 
+                                        élève sa propre voix unique au sein de la grande symphonie universelle. »
+                                    </p>
+                                </div>
+                                
+                                <p>
+                                    C'est pourquoi mes méthodes pédagogiques intègrent à la fois la rigueur de la 
+                                    tradition et l'ouverture aux nouvelles approches. Nous travaillons la modalité 
+                                    grégorienne, mais aussi l'improvisation. Nous étudions Palestrina, mais nous 
+                                    créons également nos propres pièces.
+                                </p>
+                            </div>
+                            <div class="article-meta">
+                                <div class="article-meta-item">
+                                    <i class="fas fa-calendar" aria-hidden="true"></i>
+                                    <span>Décembre 2024</span>
+                                </div>
+                                <div class="article-meta-item">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    <span>6 min de lecture</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3: L'Interprétation -->
+                    <article class="article-card slide-in-right">
+                        <div class="article-content">
+                            <div class="article-category">Interprétation</div>
+                            <h2 class="article-title text-balance">Au-delà des Notes : L'Âme de l'Interprétation</h2>
+                            <p class="article-excerpt text-pretty">
+                                Qu'est-ce qui différencie une simple exécution musicale d'une véritable interprétation ? 
+                                Réflexions sur l'art de donner vie à la partition.
+                            </p>
+                            <div class="article-body">
+                                <p>
+                                    Lorsque je me place devant l'orgue de la cathédrale ou que je lève les mains pour 
+                                    diriger le chœur, je sais que mon rôle dépasse largement la simple restitution 
+                                    fidèle d'une partition. L'interprétation musicale est un acte créateur qui engage 
+                                    tout l'être : l'intelligence, la sensibilité, l'expérience spirituelle.
+                                </p>
+                                <p>
+                                    Chaque œuvre porte en elle des siècles d'histoire, les prières de générations de 
+                                    croyants, les espoirs et les détresses de l'humanité. Quand nous interprétons une 
+                                    cantate de Bach, nous ne rejouons pas seulement des notes écrites il y a trois 
+                                    siècles, nous actualisons une expérience spirituelle intemporelle.
+                                </p>
+                                
+                                <div class="article-quote">
+                                    <p>
+                                        « L'interprète authentique est celui qui disparaît pour laisser parler l'œuvre, 
+                                        tout en y mettant paradoxalement toute sa personnalité. »
+                                    </p>
+                                </div>
+                                
+                                <p>
+                                    Cette approche de l'interprétation influence profondément ma pratique. Je cherche 
+                                    toujours à comprendre non seulement ce que le compositeur a voulu dire, mais aussi 
+                                    ce que l'œuvre peut dire aujourd'hui, dans notre contexte contemporain. C'est cette 
+                                    rencontre entre passé et présent qui donne son sens à notre mission d'interprètes.
+                                </p>
+                            </div>
+                            <div class="article-meta">
+                                <div class="article-meta-item">
+                                    <i class="fas fa-calendar" aria-hidden="true"></i>
+                                    <span>Novembre 2024</span>
+                                </div>
+                                <div class="article-meta-item">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    <span>4 min de lecture</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Themes Section -->
+        <section class="section section-alt" aria-labelledby="themes-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title text-balance" id="themes-title">Thèmes de Réflexion</h2>
+                    <p class="section-subtitle text-pretty">
+                        Les grandes questions qui nourrissent ma pratique musicale et ma recherche artistique
+                    </p>
+                </header>
+
+                <div class="themes-grid">
+                    <div class="theme-card fade-in">
+                        <div class="theme-icon">
+                            <i class="fas fa-dove" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="theme-title">Spiritualité & Art</h3>
+                        <p class="theme-description">
+                            Comment l'art musical peut-il être un chemin d'élévation spirituelle ? 
+                            Réflexions sur la dimension sacrée de la création artistique.
+                        </p>
+                    </div>
+
+                    <div class="theme-card fade-in">
+                        <div class="theme-icon">
+                            <i class="fas fa-seedling" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="theme-title">Tradition Vivante</h3>
+                        <p class="theme-description">
+                            La tradition musicale comme force créatrice contemporaine. 
+                            Comment honorer le passé tout en embrassant l'innovation ?
+                        </p>
+                    </div>
+
+                    <div class="theme-card fade-in">
+                        <div class="theme-icon">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="theme-title">Émotion & Technique</h3>
+                        <p class="theme-description">
+                            L'équilibre délicat entre maîtrise technique et expression authentique. 
+                            La technique au service de l'émotion spirituelle.
+                        </p>
+                    </div>
+
+                    <div class="theme-card fade-in">
+                        <div class="theme-icon">
+                            <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="theme-title">Communauté & Solitude</h3>
+                        <p class="theme-description">
+                            La musique comme lien social et expérience communautaire, 
+                            née pourtant de la solitude créatrice de l'artiste.
+                        </p>
+                    </div>
+
+                    <div class="theme-card fade-in">
+                        <div class="theme-icon">
+                            <i class="fas fa-infinity" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="theme-title">Temporel & Éternel</h3>
+                        <p class="theme-description">
+                            Comment la musique sacrée nous fait-elle toucher à l'éternité 
+                            dans l'éphémère de l'instant présent ?
+                        </p>
+                    </div>
+
+                    <div class="theme-card fade-in">
+                        <div class="theme-icon">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="theme-title">Local & Universel</h3>
+                        <p class="theme-description">
+                            L'enracinement local de la pratique musicale et sa portée universelle. 
+                            Sion comme fenêtre ouverte sur le monde.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2025 Jean-David Waeber. Tous droits réservés. | 
+                    <a href="#mentions-legales" aria-label="Consulter les mentions légales">Mentions légales</a> | 
+                    <a href="#politique-confidentialite" aria-label="Consulter la politique de confidentialité">Politique de confidentialité</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Retour en haut de page" style="position: fixed; bottom: var(--space-8); right: var(--space-8); width: 48px; height: 48px; background: var(--brand-primary); color: var(--text-inverse); border: none; border-radius: 50%; cursor: pointer; font-size: var(--text-lg); transition: all var(--duration-normal) var(--ease-out); z-index: var(--z-banner); opacity: 0; visibility: hidden; transform: translateY(20px) scale(0.8); box-shadow: var(--shadow-lg);">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <script>
+        /**
+         * REFLECTION PAGE ARCHITECTURE - JEAN-DAVID WAEBER
+         * Performance-first, accessibility-compliant
+         */
+        
+        class ReflectionPageHandler {
+            constructor() {
+                this.navbar = document.querySelector('.navbar');
+                this.navToggle = document.getElementById('nav-toggle');
+                this.navMenu = document.getElementById('nav-menu');
+                this.scrollToTopBtn = document.getElementById('scroll-to-top');
+                
+                this.state = {
+                    isMenuOpen: false,
+                    reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                };
+                
+                this.init();
+            }
+
+            init() {
+                this.setupNavigation();
+                this.setupScrollEffects();
+                this.setupAnimations();
+                this.setupReadingEnhancements();
+            }
+
+            setupNavigation() {
+                if (this.navToggle && this.navMenu) {
+                    this.navToggle.addEventListener('click', this.handleMenuToggle.bind(this));
+                    
+                    document.addEventListener('click', (e) => {
+                        if (this.state.isMenuOpen && !this.navToggle.contains(e.target) && !this.navMenu.contains(e.target)) {
+                            this.closeMenu();
+                        }
+                    });
+
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'Escape' && this.state.isMenuOpen) {
+                            this.closeMenu();
+                            this.navToggle.focus();
+                        }
+                    });
+                }
+
+                window.addEventListener('scroll', () => {
+                    if (this.navbar) {
+                        if (window.scrollY > 50) {
+                            this.navbar.classList.add('scrolled');
+                        } else {
+                            this.navbar.classList.remove('scrolled');
+                        }
+                    }
+                }, { passive: true });
+            }
+
+            handleMenuToggle(e) {
+                e.preventDefault();
+                this.state.isMenuOpen = !this.state.isMenuOpen;
+                
+                this.navMenu.classList.toggle('active', this.state.isMenuOpen);
+                this.navToggle.setAttribute('aria-expanded', this.state.isMenuOpen);
+                document.body.style.overflow = this.state.isMenuOpen ? 'hidden' : '';
+                
+                const icon = this.navToggle.querySelector('i');
+                if (icon) {
+                    icon.className = this.state.isMenuOpen ? 'fas fa-times' : 'fas fa-bars';
+                }
+            }
+
+            closeMenu() {
+                this.state.isMenuOpen = false;
+                this.navMenu.classList.remove('active');
+                this.navToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+                
+                const icon = this.navToggle.querySelector('i');
+                if (icon) {
+                    icon.className = 'fas fa-bars';
+                }
+            }
+
+            setupScrollEffects() {
+                if (this.scrollToTopBtn) {
+                    this.scrollToTopBtn.addEventListener('click', () => {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: this.state.reducedMotion ? 'auto' : 'smooth'
+                        });
+                    });
+
+                    window.addEventListener('scroll', () => {
+                        if (window.scrollY > 300) {
+                            this.scrollToTopBtn.style.opacity = '1';
+                            this.scrollToTopBtn.style.visibility = 'visible';
+                            this.scrollToTopBtn.style.transform = 'translateY(0) scale(1)';
+                        } else {
+                            this.scrollToTopBtn.style.opacity = '0';
+                            this.scrollToTopBtn.style.visibility = 'hidden';
+                            this.scrollToTopBtn.style.transform = 'translateY(20px) scale(0.8)';
+                        }
+                    }, { passive: true });
+                }
+            }
+
+            setupAnimations() {
+                if (this.state.reducedMotion) {
+                    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                        el.classList.add('visible');
+                    });
+                    return;
+                }
+
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry, index) => {
+                            if (entry.isIntersecting) {
+                                setTimeout(() => {
+                                    entry.target.classList.add('visible');
+                                }, index * 150);
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+                    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                        observer.observe(el);
+                    });
+                } else {
+                    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                        el.classList.add('visible');
+                    });
+                }
+            }
+
+            setupReadingEnhancements() {
+                // Add reading progress for long articles
+                const articles = document.querySelectorAll('.article-card');
+                articles.forEach(article => {
+                    this.addReadingTime(article);
+                });
+
+                // Add smooth hover effects for theme cards
+                const themeCards = document.querySelectorAll('.theme-card');
+                themeCards.forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+                        if (!this.state.reducedMotion) {
+                            card.style.willChange = 'transform';
+                        }
+                    });
+
+                    card.addEventListener('mouseleave', () => {
+                        card.style.willChange = 'auto';
+                    });
+                });
+
+                // Add interactive quote highlighting
+                const quotes = document.querySelectorAll('.article-quote, .featured-quote');
+                quotes.forEach(quote => {
+                    quote.addEventListener('click', () => {
+                        this.highlightQuote(quote);
+                    });
+                });
+            }
+
+            addReadingTime(article) {
+                const content = article.querySelector('.article-body');
+                if (!content) return;
+
+                const text = content.textContent || content.innerText;
+                const wordsPerMinute = 200;
+                const words = text.trim().split(/\s+/).length;
+                const readingTime = Math.ceil(words / wordsPerMinute);
+
+                const metaItem = article.querySelector('.article-meta-item:last-child');
+                if (metaItem && !metaItem.textContent.includes('lecture')) {
+                    metaItem.innerHTML = `
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <span>${readingTime} min de lecture</span>
+                    `;
+                }
+            }
+
+            highlightQuote(quote) {
+                // Visual feedback for quote interaction
+                quote.style.transform = 'scale(1.02)';
+                quote.style.boxShadow = '0 8px 25px rgba(212, 175, 55, 0.2)';
+                
+                setTimeout(() => {
+                    quote.style.transform = '';
+                    quote.style.boxShadow = '';
+                }, 300);
+
+                // Copy quote to clipboard (if supported)
+                if (navigator.clipboard) {
+                    const quoteText = quote.textContent.trim();
+                    navigator.clipboard.writeText(quoteText).then(() => {
+                        this.showToast('Citation copiée dans le presse-papiers');
+                    }).catch(() => {
+                        // Silent fail
+                    });
+                }
+            }
+
+            showToast(message) {
+                // Create and show toast notification
+                const toast = document.createElement('div');
+                toast.textContent = message;
+                toast.style.cssText = `
+                    position: fixed;
+                    bottom: 2rem;
+                    right: 2rem;
+                    background: var(--brand-primary);
+                    color: var(--text-inverse);
+                    padding: 1rem 1.5rem;
+                    border-radius: 0.5rem;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    z-index: 10000;
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: all 0.3s ease-out;
+                `;
+
+                document.body.appendChild(toast);
+
+                setTimeout(() => {
+                    toast.style.opacity = '1';
+                    toast.style.transform = 'translateY(0)';
+                }, 100);
+
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    toast.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        if (toast.parentNode) {
+                            toast.parentNode.removeChild(toast);
+                        }
+                    }, 300);
+                }, 3000);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new ReflectionPageHandler();
+        });
+    </script>
+</body>
+</html>

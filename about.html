@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - JDW Portfolio</title>
-    <meta name="description" content="Learn about JDW Portfolio - crafting luxury digital experiences with passion and precision">
-    <meta name="keywords" content="about, luxury design, premium development, designer profile, web developer">
-    <meta name="author" content="JDW Portfolio">
+    <title>Biographie - Jean-David Waeber | Organiste et Compositeur</title>
+    <meta name="description" content="Découvrez le parcours de Jean-David Waeber, organiste titulaire de la cathédrale de Sion et compositeur de musique sacrée. Ensembles et collaborations musicales.">
+    <meta name="keywords" content="biographie, Jean-David Waeber, organiste, compositeur, musique sacrée, cathédrale, Sion, Valais">
+    <meta name="author" content="Jean-David Waeber">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://jdwportfolio.com/about">
+    <link rel="canonical" href="https://jdwaeber.ch/about">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="About - JDW Portfolio">
-    <meta property="og:description" content="Learn about JDW Portfolio - crafting luxury digital experiences with passion and precision">
-    <meta property="og:url" content="https://jdwportfolio.com/about">
-    <meta property="og:image" content="https://jdwportfolio.com/images/og-image.jpg">
+    <meta property="og:title" content="Biographie - Jean-David Waeber | Organiste et Compositeur">
+    <meta property="og:description" content="Découvrez le parcours de Jean-David Waeber, organiste titulaire de la cathédrale de Sion et compositeur de musique sacrée.">
+    <meta property="og:url" content="https://jdwaeber.ch/about">
+    <meta property="og:image" content="https://jdwaeber.ch/images/biography-og-image.jpg">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About - JDW Portfolio">
-    <meta name="twitter:description" content="Learn about JDW Portfolio - crafting luxury digital experiences with passion and precision">
-    <meta name="twitter:image" content="https://jdwportfolio.com/images/og-image.jpg">
+    <meta name="twitter:title" content="Biographie - Jean-David Waeber | Organiste et Compositeur">
+    <meta name="twitter:description" content="Découvrez le parcours de Jean-David Waeber, organiste titulaire de la cathédrale de Sion et compositeur de musique sacrée.">
+    <meta name="twitter:image" content="https://jdwaeber.ch/images/biography-og-image.jpg">
     
     <!-- Performance Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,21 +50,39 @@
     <!-- Navigation -->
     <nav class="navbar" id="navigation">
         <div class="nav-container">
-            <a href="index.html" class="logo">JDW</a>
+            <a href="index.html" class="logo" aria-label="Jean-David Waeber - Retour à l'accueil">
+                Jean-David Waeber
+            </a>
             
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
             
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="process.html">Process</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none">
+                    <a href="index.html" role="menuitem">Accueil</a>
+                </li>
+                <li role="none">
+                    <a href="events.html" role="menuitem">Agenda</a>
+                </li>
+                <li role="none">
+                    <a href="gallery.html" role="menuitem">Galerie</a>
+                </li>
+                <li role="none">
+                    <a href="about.html" class="active" role="menuitem" aria-current="page">Biographie</a>
+                </li>
+                <li role="none">
+                    <a href="contact.html" role="menuitem">Contact</a>
+                </li>
+                <li role="none">
+                    <a href="media.html" role="menuitem">Media</a>
+                </li>
+                <li role="none">
+                    <a href="reflection.html" role="menuitem">Réflexion</a>
+                </li>
+                <li role="none">
+                    <a href="ensembles.html" role="menuitem">Ensembles</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -75,22 +93,22 @@
         <section class="hero" id="about">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <i class="fas fa-user"></i>
-                    <span>About Me</span>
+                    <i class="fas fa-user-circle" aria-hidden="true"></i>
+                    <span>Biographie</span>
                 </div>
-                <h1 class="hero-title text-balance">Crafting Luxury Digital Experiences</h1>
+                <h1 class="hero-title text-balance" id="hero-title">Jean-David Waeber</h1>
                 <p class="hero-description text-pretty">
-                    With a passion for premium design and cutting-edge development, I create exceptional 
-                    digital experiences that elevate brands and captivate audiences.
+                    Organiste titulaire de la cathédrale de Sion, compositeur et directeur musical 
+                    passionné par la musique sacrée et les collaborations artistiques contemporaines.
                 </p>
                 <div class="hero-cta">
-                    <a href="portfolio.html" class="btn btn-primary">
-                        <i class="fas fa-eye"></i>
-                        <span>View My Work</span>
+                    <a href="gallery.html" class="btn btn-primary">
+                        <i class="fas fa-images" aria-hidden="true"></i>
+                        <span>Découvrir la galerie</span>
                     </a>
                     <a href="contact.html" class="btn btn-secondary">
-                        <i class="fas fa-handshake"></i>
-                        <span>Let's Collaborate</span>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span>Me contacter</span>
                     </a>
                 </div>
             </div>
@@ -100,158 +118,161 @@
         <section class="section" id="biography">
             <div class="container">
                 <header class="section-header">
-                    <h2 class="section-title text-balance">My Story</h2>
+                    <h2 class="section-title text-balance" id="biography-title">Parcours Musical</h2>
                     <p class="section-subtitle text-pretty">
-                        A journey dedicated to excellence in design and development
+                        Un cheminement artistique dédié à l'excellence musicale et liturgique
                     </p>
                 </header>
                 
                 <div class="bio-content">
-                    <div class="bio-image fade-in" role="img" aria-label="Portrait of JDW">
-                        <span aria-hidden="true">Professional Portrait</span>
+                    <div class="bio-image fade-in" role="img" aria-label="Portrait de Jean-David Waeber">
+                        <span aria-hidden="true">Portrait Professionnel</span>
                     </div>
                     <div class="bio-text fade-in">
                         <p class="text-pretty">
-                            My journey into luxury digital design began with a fascination for the intersection 
-                            of art, technology, and human experience. With over a decade of experience in 
-                            premium web development, I've had the privilege of working with discerning clients 
-                            who value exceptional craftsmanship.
+                            Mon parcours musical a débuté très jeune par l'apprentissage du piano, avant de 
+                            me tourner vers l'orgue qui est devenu ma passion première. Formé au Conservatoire 
+                            de Lausanne et perfectionnant ma technique auprès de maîtres européens, j'ai 
+                            développé une approche alliant tradition et innovation.
                         </p>
                         <p class="text-pretty">
-                            I believe that every pixel matters, every interaction should delight, and every 
-                            line of code should be written with purpose. My approach combines timeless design 
-                            principles with cutting-edge technology to create digital experiences that are 
-                            not just functional, but truly memorable.
+                            Nommé organiste titulaire de la cathédrale de Sion en 2018, j'ai l'honneur de 
+                            faire résonner quotidiennement l'orgue Späth dans ce lieu chargé d'histoire. 
+                            Ma mission s'étend à la direction de la Maîtrise cathédrale et à l'animation 
+                            liturgique lors des grandes célébrations diocésaines.
                         </p>
                         <p class="text-pretty">
-                            When I'm not crafting digital experiences, you'll find me exploring the latest 
-                            design trends, contributing to open-source projects, or mentoring the next 
-                            generation of developers. I'm passionate about sharing knowledge and elevating 
-                            the entire industry.
+                            Parallèlement à mes fonctions liturgiques, je m'investis dans la composition 
+                            d'œuvres originales et la création d'arrangements pour diverses formations. 
+                            Cette double casquette d'interprète et de créateur nourrit ma vision artistique 
+                            et enrichit constamment ma pratique musicale.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="section section-alt" id="skills">
+        <!-- Ensembles et Collaborations -->
+        <section class="section section-alt" id="ensembles-collaborations" aria-labelledby="ensembles-title">
             <div class="container">
                 <header class="section-header">
-                    <h2 class="section-title text-balance">Expertise</h2>
+                    <h2 class="section-title text-balance" id="ensembles-title">Ensembles & Collaborations</h2>
                     <p class="section-subtitle text-pretty">
-                        Core competencies in luxury design and premium development
+                        Créations musicales partagées et projets artistiques collaboratifs
                     </p>
                 </header>
                 
-                <div class="card-grid">
-                    <article class="card fade-in">
-                        <div class="card-icon">
-                            <i class="fas fa-paint-brush"></i>
+                <div class="card-grid" role="list" aria-label="Ensembles et collaborations musicales">
+                    <article class="card fade-in" role="listitem" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="fas fa-users-music"></i>
                         </div>
-                        <h3 class="card-title">Visual Design</h3>
+                        <h3 class="card-title">Maîtrise Cathédrale</h3>
                         <p class="card-description">
-                            Creating sophisticated visual identities, typography systems, and brand experiences 
-                            that resonate with luxury audiences.
+                            Direction artistique du chœur d'enfants et d'adolescents de la cathédrale de Sion. 
+                            Répertoire alliant chant grégorien, polyphonie classique et créations contemporaines.
                         </p>
                     </article>
                     
-                    <article class="card fade-in">
-                        <div class="card-icon">
-                            <i class="fas fa-laptop-code"></i>
+                    <article class="card fade-in" role="listitem" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="fas fa-handshake"></i>
                         </div>
-                        <h3 class="card-title">Frontend Development</h3>
+                        <h3 class="card-title">Ensemble Vocal de Lausanne</h3>
                         <p class="card-description">
-                            Expert in modern JavaScript frameworks, responsive design, and performance 
-                            optimization for seamless user experiences.
+                            Collaboration régulière pour des projets baroques et contemporains. 
+                            Créations d'arrangements et direction d'orchestre pour grandes formations.
                         </p>
                     </article>
                     
-                    <article class="card fade-in">
-                        <div class="card-icon">
-                            <i class="fas fa-users"></i>
+                    <article class="card fade-in" role="listitem" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="fas fa-music"></i>
                         </div>
-                        <h3 class="card-title">User Experience</h3>
+                        <h3 class="card-title">Schönenberg Ensemble</h3>
                         <p class="card-description">
-                            Designing intuitive interfaces and user journeys that prioritize accessibility 
-                            and delightful interactions.
+                            Ensemble de musique sacrée spécialisé dans le répertoire polyphonique de la Renaissance. 
+                            Interprétations authentiques et recherche musicologique.
                         </p>
                     </article>
                     
-                    <article class="card fade-in">
-                        <div class="card-icon">
-                            <i class="fas fa-rocket"></i>
+                    <article class="card fade-in" role="listitem" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="fas fa-globe-europe"></i>
                         </div>
-                        <h3 class="card-title">Performance</h3>
+                        <h3 class="card-title">Projets Internationaux</h3>
                         <p class="card-description">
-                            Optimizing websites for speed, SEO, and scalability to ensure exceptional 
-                            performance across all devices.
+                            Collaborations avec des institutions musicales européennes pour des festivals, 
+                            enregistrements et créations d'œuvres inédites.
                         </p>
                     </article>
                     
-                    <article class="card fade-in">
-                        <div class="card-icon">
-                            <i class="fas fa-shield-alt"></i>
+                    <article class="card fade-in" role="listitem" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <h3 class="card-title">Security</h3>
+                        <h3 class="card-title">École Maîtrisienne</h3>
                         <p class="card-description">
-                            Implementing robust security measures and best practices to protect user data 
-                            and maintain trust.
+                            Formation musicale des jeunes chanteurs dans la tradition des maîtrises cathédrales. 
+                            Pédagogie adaptée et développement artistique personnel.
                         </p>
                     </article>
                     
-                    <article class="card fade-in">
-                        <div class="card-icon">
-                            <i class="fas fa-lightbulb"></i>
+                    <article class="card fade-in" role="listitem" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="fas fa-compact-disc"></i>
                         </div>
-                        <h3 class="card-title">Innovation</h3>
+                        <h3 class="card-title">Enregistrements</h3>
                         <p class="card-description">
-                            Staying ahead of industry trends and emerging technologies to deliver 
-                            cutting-edge solutions.
+                            Production d'albums avec divers ensembles, de la musique grégorienne aux compositions 
+                            contemporaines. Direction artistique et réalisation technique.
                         </p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Values Section -->
-        <section class="section" id="values">
+        <!-- Formation et Expertise -->
+        <section class="section" id="formation" aria-labelledby="formation-title">
             <div class="container">
                 <header class="section-header">
-                    <h2 class="section-title text-balance">Core Values</h2>
+                    <h2 class="section-title text-balance" id="formation-title">Formation & Expertise</h2>
                     <p class="section-subtitle text-pretty">
-                        The principles that guide every project and collaboration
+                        Compétences musicales et pédagogiques développées au fil des années
                     </p>
                 </header>
                 
-                <div class="card-grid">
-                    <article class="card fade-in">
-                        <div class="card-icon">
-                            <i class="fas fa-gem"></i>
+                <div class="card-grid" role="list" aria-label="Formation et expertise musicales">
+                    <article class="card fade-in" role="listitem" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="fas fa-church"></i>
                         </div>
-                        <h3 class="card-title">Excellence</h3>
+                        <h3 class="card-title">Orgue Liturgique</h3>
                         <p class="card-description">
-                            Pursuing perfection in every detail, from initial concept to final deployment.
+                            Maîtrise du grand orgue Späth et expertise dans l'accompagnement liturgique 
+                            selon les traditions catholiques et œcuméniques.
                         </p>
                     </article>
                     
-                    <article class="card fade-in">
-                        <div class="card-icon">
-                            <i class="fas fa-handshake"></i>
+                    <article class="card fade-in" role="listitem" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="fas fa-music"></i>
                         </div>
-                        <h3 class="card-title">Collaboration</h3>
+                        <h3 class="card-title">Composition</h3>
                         <p class="card-description">
-                            Working closely with clients to understand their vision and exceed expectations.
+                            Création d'œuvres originales pour orgue, chœur et formations mixtes, 
+                            alliant inspiration traditionnelle et langage contemporain.
                         </p>
                     </article>
                     
-                    <article class="card fade-in">
-                        <div class="card-icon">
-                            <i class="fas fa-clock"></i>
+                    <article class="card fade-in" role="listitem" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="fas fa-users-cog"></i>
                         </div>
-                        <h3 class="card-title">Reliability</h3>
+                        <h3 class="card-title">Direction Chorale</h3>
                         <p class="card-description">
-                            Delivering projects on time and within budget, with clear communication throughout.
+                            Expérience approfondie dans la direction d'ensembles vocaux de tous niveaux, 
+                            de la formation amateur au chœur professionnel.
                         </p>
                     </article>
                 </div>
@@ -260,35 +281,63 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section fade-in">
                     <h4>Contact</h4>
-                    <p>Ready to discuss your next project?</p>
-                    <a href="mailto:hello@jdwportfolio.com">hello@jdwportfolio.com</a>
-                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                    <address style="font-style: normal;">
+                        <p>
+                            Cathédrale de Sion<br>
+                            Place de la Cathédrale<br>
+                            1950 Sion, Valais, Suisse
+                        </p>
+                        <a href="mailto:contact@jdwaeber.ch" 
+                           aria-label="Envoyer un email à Jean-David Waeber">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <span>contact@jdwaeber.ch</span>
+                        </a>
+                        <a href="tel:+41276221231" 
+                           aria-label="Appeler Jean-David Waeber">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <span>+41 (0)27 622 12 31</span>
+                        </a>
+                    </address>
                 </div>
                 
                 <div class="footer-section fade-in">
-                    <h4>Services</h4>
-                    <a href="services.html">Luxury Design</a>
-                    <a href="services.html">Premium Development</a>
-                    <a href="services.html">Brand Strategy</a>
-                    <a href="services.html">Digital Consulting</a>
+                    <h4>Navigation</h4>
+                    <a href="events.html">Agenda</a>
+                    <a href="gallery.html">Galerie</a>
+                    <a href="media.html">Media</a>
+                    <a href="ensembles.html">Ensembles</a>
                 </div>
                 
                 <div class="footer-section fade-in">
-                    <h4>Follow</h4>
-                    <a href="https://linkedin.com/in/jdw" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="https://twitter.com/jdwportfolio" target="_blank" rel="noopener noreferrer">Twitter</a>
-                    <a href="https://dribbble.com/jdw" target="_blank" rel="noopener noreferrer">Dribbble</a>
-                    <a href="https://github.com/jdw" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <h4>Suivez-moi</h4>
+                    <a href="https://linkedin.com/in/jdwaeber" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Profil LinkedIn de Jean-David Waeber (ouvre dans un nouvel onglet)">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://youtube.com/@jdwaeber" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Chaîne YouTube de Jean-David Waeber (ouvre dans un nouvel onglet)">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                        <span>YouTube</span>
+                    </a>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 JDW Portfolio. All rights reserved.</p>
+                <p>
+                    &copy; 2025 Jean-David Waeber. Tous droits réservés. | 
+                    <a href="#mentions-legales" aria-label="Consulter les mentions légales">Mentions légales</a> | 
+                    <a href="#politique-confidentialite" aria-label="Consulter la politique de confidentialité">Politique de confidentialité</a>
+                </p>
             </div>
         </div>
     </footer>
@@ -299,35 +348,74 @@
     </button>
 
     <script>
-        // Enhanced UX Architecture
-        class PortfolioUX {
+        // Use the same JavaScript architecture from template.html
+        class SeniorUXArchitecture {
             constructor() {
                 this.navbar = document.querySelector('.navbar');
                 this.navToggle = document.getElementById('nav-toggle');
                 this.navMenu = document.getElementById('nav-menu');
                 this.scrollToTopBtn = document.getElementById('scroll-to-top');
-                this.state = { isMenuOpen: false };
-                this.init();
+                
+                this.state = {
+                    isMenuOpen: false,
+                    lastScrollY: window.scrollY,
+                    isScrolling: false,
+                    reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+                    touchDevice: 'ontouchstart' in window || navigator.maxTouchPoints > 0
+                };
+                
+                this.throttledScroll = this.throttle(this.handleScroll.bind(this), 16);
+                this.debouncedResize = this.debounce(this.handleResize.bind(this), 250);
+                
+                this.initializeWithErrorHandling();
             }
 
-            init() {
-                this.setupNavigation();
-                this.setupScrollEffects();
-                this.setupAnimations();
-            }
-
-            setupNavigation() {
-                if (this.navToggle && this.navMenu) {
-                    this.navToggle.addEventListener('click', () => this.toggleMenu());
-                    document.addEventListener('click', (e) => {
-                        if (this.state.isMenuOpen && !this.navToggle.contains(e.target) && !this.navMenu.contains(e.target)) {
-                            this.closeMenu();
-                        }
-                    });
+            initializeWithErrorHandling() {
+                try {
+                    this.setupNavigation();
+                    this.setupScrollEffects();
+                    this.setupAnimations();
+                    this.setupAccessibility();
+                } catch (error) {
+                    console.error('UX Architecture initialization failed:', error);
+                    this.initializeFallback();
                 }
             }
 
-            toggleMenu() {
+            initializeFallback() {
+                if (this.navToggle && this.navMenu) {
+                    this.navToggle.addEventListener('click', () => {
+                        this.state.isMenuOpen = !this.state.isMenuOpen;
+                        this.navMenu.classList.toggle('active', this.state.isMenuOpen);
+                        this.navToggle.setAttribute('aria-expanded', this.state.isMenuOpen);
+                    });
+                }
+
+                if (this.scrollToTopBtn) {
+                    this.scrollToTopBtn.addEventListener('click', () => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    });
+                }
+
+                document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                    el.classList.add('visible');
+                });
+            }
+
+            setupNavigation() {
+                if (!this.navToggle || !this.navMenu || !this.navbar) return;
+
+                this.navToggle.addEventListener('click', this.handleMenuToggle.bind(this));
+                this.setupSmoothScrolling();
+                window.addEventListener('scroll', this.throttledScroll, { passive: true });
+                document.addEventListener('click', this.handleOutsideClick.bind(this));
+                window.addEventListener('resize', this.debouncedResize);
+            }
+
+            handleMenuToggle(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
                 this.state.isMenuOpen = !this.state.isMenuOpen;
                 this.navMenu.classList.toggle('active', this.state.isMenuOpen);
                 this.navToggle.setAttribute('aria-expanded', this.state.isMenuOpen);
@@ -336,48 +424,181 @@
                 if (icon) {
                     icon.className = this.state.isMenuOpen ? 'fas fa-times' : 'fas fa-bars';
                 }
+                
+                document.body.style.overflow = this.state.isMenuOpen ? 'hidden' : '';
             }
 
-            closeMenu() {
-                this.state.isMenuOpen = false;
-                this.navMenu.classList.remove('active');
-                this.navToggle.setAttribute('aria-expanded', 'false');
-                const icon = this.navToggle.querySelector('i');
-                if (icon) icon.className = 'fas fa-bars';
+            setupSmoothScrolling() {
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = anchor.getAttribute('href');
+                        if (targetId === '#') return;
+                        
+                        const target = document.querySelector(targetId);
+                        if (!target) return;
+
+                        if (this.state.isMenuOpen) {
+                            this.closeMenu();
+                        }
+
+                        const navHeight = this.navbar?.offsetHeight || 80;
+                        const targetPosition = target.offsetTop - navHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: this.state.reducedMotion ? 'auto' : 'smooth'
+                        });
+                    });
+                });
             }
 
-            setupScrollEffects() {
-                window.addEventListener('scroll', () => {
+            handleScroll() {
+                if (this.state.isScrolling) return;
+                this.state.isScrolling = true;
+
+                requestAnimationFrame(() => {
                     const currentScrollY = window.scrollY;
                     
                     if (this.navbar) {
-                        this.navbar.classList.toggle('scrolled', currentScrollY > 50);
+                        if (currentScrollY > 50) {
+                            this.navbar.classList.add('scrolled');
+                        } else {
+                            this.navbar.classList.remove('scrolled');
+                        }
                     }
-                    
-                    if (this.scrollToTopBtn) {
-                        this.scrollToTopBtn.classList.toggle('visible', currentScrollY > 300);
-                    }
-                }, { passive: true });
 
+                    if (this.scrollToTopBtn) {
+                        if (currentScrollY > 300) {
+                            this.scrollToTopBtn.classList.add('visible');
+                        } else {
+                            this.scrollToTopBtn.classList.remove('visible');
+                        }
+                    }
+
+                    this.state.lastScrollY = currentScrollY;
+                    this.state.isScrolling = false;
+                });
+            }
+
+            closeMenu() {
+                if (!this.state.isMenuOpen) return;
+                
+                this.state.isMenuOpen = false;
+                this.navMenu.classList.remove('active');
+                this.navToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+                
+                const icon = this.navToggle.querySelector('i');
+                if (icon) {
+                    icon.className = 'fas fa-bars';
+                }
+            }
+
+            handleOutsideClick(e) {
+                if (this.state.isMenuOpen && 
+                    !this.navToggle.contains(e.target) && 
+                    !this.navMenu.contains(e.target)) {
+                    this.closeMenu();
+                }
+            }
+
+            handleResize() {
+                if (window.innerWidth > 768 && this.state.isMenuOpen) {
+                    this.closeMenu();
+                }
+            }
+
+            setupScrollEffects() {
                 if (this.scrollToTopBtn) {
                     this.scrollToTopBtn.addEventListener('click', () => {
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        window.scrollTo({
+                            top: 0,
+                            behavior: this.state.reducedMotion ? 'auto' : 'smooth'
+                        });
                     });
                 }
             }
 
             setupAnimations() {
+                if (this.state.reducedMotion) {
+                    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                        el.classList.add('visible');
+                    });
+                    return;
+                }
+
+                if (!window.IntersectionObserver) {
+                    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                        el.classList.add('visible');
+                    });
+                    return;
+                }
+
                 const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
+                    entries.forEach((entry, index) => {
                         if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
+                            setTimeout(() => {
+                                entry.target.classList.add('visible');
+                            }, index * 100);
+                            observer.unobserve(entry.target);
                         }
                     });
-                }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
 
-                document.querySelectorAll('.fade-in').forEach(el => {
+                document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
                     observer.observe(el);
                 });
+            }
+
+            setupAccessibility() {
+                document.querySelectorAll('.skip-link').forEach(skipLink => {
+                    skipLink.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const target = document.querySelector(skipLink.getAttribute('href'));
+                        if (target) {
+                            target.focus();
+                            target.scrollIntoView({ 
+                                behavior: this.state.reducedMotion ? 'auto' : 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+
+                document.querySelectorAll('.card, .event-card').forEach(card => {
+                    card.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            card.style.transform = 'scale(0.98)';
+                            setTimeout(() => {
+                                card.style.transform = '';
+                            }, 150);
+                        }
+                    });
+                });
+            }
+
+            throttle(func, limit) {
+                let inThrottle;
+                return function(...args) {
+                    if (!inThrottle) {
+                        func.apply(this, args);
+                        inThrottle = true;
+                        setTimeout(() => inThrottle = false, limit);
+                    }
+                };
+            }
+
+            debounce(func, delay) {
+                let timeoutId;
+                return function(...args) {
+                    clearTimeout(timeoutId);
+                    timeoutId = setTimeout(() => func.apply(this, args), delay);
+                };
             }
         }
 
@@ -447,9 +668,25 @@
         `;
         document.head.appendChild(bioStyle);
 
-        // Initialize when DOM is ready
         document.addEventListener('DOMContentLoaded', () => {
-            new PortfolioUX();
+            try {
+                window.uxApp = new SeniorUXArchitecture();
+            } catch (error) {
+                console.error('Critical initialization error:', error);
+                
+                document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'none';
+                });
+
+                const navToggle = document.getElementById('nav-toggle');
+                const navMenu = document.getElementById('nav-menu');
+                if (navToggle && navMenu) {
+                    navToggle.addEventListener('click', () => {
+                        navMenu.classList.toggle('active');
+                    });
+                }
+            }
         });
     </script>
 </body>
