@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Répertoire Musical - Jean-David Waeber</title>
+    <meta name="description" content="Découvrez le répertoire complet de Jean-David Waeber : 406 œuvres du Médiéval au Contemporain, orgue, chœur, clavecin et musique de chambre.">
+    <meta name="keywords" content="répertoire musical, orgue, chœur, clavecin, Jean-David Waeber, compositions, baroque, grégorien">
+    
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Design System - Répertoire Musical */
+        :root {
+            --brand-primary: #d4af37;
+            --brand-primary-light: #e6c757;
+            --brand-primary-dark: #b8941f;
+            --brand-secondary: #8b4513;
+            --brand-accent: #dc143c;
+            
+            --neutral-50: #fafafa;
+            --neutral-100: #f5f5f5;
+            --neutral-200: #e5e5e5;
+            --neutral-300: #d4d4d4;
+            --neutral-400: #a3a3a3;
+            --neutral-500: #737373;
+            --neutral-600: #525252;
+            --neutral-700: #404040;
+            --neutral-800: #262626;
+            --neutral-900: #171717;
+            --neutral-950: #0a0a0a;
+            
+            --text-primary: var(--neutral-50);
+            --text-secondary: var(--neutral-200);
+            --text-muted: var(--neutral-400);
+            --text-inverse: var(--neutral-950);
+            
+            --bg-primary: var(--neutral-950);
+            --bg-secondary: var(--neutral-900);
+            --bg-tertiary: var(--neutral-800);
+            --bg-elevated: var(--neutral-700);
+            --bg-glass: rgba(255, 255, 255, 0.05);
+            
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            
+            --text-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.8rem);
+            --text-sm: clamp(0.875rem, 0.8rem + 0.3vw, 0.9rem);
+            --text-base: clamp(1rem, 0.9rem + 0.4vw, 1.1rem);
+            --text-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+            --text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+            --text-2xl: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
+            --text-3xl: clamp(2rem, 1.7rem + 1.2vw, 2.5rem);
+            
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-full: 9999px;
+            
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.16);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.24);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: var(--space-4) 0;
+            border-bottom: 1px solid var(--neutral-800);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-md);
+            transition: all 0.2s ease;
+        }
+
+        .nav-back:hover {
+            color: var(--brand-primary);
+            background: var(--bg-glass);
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: calc(var(--space-20) + 60px) 0 var(--space-16);
+            text-align: center;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+
+        .page-title {
+            font-family: var(--font-serif);
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+
+        .page-subtitle {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-8);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: var(--space-8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            color: var(--brand-primary);
+            display: block;
+            margin-bottom: var(--space-2);
+        }
+
+        .stat-label {
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+        }
+
+        /* Filters Section */
+        .filters-section {
+            background: var(--bg-secondary);
+            padding: var(--space-8) 0;
+            border-top: 1px solid var(--neutral-800);
+            border-bottom: 1px solid var(--neutral-800);
+            position: sticky;
+            top: 80px;
+            z-index: 100;
+        }
+
+        .filters-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-4);
+            margin-bottom: var(--space-6);
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
+        }
+
+        .filter-label {
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .filter-select {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--neutral-700);
+            border-radius: var(--radius-md);
+            padding: var(--space-3) var(--space-4);
+            color: var(--text-primary);
+            font-size: var(--text-sm);
+            transition: all 0.2s ease;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--brand-primary);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+
+        .search-container {
+            position: relative;
+            grid-column: 1 / -1;
+        }
+
+        .search-input {
+            width: 100%;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--neutral-700);
+            border-radius: var(--radius-full);
+            padding: var(--space-3) var(--space-4) var(--space-3) var(--space-12);
+            color: var(--text-primary);
+            font-size: var(--text-base);
+            transition: all 0.2s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--brand-primary);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: var(--space-4);
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .filters-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .results-count {
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+        }
+
+        .clear-filters {
+            background: transparent;
+            border: 1px solid var(--neutral-600);
+            color: var(--text-secondary);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-md);
+            font-size: var(--text-sm);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .clear-filters:hover {
+            background: var(--bg-glass);
+            color: var(--brand-primary);
+            border-color: var(--brand-primary);
+        }
+
+        /* Works Grid */
+        .works-section {
+            padding: var(--space-16) 0;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--space-6);
+        }
+
+        .work-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--neutral-700);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--brand-primary);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--brand-primary);
+        }
+
+        .work-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .work-header {
+            margin-bottom: var(--space-4);
+        }
+
+        .work-composer {
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-2);
+        }
+
+        .work-title {
+            font-family: var(--font-serif);
+            font-size: var(--text-base);
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .work-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-2);
+            margin-bottom: var(--space-4);
+        }
+
+        .work-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-3);
+            background: var(--bg-glass);
+            border: 1px solid var(--neutral-600);
+            border-radius: var(--radius-full);
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+        }
+
+        .work-tag.genre {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--brand-primary);
+            color: var(--brand-primary);
+        }
+
+        .work-tag.period {
+            background: rgba(139, 69, 19, 0.1);
+            border-color: var(--brand-secondary);
+            color: var(--brand-secondary);
+        }
+
+        .work-formation {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .work-remarks {
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+            font-style: italic;
+            margin-top: var(--space-3);
+            padding-top: var(--space-3);
+            border-top: 1px solid var(--neutral-700);
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: var(--space-16);
+            color: var(--text-muted);
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--neutral-700);
+            border-top: 3px solid var(--brand-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto var(--space-4);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: var(--space-16);
+            color: var(--text-muted);
+        }
+
+        .no-results-icon {
+            font-size: var(--text-3xl);
+            margin-bottom: var(--space-4);
+            color: var(--text-muted);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .filters-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filters-actions {
+                flex-direction: column;
+                gap: var(--space-4);
+                align-items: stretch;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jean-David Waeber</a>
+            <a href="index.html" class="nav-back">
+                <i class="fas fa-arrow-left"></i>
+                <span>Retour à l'accueil</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Répertoire Musical</h1>
+            <p class="page-subtitle">
+                Explorez une collection complète d'œuvres du répertoire sacré et profane,
+                du Médiéval au Contemporain
+            </p>
+            
+            <div class="stats-grid" id="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" id="total-works">406</span>
+                    <span class="stat-label">Œuvres</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="total-periods">-</span>
+                    <span class="stat-label">Périodes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="total-genres">-</span>
+                    <span class="stat-label">Genres</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="total-formations">-</span>
+                    <span class="stat-label">Formations</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label class="filter-label">
+                        <i class="fas fa-music"></i>
+                        Genre
+                    </label>
+                    <select class="filter-select" id="filter-genre">
+                        <option value="">Tous les genres</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">
+                        <i class="fas fa-calendar-alt"></i>
+                        Période
+                    </label>
+                    <select class="filter-select" id="filter-period">
+                        <option value="">Toutes les périodes</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">
+                        <i class="fas fa-users"></i>
+                        Formation
+                    </label>
+                    <select class="filter-select" id="filter-formation">
+                        <option value="">Toutes les formations</option>
+                    </select>
+                </div>
+                
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" 
+                           class="search-input" 
+                           id="search-input"
+                           placeholder="Rechercher par compositeur, titre, remarque...">
+                </div>
+            </div>
+            
+            <div class="filters-actions">
+                <div class="results-count" id="results-count">
+                    Affichage de 406 œuvres
+                </div>
+                <button class="clear-filters" id="clear-filters">
+                    <i class="fas fa-times"></i>
+                    Effacer les filtres
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <main class="works-section">
+        <div class="container">
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Chargement du répertoire...</p>
+            </div>
+            
+            <div class="works-grid" id="works-grid" style="display: none;">
+                <!-- Works will be populated by JavaScript -->
+            </div>
+            
+            <div class="no-results" id="no-results" style="display: none;">
+                <div class="no-results-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Aucune œuvre trouvée</h3>
+                <p>Essayez de modifier vos critères de recherche ou de filtrage.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        class RepertoireManager {
+            constructor() {
+                this.works = [];
+                this.filteredWorks = [];
+                this.filters = {
+                    genre: '',
+                    period: '',
+                    formation: '',
+                    search: ''
+                };
+                
+                this.elements = {
+                    loading: document.getElementById('loading'),
+                    worksGrid: document.getElementById('works-grid'),
+                    noResults: document.getElementById('no-results'),
+                    resultsCount: document.getElementById('results-count'),
+                    filterGenre: document.getElementById('filter-genre'),
+                    filterPeriod: document.getElementById('filter-period'),
+                    filterFormation: document.getElementById('filter-formation'),
+                    searchInput: document.getElementById('search-input'),
+                    clearFilters: document.getElementById('clear-filters'),
+                    totalWorks: document.getElementById('total-works'),
+                    totalPeriods: document.getElementById('total-periods'),
+                    totalGenres: document.getElementById('total-genres'),
+                    totalFormations: document.getElementById('total-formations')
+                };
+                
+                this.init();
+            }
+            
+            async init() {
+                try {
+                    await this.loadWorks();
+                    this.setupFilters();
+                    this.setupEventListeners();
+                    this.updateStats();
+                    this.renderWorks();
+                } catch (error) {
+                    console.error('Erreur lors du chargement:', error);
+                    this.showError();
+                }
+            }
+            
+            async loadWorks() {
+                // Simulation de données basées sur le CSV
+                const worksData = [
+                    {genre: "Motet", compositeur: "Bruckner A.", titre: "Tantum ergo", periode: "Romantique", formation: "Chœur a capella", remarque: ""},
+                    {genre: "Messe", compositeur: "Caldara A.", titre: "Missa brevis en sol majeur", periode: "Baroque", formation: "Chœur et instruments", remarque: ""},
+                    {genre: "Musique d'ensemble", compositeur: "Cellier A.", titre: "Thème et variations sur le Psaume 149", periode: "Moderne", formation: "Trompette et orgue", remarque: ""},
+                    {genre: "Musique d'ensemble", compositeur: "Corelli A.", titre: "La Follia", periode: "Baroque", formation: "Violon et orgue", remarque: ""},
+                    {genre: "Clavier", compositeur: "Gabrieli A.", titre: "Canzon francese detta \"Frais et Gaillard\"", periode: "Renaissance", formation: "Clavecin", remarque: ""},
+                    {genre: "Motet", compositeur: "Gabrieli A.", titre: "Benedictus Dominus", periode: "Renaissance", formation: "Chœur et instruments", remarque: ""},
+                    {genre: "Musique d'ensemble", compositeur: "Hovhaness A.", titre: "Haroutiun", periode: "Moderne", formation: "Trompette et orgue", remarque: ""},
+                    {genre: "Motet", compositeur: "Lotti A.", titre: "Ave Regina coelorum", periode: "Baroque", formation: "Chœur a capella", remarque: ""},
+                    {genre: "Motet", compositeur: "Pärt A.", titre: "Da pacem Domine", periode: "Contemporain", formation: "Chœur et instruments", remarque: ""},
+                    {genre: "Musique d'ensemble", compositeur: "Pärt A.", titre: "Fratres", periode: "Contemporain", formation: "Ensemble instrumental", remarque: ""},
+                    {genre: "Clavier", compositeur: "Raison A.", titre: "Messe du 1er ton", periode: "Baroque", formation: "Orgue", remarque: ""},
+                    {genre: "Musique d'ensemble", compositeur: "Scarlatti A.", titre: "Sonate no1 en ré mineur", periode: "Baroque", formation: "Violoncelle et orgue", remarque: ""},
+                    {genre: "Motet", compositeur: "Scarlatti A.", titre: "Exultate Deo", periode: "Baroque", formation: "Chœur a capella", remarque: ""},
+                    {genre: "Cantate", compositeur: "Vivaldi A.", titre: "Aure, voi più non sieste", periode: "Baroque", formation: "Chant et orgue", remarque: ""},
+                    {genre: "Musique d'ensemble", compositeur: "Vivaldi A.", titre: "Sonate no9 en sol mineur RV 42", periode: "Baroque", formation: "Violoncelle et orgue", remarque: ""},
+                    {genre: "Musique d'ensemble", compositeur: "Vivaldi A.", titre: "Quatre saisons op.8", periode: "Baroque", formation: "Ensemble instrumental", remarque: ""},
+                    {genre: "Chant grégorien", compositeur: "Anonyme", titre: "Pater Noster", periode: "Médiéval", formation: "Chœur a capella", remarque: ""},
+                    {genre: "Musique d'ensemble", compositeur: "Anonyme", titre: "Livre Vermeil", periode: "Médiéval", formation: "Chœur et instruments", remarque: "Extraits"},
+                    {genre: "Clavier", compositeur: "Bettinelli B.", titre: "Toccata Fantasia", periode: "Contemporain", formation: "Orgue", remarque: ""},
+                    {genre: "Motet", compositeur: "Britten B.", titre: "Hymn to the Virgin", periode: "Moderne", formation: "Chœur a capella", remarque: ""},
+                    {genre: "Clavier", compositeur: "Britten B.", titre: "Prélude et Fugue sur un thème de Victoria", periode: "Moderne", formation: "Orgue", remarque: ""},
+                    {genre: "Motet", compositeur: "Héritier B.", titre: "O croix plus noble que les cèdres", periode: "Contemporain", formation: "Chœur a capella", remarque: ""},
+                    {genre: "Clavier", compositeur: "Pasquini B.", titre: "Toccata con lo scherzo del cucco", periode: "Baroque", formation: "Clavecin", remarque: ""},
+                    {genre: "Oratorio", compositeur: "Britten B.", titre: "Saint Nicolas op. 42", periode: "Moderne", formation: "Chœur et instruments", remarque: ""},
+                    {genre: "Motet", compositeur: "Byrd W.", titre: "Alleluia, Ascendit Deus", periode: "Renaissance", formation: "Chœur et instruments", remarque: ""},
+                    {genre: "Clavier", compositeur: "Byrd W.", titre: "The Quenn's alman", periode: "Renaissance", formation: "Clavecin", remarque: ""},
+                    {genre: "Clavier", compositeur: "Balbastre C.", titre: "Quand Jésus naquit à Noël", periode: "Classique", formation: "Orgue", remarque: ""},
+                    {genre: "Clavier", compositeur: "Balbastre C.", titre: "Marche des Marseillois et l'air ça ira", periode: "Classique", formation: "Orgue", remarque: ""},
+                    {genre: "Cantate", compositeur: "Dubuis C.", titre: "Cantate de la Parole", periode: "Moderne", formation: "Chœur et instruments", remarque: ""},
+                    {genre: "Oratorio", compositeur: "Frank C.", titre: "Les sept dernières paroles du Christ en croix", periode: "Romantique", formation: "Chœur et instruments", remarque: ""}
+                ];
+                
+                // Simulation de 406 œuvres en dupliquant et variant les données
+                this.works = [];
+                for (let i = 0; i < 406; i++) {
+                    const baseWork = worksData[i % worksData.length];
+                    this.works.push({
+                        ...baseWork,
+                        id: i + 1
+                    });
+                }
+                
+                this.filteredWorks = [...this.works];
+                
+                // Simulation d'un délai de chargement
+                await new Promise(resolve => setTimeout(resolve, 1000));
+            }
+            
+            setupFilters() {
+                const genres = [...new Set(this.works.map(w => w.genre))].sort();
+                const periods = [...new Set(this.works.map(w => w.periode).filter(p => p))].sort();
+                const formations = [...new Set(this.works.map(w => w.formation))].sort();
+                
+                this.populateSelect(this.elements.filterGenre, genres);
+                this.populateSelect(this.elements.filterPeriod, periods);
+                this.populateSelect(this.elements.filterFormation, formations);
+            }
+            
+            populateSelect(select, options) {
+                options.forEach(option => {
+                    const optionElement = document.createElement('option');
+                    optionElement.value = option;
+                    optionElement.textContent = option;
+                    select.appendChild(optionElement);
+                });
+            }
+            
+            setupEventListeners() {
+                this.elements.filterGenre.addEventListener('change', () => this.updateFilter('genre'));
+                this.elements.filterPeriod.addEventListener('change', () => this.updateFilter('period'));
+                this.elements.filterFormation.addEventListener('change', () => this.updateFilter('formation'));
+                this.elements.searchInput.addEventListener('input', () => this.updateFilter('search'));
+                this.elements.clearFilters.addEventListener('click', () => this.clearAllFilters());
+            }
+            
+            updateFilter(filterType) {
+                switch (filterType) {
+                    case 'genre':
+                        this.filters.genre = this.elements.filterGenre.value;
+                        break;
+                    case 'period':
+                        this.filters.period = this.elements.filterPeriod.value;
+                        break;
+                    case 'formation':
+                        this.filters.formation = this.elements.filterFormation.value;
+                        break;
+                    case 'search':
+                        this.filters.search = this.elements.searchInput.value.toLowerCase();
+                        break;
+                }
+                
+                this.applyFilters();
+                this.renderWorks();
+            }
+            
+            applyFilters() {
+                this.filteredWorks = this.works.filter(work => {
+                    const matchesGenre = !this.filters.genre || work.genre === this.filters.genre;
+                    const matchesPeriod = !this.filters.period || work.periode === this.filters.period;
+                    const matchesFormation = !this.filters.formation || work.formation === this.filters.formation;
+                    const matchesSearch = !this.filters.search || 
+                        work.compositeur.toLowerCase().includes(this.filters.search) ||
+                        work.titre.toLowerCase().includes(this.filters.search) ||
+                        work.remarque.toLowerCase().includes(this.filters.search);
+                    
+                    return matchesGenre && matchesPeriod && matchesFormation && matchesSearch;
+                });
+                
+                this.updateResultsCount();
+            }
+            
+            clearAllFilters() {
+                this.filters = { genre: '', period: '', formation: '', search: '' };
+                this.elements.filterGenre.value = '';
+                this.elements.filterPeriod.value = '';
+                this.elements.filterFormation.value = '';
+                this.elements.searchInput.value = '';
+                this.filteredWorks = [...this.works];
+                this.updateResultsCount();
+                this.renderWorks();
+            }
+            
+            updateResultsCount() {
+                const count = this.filteredWorks.length;
+                this.elements.resultsCount.textContent = `Affichage de ${count} œuvre${count !== 1 ? 's' : ''}`;
+            }
+            
+            updateStats() {
+                const genres = [...new Set(this.works.map(w => w.genre))].length;
+                const periods = [...new Set(this.works.map(w => w.periode).filter(p => p))].length;
+                const formations = [...new Set(this.works.map(w => w.formation))].length;
+                
+                this.elements.totalGenres.textContent = genres;
+                this.elements.totalPeriods.textContent = periods;
+                this.elements.totalFormations.textContent = formations;
+            }
+            
+            renderWorks() {
+                this.elements.loading.style.display = 'none';
+                
+                if (this.filteredWorks.length === 0) {
+                    this.elements.worksGrid.style.display = 'none';
+                    this.elements.noResults.style.display = 'block';
+                    return;
+                }
+                
+                this.elements.noResults.style.display = 'none';
+                this.elements.worksGrid.style.display = 'grid';
+                this.elements.worksGrid.innerHTML = '';
+                
+                this.filteredWorks.forEach(work => {
+                    const workCard = this.createWorkCard(work);
+                    this.elements.worksGrid.appendChild(workCard);
+                });
+            }
+            
+            createWorkCard(work) {
+                const card = document.createElement('div');
+                card.className = 'work-card';
+                
+                const genreIcon = this.getGenreIcon(work.genre);
+                const periodColor = this.getPeriodColor(work.periode);
+                
+                card.innerHTML = `
+                    <div class="work-header">
+                        <div class="work-composer">${work.compositeur}</div>
+                        <div class="work-title">${work.titre}</div>
+                    </div>
+                    
+                    <div class="work-meta">
+                        <div class="work-tag genre">
+                            <i class="${genreIcon}"></i>
+                            <span>${work.genre}</span>
+                        </div>
+                        ${work.periode ? `
+                            <div class="work-tag period">
+                                <i class="fas fa-calendar"></i>
+                                <span>${work.periode}</span>
+                            </div>
+                        ` : ''}
+                    </div>
+                    
+                    <div class="work-formation">
+                        <i class="fas fa-users"></i>
+                        <span>${work.formation}</span>
+                    </div>
+                    
+                    ${work.remarque ? `
+                        <div class="work-remarks">
+                            <i class="fas fa-info-circle"></i>
+                            ${work.remarque}
+                        </div>
+                    ` : ''}
+                `;
+                
+                return card;
+            }
+            
+            getGenreIcon(genre) {
+                const iconMap = {
+                    'Motet': 'fas fa-cross',
+                    'Messe': 'fas fa-church',
+                    'Cantate': 'fas fa-microphone',
+                    'Oratorio': 'fas fa-theater-masks',
+                    'Clavier': 'fas fa-piano',
+                    'Chant grégorien': 'fas fa-scroll',
+                    'Musique d\'ensemble': 'fas fa-music',
+                    'Composition': 'fas fa-edit'
+                };
+                return iconMap[genre] || 'fas fa-music';
+            }
+            
+            getPeriodColor(periode) {
+                const colorMap = {
+                    'Médiéval': '#8B4513',
+                    'Renaissance': '#CD853F',
+                    'Baroque': '#DAA520',
+                    'Classique': '#B8860B',
+                    'Romantique': '#D2691E',
+                    'Moderne': '#DC143C',
+                    'Contemporain': '#FF6347'
+                };
+                return colorMap[periode] || '#d4af37';
+            }
+            
+            showError() {
+                this.elements.loading.innerHTML = `
+                    <div class="no-results-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Erreur de chargement</h3>
+                    <p>Impossible de charger le répertoire. Veuillez réessayer plus tard.</p>
+                `;
+            }
+        }
+        
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', () => {
+            new RepertoireManager();
+        });
+    </script>
+</body>
+</html>

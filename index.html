@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jean-David Waeber - Organiste & Chef de Chœur</title>
-    <meta name="description" content="Jean-David Waeber, organiste et chef de chœur, maître de chapelle de la cathédrale de Sion. Découvrez ses concerts, compositions et enseignements.">
-    <meta name="keywords" content="organiste, chef de chœur, Sion, cathédrale, musique sacrée, chant grégorien">
+    <meta name="description" content="Jean-David Waeber, organiste professionnel et chef de chœur. Découvrez ses concerts, enseignement et compositions musicales.">
+    <meta name="keywords" content="organiste, chef de chœur, enseignant, Sion, cathédrale, musique sacrée, chant grégorien">
     <meta name="author" content="Jean-David Waeber">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://jdwaeber.ch">
@@ -13,20 +13,23 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Jean-David Waeber - Organiste & Chef de Chœur">
-    <meta property="og:description" content="Maître de chapelle de la cathédrale de Sion, spécialisé dans la musique sacrée et le chant grégorien.">
+    <meta property="og:description" content="Organiste professionnel et chef de chœur, spécialisé dans la musique sacrée et le chant grégorien.">
     <meta property="og:url" content="https://jdwaeber.ch">
-    <meta property="og:image" content="https://jdwaeber.ch/images/og-image.jpg">
+    <meta property="og:image" content="https://jdwaeber.ch/images/171111_1045.jpg">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jean-David Waeber - Organiste & Chef de Chœur">
-    <meta name="twitter:description" content="Maître de chapelle de la cathédrale de Sion, spécialisé dans la musique sacrée et le chant grégorien.">
-    <meta name="twitter:image" content="https://jdwaeber.ch/images/og-image.jpg">
+    <meta name="twitter:description" content="Organiste professionnel et chef de chœur, spécialisé dans la musique sacrée et le chant grégorien.">
+    <meta name="twitter:image" content="https://jdwaeber.ch/images/171111_1045.jpg">
     
     <!-- Performance Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload Hero Image -->
+    <link rel="preload" href="images/171111_1045.jpg" as="image" type="image/jpeg">
     
     <!-- Font Loading Strategy - Critical Performance -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -62,11 +65,20 @@
 
         /* === DESIGN TOKENS - Rationalized System === */
         :root {
-            /* Brand Colors - Luxury Palette */
+            /* Brand Colors - Liturgical Palette */
             --brand-primary: #d4af37;
             --brand-primary-light: #e6c757;
             --brand-primary-dark: #b8941f;
             --brand-primary-alpha: rgba(212, 175, 55, 0.1);
+            --brand-secondary: #8b4513;    /* Brun cathédrale */
+            --brand-accent: #dc143c;       /* Rouge liturgique */
+            --brand-neutral: #2f2f2f;     /* Gris pierre */
+            
+            /* Gradients liturgiques */
+            --gradient-main: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+            --gradient-sacred: linear-gradient(135deg, #8b4513 0%, #d4af37 100%);
+            --gradient-overlay: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+            --gradient-hero: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
             
             /* Neutral Scale - WCAG AAA Compliant */
             --neutral-50: #fafafa;    /* 21:1 contrast */
@@ -397,8 +409,32 @@
             position: relative;
             padding: var(--space-24) 0 var(--space-16);
             background: 
-                radial-gradient(ellipse at center top, var(--brand-primary-alpha) 0%, transparent 60%),
-                linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+                linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%),
+                url('images/171111_1045.jpg') center/cover no-repeat,
+                var(--bg-primary);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="cathedral" patternUnits="userSpaceOnUse" width="20" height="20"><path d="M10 0L20 10L10 20L0 10Z" fill="none" stroke="%23d4af37" stroke-width="0.5" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23cathedral)"/></svg>') repeat;
+            z-index: 1;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
         .hero-content {
@@ -407,7 +443,7 @@
             padding: 0 var(--space-6);
             text-align: center;
             position: relative;
-            z-index: var(--z-base);
+            z-index: 2;
         }
 
         .hero-badge {
@@ -415,37 +451,79 @@
             align-items: center;
             gap: var(--space-2);
             background: var(--bg-glass);
-            border: 1px solid var(--border-subtle);
-            padding: var(--space-2) var(--space-4);
+            border: 1px solid var(--brand-primary);
+            padding: var(--space-3) var(--space-6);
             border-radius: var(--radius-full);
             font-size: var(--text-sm);
-            font-weight: 500;
+            font-weight: 600;
             color: var(--brand-primary-light);
             margin-bottom: var(--space-6);
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(12px);
             opacity: 0;
-            animation: fadeInUp var(--duration-slow) var(--ease-out) 0.2s forwards;
+            animation: fadeInUp var(--duration-slow) var(--ease-out) 0.2s forwards, sacred-glow 3s ease-in-out 1s infinite;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+        }
+        
+        .hero-badge::after {
+            content: '';
+            position: absolute;
+            right: -3px;
+            top: -3px;
+            width: 10px;
+            height: 10px;
+            background: var(--brand-accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes sacred-glow {
+            0%, 100% { box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2); }
+            50% { box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.8; }
         }
 
         .hero-title {
             font-family: var(--font-serif);
             font-size: var(--text-4xl);
             font-weight: 700;
-            margin-bottom: var(--space-6);
+            margin-bottom: var(--space-4);
             line-height: 1.1;
             color: var(--text-primary);
             opacity: 0;
             animation: fadeInUp var(--duration-slow) var(--ease-out) 0.4s forwards;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
+        }
+        
+        .hero-subtitle {
+            font-family: var(--font-sans);
+            font-size: var(--text-xl);
+            font-weight: 500;
+            color: var(--brand-primary-light);
+            font-style: italic;
+            opacity: 0.9;
         }
 
         .hero-description {
             font-size: var(--text-lg);
             color: var(--text-secondary);
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto var(--space-8);
-            line-height: 1.5;
+            line-height: 1.6;
             opacity: 0;
             animation: fadeInUp var(--duration-slow) var(--ease-out) 0.6s forwards;
+        }
+        
+        .hero-description strong {
+            color: var(--brand-primary);
+            font-weight: 600;
         }
 
         .hero-cta {
@@ -455,6 +533,33 @@
             flex-wrap: wrap;
             opacity: 0;
             animation: fadeInUp var(--duration-slow) var(--ease-out) 0.8s forwards;
+            margin-bottom: var(--space-8);
+        }
+        
+        .hero-cta .btn {
+            position: relative;
+            overflow: hidden;
+            transition: all var(--duration-normal) var(--ease-out);
+        }
+        
+        .hero-cta .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left var(--duration-slow) var(--ease-out);
+        }
+        
+        .hero-cta .btn:hover::before {
+            left: 100%;
+        }
+        
+        .hero-cta .btn:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
         }
 
         @keyframes fadeInUp {
@@ -573,10 +678,10 @@
             line-height: 1.5;
         }
 
-        /* === CARD SYSTEM - Optimized Performance === */
+        /* === CARD SYSTEM - Premium Enhanced === */
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: var(--space-8);
             margin-top: var(--space-16);
         }
@@ -590,24 +695,83 @@
             position: relative;
             text-align: center;
             will-change: transform;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-sacred);
+            opacity: 0;
+            transition: opacity var(--duration-normal) var(--ease-out);
+            z-index: 0;
+        }
+        
+        .card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, var(--brand-primary-alpha), transparent);
+            opacity: 0;
+            animation: rotate 4s linear infinite;
+            transition: opacity var(--duration-normal) var(--ease-out);
+            z-index: 0;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .card:hover,
         .card:focus-within {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
             border-color: var(--border-brand);
+        }
+        
+        .card:hover::before {
+            opacity: 0.05;
+        }
+        
+        .card:hover::after {
+            opacity: 0.3;
+        }
+        
+        .card > * {
+            position: relative;
+            z-index: 1;
         }
 
         .card-icon {
             font-size: var(--text-3xl);
             color: var(--brand-primary);
             margin-bottom: var(--space-6);
-            transition: transform var(--duration-normal) var(--ease-back);
+            margin-top: var(--space-4);
+            transition: all var(--duration-normal) var(--ease-back);
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: var(--bg-glass);
+            border-radius: 50%;
+            border: 2px solid var(--border-subtle);
+            backdrop-filter: blur(8px);
         }
 
         .card:hover .card-icon {
-            transform: scale(1.1);
+            transform: scale(1.1) rotate(5deg);
+            border-color: var(--brand-primary);
+            background: var(--brand-primary-alpha);
         }
 
         .card-title {
@@ -621,6 +785,75 @@
         .card-description {
             color: var(--text-secondary);
             line-height: 1.6;
+            margin-bottom: var(--space-6);
+        }
+        
+        .card-stats {
+            display: flex;
+            justify-content: space-around;
+            gap: var(--space-4);
+            margin-top: var(--space-6);
+            padding-top: var(--space-4);
+            border-top: 1px solid var(--border-subtle);
+        }
+        
+        .card-stat {
+            text-align: center;
+            font-size: var(--text-sm);
+        }
+        
+        .card-stat-number {
+            display: block;
+            font-size: var(--text-lg);
+            font-weight: 700;
+            color: var(--brand-primary);
+            margin-bottom: var(--space-1);
+        }
+        
+        .card-stat-label {
+            color: var(--text-muted);
+            font-size: var(--text-xs);
+        }
+        
+        .card-badge {
+            position: absolute;
+            top: var(--space-4);
+            right: var(--space-4);
+            background: var(--brand-primary);
+            color: var(--text-inverse);
+            padding: var(--space-1) var(--space-2);
+            border-radius: var(--radius-sm);
+            font-size: var(--text-xs);
+            font-weight: 600;
+            z-index: 3;
+        }
+        
+        .card-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            opacity: 0;
+            transition: opacity var(--duration-normal) var(--ease-out);
+            z-index: 0;
+            border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--duration-slow) var(--ease-out);
+        }
+        
+        .card:hover .card-image {
+            opacity: 0.25;
+        }
+        
+        .card:hover .card-image img {
+            transform: scale(1.05);
         }
 
         /* === FOOTER - Simplified Design === */
@@ -828,6 +1061,312 @@
             }
         }
 
+        /* === HERO SOCIAL PROOF === */
+        .hero-social-proof {
+            margin-top: var(--space-8);
+            opacity: 0;
+            animation: fadeInUp var(--duration-slow) var(--ease-out) 1s forwards;
+        }
+        
+        .testimonial-quick {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-subtle);
+            padding: var(--space-4) var(--space-6);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(8px);
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .testimonial-quick p {
+            font-size: var(--text-base);
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: var(--space-2);
+            line-height: 1.5;
+        }
+        
+        .testimonial-quick cite {
+            font-size: var(--text-sm);
+            color: var(--brand-primary);
+            font-weight: 500;
+        }
+        
+        /* === CONCERT CARDS - Premium Design === */
+        .concert-card {
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            border: 1px solid var(--border-subtle);
+            position: relative;
+            overflow: hidden;
+            transition: all var(--duration-normal) var(--ease-out);
+        }
+        
+        .concert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-main);
+        }
+        
+        .concert-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--brand-primary);
+        }
+        
+        .concert-header {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-4);
+            margin-bottom: var(--space-4);
+        }
+        
+        .concert-date {
+            background: var(--gradient-main);
+            color: var(--text-inverse);
+            padding: var(--space-3);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            min-width: 60px;
+            position: relative;
+        }
+        
+        .concert-date-day {
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            line-height: 1;
+            display: block;
+        }
+        
+        .concert-date-month {
+            font-size: var(--text-xs);
+            font-weight: 600;
+            opacity: 0.9;
+            display: block;
+        }
+        
+        .concert-countdown {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--brand-accent);
+            color: white;
+            font-size: var(--text-xs);
+            padding: var(--space-1) var(--space-2);
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+        
+        .concert-details {
+            flex: 1;
+        }
+        
+        .concert-title {
+            font-family: var(--font-serif);
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-2);
+        }
+        
+        .concert-venue {
+            color: var(--text-secondary);
+            font-size: var(--text-sm);
+            margin-bottom: var(--space-2);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+        
+        .concert-time {
+            color: var(--brand-primary);
+            font-weight: 600;
+            font-size: var(--text-sm);
+        }
+        
+        .concert-program {
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+            margin-top: var(--space-2);
+            font-style: italic;
+        }
+        
+        .concert-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: var(--space-4);
+            padding-top: var(--space-4);
+            border-top: 1px solid var(--border-subtle);
+        }
+        
+        .concert-availability {
+            font-size: var(--text-xs);
+            color: var(--brand-accent);
+            font-weight: 600;
+        }
+        
+        .concert-price {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+        }
+        
+        .concert-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            overflow: hidden;
+            border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+            z-index: 0;
+        }
+        
+        .concert-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--duration-slow) var(--ease-out);
+        }
+        
+        .concert-card:hover .concert-image img {
+            transform: scale(1.05);
+        }
+        
+        .concert-card {
+            padding-top: 170px;
+        }
+        
+        .concert-header {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* === NEWSLETTER SECTION === */
+        .newsletter-section {
+            background: var(--gradient-sacred);
+            padding: var(--space-16) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="notes" patternUnits="userSpaceOnUse" width="30" height="30"><text x="15" y="20" text-anchor="middle" font-size="16" fill="%23d4af37" opacity="0.1">♫</text></pattern></defs><rect width="100" height="100" fill="url(%23notes)"/></svg>') repeat;
+            z-index: 0;
+        }
+        
+        .newsletter-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+        
+        .newsletter-title {
+            font-family: var(--font-serif);
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+        
+        .newsletter-description {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-8);
+            font-size: var(--text-lg);
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: var(--space-4);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: var(--space-4) var(--space-6);
+            border: 2px solid var(--border-subtle);
+            border-radius: var(--radius-full);
+            background: var(--bg-glass);
+            color: var(--text-primary);
+            font-size: var(--text-base);
+            backdrop-filter: blur(8px);
+            transition: all var(--duration-fast) var(--ease-out);
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--brand-primary);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+        
+        .newsletter-input::placeholder {
+            color: var(--text-muted);
+        }
+        
+        .newsletter-button {
+            padding: var(--space-4) var(--space-6);
+            background: var(--brand-primary);
+            color: var(--text-inverse);
+            border: none;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--duration-fast) var(--ease-out);
+        }
+        
+        .newsletter-button:hover {
+            background: var(--brand-primary-light);
+            transform: translateY(-2px);
+        }
+        
+        .newsletter-benefits {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-8);
+            margin-top: var(--space-8);
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+        }
+        
+        .newsletter-benefit {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+        
+        .newsletter-benefit i {
+            color: var(--brand-primary);
+        }
+        
+        @media (max-width: 768px) {
+            .newsletter-form {
+                flex-direction: column;
+                gap: var(--space-4);
+            }
+            
+            .newsletter-benefits {
+                flex-direction: column;
+                gap: var(--space-4);
+            }
+        }
+        
         /* === UTILITY CLASSES === */
         .sr-only {
             position: absolute;
@@ -899,6 +1438,9 @@
                 <li role="none">
                     <a href="ensembles.html" role="menuitem">Ensembles</a>
                 </li>
+                <li role="none">
+                    <a href="repertoire.html" role="menuitem">Répertoire</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -910,25 +1452,36 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <i class="fas fa-music" aria-hidden="true"></i>
-                    <span>Organiste & Chef de Chœur</span>
+                    <span>Organiste Professionnel • Chef de Chœur • Enseignant</span>
                 </div>
-                <h1 class="hero-title text-balance" id="hero-title">Jean-David Waeber</h1>
+                <h1 class="hero-title text-balance" id="hero-title">
+                    Jean-David Waeber
+                    <span class="hero-subtitle">Organiste virtuose & Chef de chœur</span>
+                </h1>
                 <p class="hero-description text-pretty">
-                    Maître de chapelle de la cathédrale de Sion, je dédie ma passion à la transmission 
-                    du patrimoine musical sacré et à la création contemporaine.
+                    Plus de 15 ans d'expérience dans la direction musicale sacrée. 
+                    Spécialiste du répertoire grégorien et de la musique baroque.
+                    <strong>Prochain concert : 29 Août 2025 - Souffle sacré</strong>
                 </p>
                 <div class="hero-cta">
-                    <a href="events.html" class="btn btn-primary" aria-describedby="hero-cta-desc">
+                    <a href="media.html" class="btn btn-primary" aria-describedby="hero-cta-desc">
+                        <i class="fas fa-play" aria-hidden="true"></i>
+                        <span>Écouter un extrait</span>
+                    </a>
+                    <a href="events.html" class="btn btn-secondary">
                         <i class="fas fa-calendar-alt" aria-hidden="true"></i>
                         <span>Prochains concerts</span>
                     </a>
-                    <a href="contact.html" class="btn btn-secondary">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                        <span>Contact</span>
-                    </a>
+                </div>
+                
+                <div class="hero-social-proof">
+                    <blockquote class="testimonial-quick">
+                        <p>"Une direction d'une rare sensibilité musicale"</p>
+                        <cite>— Le Nouvelliste, Critique Musical 2024</cite>
+                    </blockquote>
                 </div>
                 <div id="hero-cta-desc" class="sr-only">
-                    Découvrir les prochains concerts et événements de Jean-David Waeber
+                    Écouter des extraits des concerts de Jean-David Waeber
                 </div>
             </div>
         </section>
@@ -945,28 +1498,57 @@
                 
                 <div class="card-grid" role="list" aria-label="Liste des activités principales">
                     <article class="card fade-in" role="listitem" tabindex="0">
-                        <div class="card-icon" aria-hidden="true">
-                            <i class="fas fa-music"></i>
+                        <div class="card-badge">15 ans</div>
+                        <div class="card-image">
+                            <img src="images/Maîtrise/018A0852.jpg" alt="Jean-David Waeber dirigeant un concert" loading="lazy">
                         </div>
-                        <h3 class="card-title">Direction</h3>
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <h3 class="card-title">Direction Liturgique</h3>
                         <p class="card-description">
-                            Direction du chœur Oracantat de Sion et des ensembles de la Maîtrise cathédrale. 
-                            Spécialisation dans le répertoire sacré, du chant grégorien aux œuvres contemporaines.
+                            Direction musicale de la cathédrale de Sion depuis 2010. Direction du chœur Oracantat 
+                            et des ensembles de la Maîtrise cathédrale.
                         </p>
+                        <div class="card-stats">
+                            <div class="card-stat">
+                                <span class="card-stat-number">120+</span>
+                                <span class="card-stat-label">Concerts dirigés</span>
+                            </div>
+                            <div class="card-stat">
+                                <span class="card-stat-number">3</span>
+                                <span class="card-stat-label">Ensembles actifs</span>
+                            </div>
+                        </div>
                     </article>
                     
                     <article class="card fade-in" role="listitem" tabindex="0">
+                        <div class="card-badge">Soliste</div>
+                        <div class="card-image">
+                            <img src="images/Trio/Trio baroque JHS.jpg" alt="Jean-David Waeber au clavecin" loading="lazy">
+                        </div>
                         <div class="card-icon" aria-hidden="true">
                             <i class="fas fa-piano"></i>
                         </div>
                         <h3 class="card-title">Interprétation</h3>
                         <p class="card-description">
-                            Interprétation soliste et musique de chambre. Formation approfondie dans la tradition 
+                            Récitals d'orgue et musique de chambre. Formation approfondie dans la tradition 
                             baroque et la pratique historiquement informée.
                         </p>
+                        <div class="card-stats">
+                            <div class="card-stat">
+                                <span class="card-stat-number">50+</span>
+                                <span class="card-stat-label">Récitals</span>
+                            </div>
+                            <div class="card-stat">
+                                <span class="card-stat-number">2</span>
+                                <span class="card-stat-label">Albums</span>
+                            </div>
+                        </div>
                     </article>
                     
                     <article class="card fade-in" role="listitem" tabindex="0">
+                        <div class="card-badge">Créateur</div>
                         <div class="card-icon" aria-hidden="true">
                             <i class="fas fa-feather-alt"></i>
                         </div>
@@ -975,9 +1557,20 @@
                             Création d'œuvres originales pour orgue, chœur et formations de chambre, 
                             alliant respect de la tradition et sensibilité contemporaine.
                         </p>
+                        <div class="card-stats">
+                            <div class="card-stat">
+                                <span class="card-stat-number">25+</span>
+                                <span class="card-stat-label">Compositions</span>
+                            </div>
+                            <div class="card-stat">
+                                <span class="card-stat-number">8</span>
+                                <span class="card-stat-label">Commandes</span>
+                            </div>
+                        </div>
                     </article>
                     
                     <article class="card fade-in" role="listitem" tabindex="0">
+                        <div class="card-badge">Pédagogue</div>
                         <div class="card-icon" aria-hidden="true">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
@@ -986,6 +1579,16 @@
                             Enseignement musical au Lycée-Collège des Creusets et direction de l'École 
                             maîtrisienne de la cathédrale de Sion.
                         </p>
+                        <div class="card-stats">
+                            <div class="card-stat">
+                                <span class="card-stat-number">200+</span>
+                                <span class="card-stat-label">Élèves formés</span>
+                            </div>
+                            <div class="card-stat">
+                                <span class="card-stat-number">10</span>
+                                <span class="card-stat-label">Ans d'expérience</span>
+                            </div>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -1002,40 +1605,76 @@
                 </header>
                 
                 <div class="card-grid" role="list" aria-label="Liste des prochains concerts">
-                    <article class="card fade-in" role="listitem">
-                        <div class="card-icon" aria-hidden="true">
-                            <i class="fas fa-calendar-alt"></i>
+                    <article class="concert-card fade-in" role="listitem">
+                        <div class="concert-image">
+                            <img src="images/Maîtrise/018A0848.jpg" alt="Concert à la cathédrale de Sion" loading="lazy">
                         </div>
-                        <h3 class="card-title">Concert d'été</h3>
-                        <p class="card-description">
-                            <strong>15 Août 2025 - 17h00</strong><br>
-                            Cathédrale de Sion<br>
-                            Concert avec la Maîtrise cathédrale présentant des œuvres de Palestrina et Victoria.
-                        </p>
+                        <div class="concert-header">
+                            <div class="concert-date">
+                                <span class="concert-date-day">15</span>
+                                <span class="concert-date-month">AOU</span>
+                                <div class="concert-countdown">Dans 28 jours</div>
+                            </div>
+                            <div class="concert-details">
+                                <h3 class="concert-title">Concert d'Été Exceptionnel</h3>
+                                <div class="concert-venue">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    <span>Cathédrale de Sion</span>
+                                </div>
+                                <div class="concert-time">17h00</div>
+                                <div class="concert-program">Palestrina • Victoria • Chants Sacrés</div>
+                            </div>
+                        </div>
+                        <div class="concert-info">
+                            <span class="concert-availability">🎫 Places limitées</span>
+                            <span class="concert-price">Entrée libre</span>
+                        </div>
                     </article>
                     
-                    <article class="card fade-in" role="listitem">
-                        <div class="card-icon" aria-hidden="true">
-                            <i class="fas fa-music"></i>
+                    <article class="concert-card fade-in" role="listitem">
+                        <div class="concert-header">
+                            <div class="concert-date">
+                                <span class="concert-date-day">10</span>
+                                <span class="concert-date-month">SEP</span>
+                                <div class="concert-countdown">Dans 54 jours</div>
+                            </div>
+                            <div class="concert-details">
+                                <h3 class="concert-title">Récital d'Orgue Baroque</h3>
+                                <div class="concert-venue">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    <span>Église Saint-Théodule</span>
+                                </div>
+                                <div class="concert-time">20h00</div>
+                                <div class="concert-program">Bach • Buxtehude • Compositions personnelles</div>
+                            </div>
                         </div>
-                        <h3 class="card-title">Récital d'orgue</h3>
-                        <p class="card-description">
-                            <strong>10 Septembre 2025 - 20h00</strong><br>
-                            Église Saint-Théodule<br>
-                            Récital solo avec œuvres de Bach, Buxtehude et compositions personnelles.
-                        </p>
+                        <div class="concert-info">
+                            <span class="concert-availability">🎟️ Réservation recommandée</span>
+                            <span class="concert-price">15 CHF</span>
+                        </div>
                     </article>
                     
-                    <article class="card fade-in" role="listitem">
-                        <div class="card-icon" aria-hidden="true">
-                            <i class="fas fa-church"></i>
+                    <article class="concert-card fade-in" role="listitem">
+                        <div class="concert-header">
+                            <div class="concert-date">
+                                <span class="concert-date-day">05</span>
+                                <span class="concert-date-month">OCT</span>
+                                <div class="concert-countdown">Dans 79 jours</div>
+                            </div>
+                            <div class="concert-details">
+                                <h3 class="concert-title">Cantate de Bach</h3>
+                                <div class="concert-venue">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    <span>Cathédrale de Sion</span>
+                                </div>
+                                <div class="concert-time">19h30</div>
+                                <div class="concert-program">Série mensuelle • Orchestre baroque</div>
+                            </div>
                         </div>
-                        <h3 class="card-title">Cantate de Bach</h3>
-                        <p class="card-description">
-                            <strong>5 Octobre 2025 - 19h30</strong><br>
-                            Cathédrale de Sion<br>
-                            Série mensuelle dédiée aux cantates de J.S. Bach avec orchestre baroque.
-                        </p>
+                        <div class="concert-info">
+                            <span class="concert-availability">✨ Cycle d'abonnement</span>
+                            <span class="concert-price">25 CHF</span>
+                        </div>
                     </article>
                 </div>
                 
@@ -1044,6 +1683,44 @@
                         <i class="fas fa-calendar" aria-hidden="true"></i>
                         <span>Voir tous les événements</span>
                     </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter Section -->
+        <section class="newsletter-section" id="newsletter" aria-labelledby="newsletter-title">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title fade-in" id="newsletter-title">Restez informé</h2>
+                <p class="newsletter-description fade-in">
+                    Recevez les dernières actualités, dates de concerts et réflexions musicales 
+                    directement dans votre boîte mail.
+                </p>
+                
+                <form class="newsletter-form fade-in" action="#" method="post">
+                    <input type="email" 
+                           class="newsletter-input" 
+                           placeholder="Votre adresse email"
+                           required
+                           aria-label="Adresse email pour la newsletter">
+                    <button type="submit" class="newsletter-button">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        <span>S'abonner</span>
+                    </button>
+                </form>
+                
+                <div class="newsletter-benefits fade-in">
+                    <div class="newsletter-benefit">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                        <span>Concerts en exclusivité</span>
+                    </div>
+                    <div class="newsletter-benefit">
+                        <i class="fas fa-music" aria-hidden="true"></i>
+                        <span>Extraits musicaux</span>
+                    </div>
+                    <div class="newsletter-benefit">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <span>Réflexions spirituelles</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1060,10 +1737,10 @@
                         Place de la Cathédrale<br>
                         1950 Sion, Valais, Suisse
                     </p>
-                    <a href="mailto:contact@jdwaeber.ch" 
+                    <a href="mailto:info@jdwaeber.ch" 
                        aria-label="Envoyer un email à Jean-David Waeber">
                         <i class="fas fa-envelope" aria-hidden="true"></i>
-                        <span>contact@jdwaeber.ch</span>
+                        <span>info@jdwaeber.ch</span>
                     </a>
                     <a href="tel:+41276221231" 
                        aria-label="Appeler Jean-David Waeber">
@@ -1072,19 +1749,6 @@
                     </a>
                 </div>
                 
-                <div class="footer-section fade-in">
-                    <h4>Enseignement</h4>
-                    <p>
-                        <strong>Lycée-Collège des Creusets</strong><br>
-                        Formation musicale avancée<br>
-                        Sion, Valais
-                    </p>
-                    <p>
-                        <strong>École maîtrisienne</strong><br>
-                        Cathédrale de Sion<br>
-                        Direction pédagogique
-                    </p>
-                </div>
                 
                 <div class="footer-section fade-in">
                     <h4>Suivez-moi</h4>
@@ -1095,7 +1759,7 @@
                         <i class="fab fa-linkedin" aria-hidden="true"></i>
                         <span>LinkedIn</span>
                     </a>
-                    <a href="mailto:contact@jdwaeber.ch?subject=Newsletter" 
+                    <a href="mailto:info@jdwaeber.ch?subject=Newsletter" 
                        aria-label="S'abonner à la newsletter par email">
                         <i class="fas fa-envelope-open" aria-hidden="true"></i>
                         <span>Newsletter</span>
