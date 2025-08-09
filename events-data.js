@@ -1,9 +1,9 @@
 // Données agenda authentiques Jean-David Waeber
-// 25 événements de Août 2025 à Juin 2026
-// Généré automatiquement depuis le CSV source
+// 24 événements de Août 2025 à Juin 2026
+// Mis à jour depuis le CSV source - Session 9 Août 2025
 
 const eventsData = {
-    // Événements authentiques - 25 prestations
+    // Événements authentiques - 24 prestations
     evenements: [
         {
             "date": "2025-08-29",
@@ -43,7 +43,7 @@ const eventsData = {
             "lieu": "Cathédrale de Sion",
             "description": "Cycle de cantates de Bach dans le cadre de la messe",
             "lien": "",
-            "category": "liturgy"
+            "category": "liturgie"
         },
         {
             "date": "2025-09-07",
@@ -83,7 +83,7 @@ const eventsData = {
             "lieu": "Cathédrale de Sion",
             "description": "Cycle de cantates de Bach dans le cadre de la messe",
             "lien": "",
-            "category": "liturgy"
+            "category": "liturgie"
         },
         {
             "date": "2025-11-16",
@@ -93,7 +93,7 @@ const eventsData = {
             "lieu": "Cathédrale de Sion",
             "description": "Cycle de cantates de Bach dans le cadre de la messe",
             "lien": "",
-            "category": "liturgy"
+            "category": "liturgie"
         },
         {
             "date": "2025-11-30",
@@ -133,7 +133,7 @@ const eventsData = {
             "lieu": "Cathédrale de Sion",
             "description": "Cycle de cantates de Bach dans le cadre de la messe",
             "lien": "",
-            "category": "liturgy"
+            "category": "liturgie"
         },
         {
             "date": "2025-12-21",
@@ -163,7 +163,7 @@ const eventsData = {
             "lieu": "Cathédrale de Sion",
             "description": "Cycle de cantates de Bach dans le cadre de la messe",
             "lien": "",
-            "category": "liturgy"
+            "category": "liturgie"
         },
         {
             "date": "2026-02-15",
@@ -173,7 +173,7 @@ const eventsData = {
             "lieu": "Cathédrale de Sion",
             "description": "Cycle de cantates de Bach dans le cadre de la messe",
             "lien": "",
-            "category": "liturgy"
+            "category": "liturgie"
         },
         {
             "date": "2026-02-17",
@@ -183,7 +183,7 @@ const eventsData = {
             "lieu": "Salle Noda BCVS",
             "description": "Conférence de Marie Favre et Philippe Vuadens illustrée d'exemples musicaux",
             "lien": "",
-            "category": "teaching"
+            "category": "conferences"
         },
         {
             "date": "2026-02-21",
@@ -203,7 +203,7 @@ const eventsData = {
             "lieu": "Cathédrale de Sion",
             "description": "Cycle de cantates de Bach dans le cadre de la messe",
             "lien": "",
-            "category": "liturgy"
+            "category": "liturgie"
         },
         {
             "date": "2026-04-19",
@@ -213,7 +213,7 @@ const eventsData = {
             "lieu": "Cathédrale de Sion",
             "description": "Cycle de cantates de Bach dans le cadre de la messe",
             "lien": "",
-            "category": "liturgy"
+            "category": "liturgie"
         },
         {
             "date": "2026-05-10",
@@ -223,7 +223,7 @@ const eventsData = {
             "lieu": "Cathédrale de Sion",
             "description": "Cycle de cantates de Bach dans le cadre de la messe",
             "lien": "",
-            "category": "liturgy"
+            "category": "liturgie"
         },
         {
             "date": "2026-05-17",
@@ -243,27 +243,12 @@ const eventsData = {
             "lieu": "Cathédrale de Sion",
             "description": "Cycle de cantates de Bach dans le cadre de la messe",
             "lien": "",
-            "category": "liturgy"
+            "category": "liturgie"
         }
-    ],
-    
-    // Statistiques des événements
-    statistiques: {
-        total: 25,
-        parCategorie: {
-            "concerts": 11,
-            "liturgy": 11,
-            "recitals": 1,
-            "teaching": 1
-        },
-        parLieu: {
-            "Cathédrale de Sion": 18,
-            "Autres lieux": 7
-        }
-    }
+    ]
 };
 
-// Export pour utilisation dans le site
+// Export pour utilisation
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = eventsData;
 }
