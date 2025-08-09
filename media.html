@@ -74,7 +74,7 @@
                     <a href="reflection.html" class="nav-link" role="menuitem" data-page="reflexion">Réflexion</a>
                 </li>
                 <li role="none">
-                    <a href="media.html" class="nav-link" role="menuitem" data-page="media">Média</a>
+                    <a href="media.html" class="nav-link active" role="menuitem" data-page="media">Média</a>
                 </li>
                 <li role="none">
                     <a href="repertoire.html" class="nav-link" role="menuitem" data-page="repertoire">Répertoire</a>
@@ -88,30 +88,20 @@
 
     <!-- Main Content -->
     <main role="main" id="main-content">
-        <!-- Hero Section -->
-        <section class="hero fade-up-element" style="min-height: 60vh;" aria-labelledby="media-title">
-            <img src="images/optimized-final/media-technique.jpg" alt="" class="hero-background">
-            <div class="hero-overlay"></div>
-            
-            <div class="hero-content">
-                <div class="hero-badge fade-in">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                    <span>Média & Enregistrements</span>
-                </div>
-                
-                <h1 class="hero-title fade-in" id="media-title">
-                    Archives musicales
-                    <span class="hero-subtitle">Enregistrements • Vidéos • Ressources presse</span>
-                </h1>
-                
-                <p class="hero-description fade-in">
-                    Découvrez une sélection d'enregistrements et de contenus multimédia témoignant 
-                    de mon parcours artistique et de mes collaborations musicales.
-                </p>
+        <!-- Header/Hero unifié -->
+        <header class="page-header" role="banner">
+            <img 
+                class="page-header-background" 
+                src="images/optimized-final/media-technique.jpg"
+                alt="Matériel d'enregistrement professionnel"
+                loading="eager"
+            >
+            <div class="page-header-overlay" aria-hidden="true"></div>
+            <div class="page-header-content">
+                <h1 class="page-header-title">Média</h1>
+                <p class="page-header-subtitle">Enregistrements, vidéos et ressources</p>
             </div>
-        </section>
+        </header>
 
         <!-- Media Filters -->
         <section class="section section-sm fade-up-element" style="background: var(--color-surface);">
@@ -138,20 +128,6 @@
             <div class="container">
                 <!-- Audio Section -->
                 <div class="mb-4xl">
-                            <!-- Header/Hero unifié -->
-        <header class="page-header" role="banner">
-            <img 
-                class="page-header-background" 
-                src="images/optimized-final/media-technique.jpg"
-                alt="Matériel d'enregistrement professionnel"
-                loading="lazy"
-            >
-            <div class="page-header-overlay" aria-hidden="true"></div>
-            <div class="page-header-content">
-                <h1 class="page-header-title">Média</h1>
-                <p class="page-header-subtitle">Enregistrements, vidéos et ressources</p>
-            </div>
-        </header>
                     
                     <div class="media-grid">
                         <article class="media-card fade-in" data-category="audio">
