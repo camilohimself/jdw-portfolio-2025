@@ -130,3 +130,74 @@ https://github.com/camilohimself/jdw-portfolio-2025.git
 
 ### **OBJECTIF SESSION**
 Travailler toute la journée avec inspiration et énergie maximale ! 🔥
+
+---
+
+## 🩺 **PROTOCOLE DOCTEUR CLAUDE - Session 9 Août 2025**
+
+### **MISSION** 
+Nettoyage et réparation systématique de toutes les pages du portfolio avec diagnostic rigoureux pour éviter les erreurs de "faux positifs" (dire qu'une page est saine alors qu'elle est cassée visuellement).
+
+### **ÉTAPE 1 : DIAGNOSTIC PRÉLIMINAIRE OBLIGATOIRE**
+```bash
+cd /Users/camilorivera/JDW-Portfolio-2025
+wc -l nompage.html                    # Taille fichier
+open nompage.html                     # Test visuel OBLIGATOIRE
+```
+**🚨 RÈGLE ABSOLUE** : Jamais dire "page OK" sans test visuel réel.
+
+### **ÉTAPE 2 : DÉTECTION CLASSES CSS ORPHELINES**
+```bash
+# Extraire toutes les classes HTML
+grep -o 'class="[^"]*"' nompage.html | sort -u
+
+# Vérifier existence dans CSS pour chaque classe suspecte
+grep -r "\.nom-classe" assets/css/
+```
+
+### **ÉTAPE 3 : HIÉRARCHIE DE RÉPARATION SÉCURISÉE**
+1. **✅ TOUJOURS CONSERVER** : Contenu texte, structure sémantique HTML
+2. **🔧 REMPLACER UNIQUEMENT** : Classes CSS défaillantes/inexistantes
+3. **⚡ UTILISER SYSTÈME EXISTANT** : Classes validées du design system
+
+### **ÉTAPE 4 : CLASSES DE RÉFÉRENCE VALIDÉES**
+**Layout Foundation :**
+- `.section` → sections principales
+- `.container` → conteneur centré responsive  
+- `.grid .grid-cols-1` → système grille
+- `.section-header` + `.section-title` → en-têtes
+
+**Composants UI :**
+- `.card` + `.card-body` → contenus structurés
+- `.btn` + variations → boutons
+- `.nav` + `.nav-container` → navigation
+
+**Typographie :**
+- `.text-body` → paragraphes standard
+- `.text-muted` → texte secondaire
+- `.fade-in` → animations d'entrée
+
+### **ÉTAPE 5 : VÉRIFICATION POST-RÉPARATION**
+1. **Test visuel** : `open nompage.html` (obligatoire)
+2. **Test responsive** : Redimensionner fenêtre si nécessaire  
+3. **Commit seulement si fonctionnel** : Pas de commit "en aveugle"
+
+### **ÉTAPE 6 : PATTERN DE REMPLACEMENT SÉCURISÉ**
+```html
+<!-- ❌ CLASSES ORPHELINES TYPIQUES -->
+<div class="content-section">     → <div class="section">
+<div class="content-container">   → <div class="container">
+<div class="bio-content">         → <div class="grid grid-cols-1">
+<p class="bio-text">             → <p class="text-body">
+
+<!-- ❌ FOOTER CASSÉ TYPIQUE -->
+<div class="footer-container">    → <div class="container">
+<div class="footer-section">      → <div class="text-center">
+```
+
+### **🎯 RÉSULTATS PROTOCOLE APPLIQUÉ**
+- **events.html** : 589 lignes pollution supprimées ✅
+- **index.html** : 96 lignes CSS inline supprimées ✅  
+- **about.html** : Classes orphelines réparées ✅
+
+**📊 MÉTRIQUES SUCCESS** : Code plus léger, rendu visuel correct, maintenabilité optimale.
