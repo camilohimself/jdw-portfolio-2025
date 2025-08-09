@@ -1,0 +1,181 @@
+/**
+ * ================================================================
+ * DESIGN TOKENS - JEAN-DAVID WAEBER PORTFOLIO
+ * Musique Sacrée • Noblesse • Immersion
+ * ================================================================
+ */
+
+/* === FONTS IMPORT === */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* === COLOR PALETTE === */
+  /* Primary - Noble Dark Blues */
+  --color-primary-darkest: #0b0e12;
+  --color-primary-darker: #101419;
+  --color-primary-dark: #1a1f26;
+  --color-primary-base: #242933;
+  --color-primary-light: #2d3340;
+  
+  /* Secondary - Warm Creams */
+  --color-secondary-darkest: #d4c7b8;
+  --color-secondary-dark: #e0d4c6;
+  --color-secondary-base: #e9e6df;
+  --color-secondary-light: #f2f0ea;
+  --color-secondary-lightest: #faf9f7;
+  
+  /* Accent - Elegant Gold */
+  --color-accent-dark: #b8941f;
+  --color-accent-base: #c9a646;
+  --color-accent-light: #d4b55a;
+  --color-accent-lighter: #e6c757;
+  --color-accent-alpha: rgba(201, 166, 70, 0.15);
+  --color-accent-alpha-light: rgba(201, 166, 70, 0.08);
+  
+  /* Semantic Colors */
+  --color-background: var(--color-primary-darkest);
+  --color-surface: var(--color-primary-darker);
+  --color-surface-elevated: var(--color-primary-dark);
+  --color-text-primary: var(--color-secondary-base);
+  --color-text-secondary: var(--color-secondary-dark);
+  --color-text-muted: rgba(233, 230, 223, 0.7);
+  --color-text-inverse: var(--color-primary-base);
+  
+  /* === TYPOGRAPHY === */
+  /* Font Families */
+  --font-serif: 'EB Garamond', 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  
+  /* Font Scale - Fluid Typography */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.8rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.3vw, 0.9rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.375vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);
+  --text-3xl: clamp(2rem, 1.75rem + 1.25vw, 2.75rem);
+  --text-4xl: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --text-5xl: clamp(3rem, 2.5rem + 2.5vw, 5rem);
+  
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 1.75;
+  
+  /* Letter Spacing */
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  
+  /* === SPACING SCALE === */
+  --space-xs: clamp(0.5rem, 0.45rem + 0.25vw, 0.625rem);
+  --space-sm: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --space-md: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+  --space-lg: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);
+  --space-xl: clamp(2rem, 1.75rem + 1.25vw, 3rem);
+  --space-2xl: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --space-3xl: clamp(3rem, 2.5rem + 2.5vw, 5rem);
+  --space-4xl: clamp(4rem, 3rem + 5vw, 6rem);
+  --space-5xl: clamp(5rem, 4rem + 5vw, 8rem);
+  
+  /* === LAYOUT === */
+  /* Container Sizes */
+  --container-xs: 480px;
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  
+  /* Border Radius */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.15), 0 2px 4px -1px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 10px 10px -5px rgba(0, 0, 0, 0.08);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 0 1px rgba(201, 166, 70, 0.3), 0 4px 12px rgba(201, 166, 70, 0.15);
+  
+  /* === TRANSITIONS === */
+  --duration-fast: 0.15s;
+  --duration-normal: 0.25s;
+  --duration-slow: 0.4s;
+  --duration-slower: 0.6s;
+  
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  /* === Z-INDEX SCALE === */
+  --z-base: 0;
+  --z-sticky: 10;
+  --z-dropdown: 100;
+  --z-modal: 1000;
+  --z-popover: 1100;
+  --z-tooltip: 1200;
+  --z-max: 9999;
+  
+  /* === GRADIENTS === */
+  --gradient-accent: linear-gradient(135deg, var(--color-accent-base) 0%, var(--color-accent-light) 100%);
+  --gradient-accent-hover: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent-lighter) 100%);
+  --gradient-overlay: linear-gradient(135deg, rgba(11, 14, 18, 0.8) 0%, rgba(11, 14, 18, 0.4) 100%);
+  --gradient-hero: radial-gradient(ellipse at center, rgba(201, 166, 70, 0.08) 0%, transparent 70%);
+  
+  /* === BREAKPOINTS === */
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
+}
+
+/* === UTILITY CLASSES === */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0.01s;
+    --duration-normal: 0.01s;
+    --duration-slow: 0.01s;
+    --duration-slower: 0.01s;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -15,498 +15,99 @@
     <meta property="og:title" content="Réflexion autour de... - Jean-David Waeber | Organiste & Chef de Chœur">
     <meta property="og:description" content="Réflexions philosophiques et spirituelles sur la musique sacrée et l'art musical.">
     <meta property="og:url" content="https://jdwaeber.ch/reflection.html">
-    <meta property="og:image" content="https://jdwaeber.ch/images/og-image.jpg">
+    <meta property="og:image" content="https://jdwaeber.ch/images/optimized-final/bio-portrait.jpg">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Réflexion autour de... - Jean-David Waeber | Organiste & Chef de Chœur">
     <meta name="twitter:description" content="Réflexions philosophiques et spirituelles sur la musique sacrée et l'art musical.">
-    <meta name="twitter:image" content="https://jdwaeber.ch/images/og-image.jpg">
+    <meta name="twitter:image" content="https://jdwaeber.ch/images/optimized-final/bio-portrait.jpg">
     
     <!-- Performance Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <!-- Font Loading Strategy -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"></noscript>
+    <!-- Design System -->
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/components.css">
     
-    <!-- Font Fallback for better CLS -->
+    <!-- Additional Styles for Reflection Content -->
     <style>
-        @font-face {
-            font-family: 'InterFallback';
-            src: local('Arial'), local('Helvetica');
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'PlayfairFallback';
-            src: local('Times New Roman'), local('serif');
-            font-display: swap;
-        }
-    </style>
-    
-    <!-- Icons -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
-    
-    <style>
-        /**
-         * ===============================================
-         * DESIGN SYSTEM LUXURY - JEAN-DAVID WAEBER
-         * Reflection Page - Performance Optimized
-         * ===============================================
-         */
-
-        /* === DESIGN TOKENS === */
-        :root {
-            /* Brand Colors */
-            --brand-primary: #d4af37;
-            --brand-primary-light: #e6c757;
-            --brand-primary-dark: #b8941f;
-            --brand-primary-alpha: rgba(212, 175, 55, 0.1);
-            
-            /* Neutral Scale */
-            --neutral-50: #fafafa;
-            --neutral-100: #f5f5f5;
-            --neutral-200: #e5e5e5;
-            --neutral-300: #d4d4d4;
-            --neutral-400: #a3a3a3;
-            --neutral-500: #737373;
-            --neutral-600: #525252;
-            --neutral-700: #404040;
-            --neutral-800: #262626;
-            --neutral-900: #171717;
-            --neutral-950: #0a0a0a;
-            
-            /* Semantic Colors */
-            --text-primary: var(--neutral-50);
-            --text-secondary: var(--neutral-200);
-            --text-muted: var(--neutral-400);
-            --text-inverse: var(--neutral-950);
-            
-            /* Background System */
-            --bg-primary: var(--neutral-950);
-            --bg-secondary: var(--neutral-900);
-            --bg-tertiary: var(--neutral-800);
-            --bg-elevated: var(--neutral-700);
-            --bg-overlay: rgba(10, 10, 10, 0.9);
-            --bg-glass: rgba(255, 255, 255, 0.05);
-            
-            /* Border System */
-            --border-subtle: var(--neutral-800);
-            --border-default: var(--neutral-700);
-            --border-strong: var(--neutral-600);
-            --border-brand: var(--brand-primary);
-            
-            /* Typography System */
-            --font-sans: 'Inter', 'InterFallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            --font-serif: 'Playfair Display', 'PlayfairFallback', Georgia, 'Times New Roman', Times, serif;
-            
-            /* Fluid Type Scale */
-            --text-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.8rem);
-            --text-sm: clamp(0.875rem, 0.8rem + 0.3vw, 0.9rem);
-            --text-base: clamp(1rem, 0.9rem + 0.4vw, 1.1rem);
-            --text-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
-            --text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
-            --text-2xl: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
-            --text-3xl: clamp(2rem, 1.7rem + 1.2vw, 2.5rem);
-            --text-4xl: clamp(2.5rem, 2rem + 2vw, 4rem);
-            
-            /* Spacing Scale */
-            --space-px: 1px;
-            --space-0: 0;
-            --space-1: 0.25rem;
-            --space-2: 0.5rem;
-            --space-3: 0.75rem;
-            --space-4: 1rem;
-            --space-5: 1.25rem;
-            --space-6: 1.5rem;
-            --space-8: 2rem;
-            --space-10: 2.5rem;
-            --space-12: 3rem;
-            --space-16: 4rem;
-            --space-20: 5rem;
-            --space-24: 6rem;
-            
-            /* Shadow System */
-            --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.12);
-            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.16);
-            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
-            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.24);
-            --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.28);
-            --shadow-brand: 0 4px 12px rgba(212, 175, 55, 0.15);
-            
-            /* Animation System */
-            --duration-instant: 0ms;
-            --duration-fast: 150ms;
-            --duration-normal: 250ms;
-            --duration-slow: 400ms;
-            --duration-slower: 600ms;
-            
-            --ease-linear: linear;
-            --ease-in: cubic-bezier(0.4, 0, 1, 1);
-            --ease-out: cubic-bezier(0, 0, 0.2, 1);
-            --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-            --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
-            
-            /* Radius System */
-            --radius-none: 0;
-            --radius-sm: 0.375rem;
-            --radius-md: 0.5rem;
-            --radius-lg: 0.75rem;
-            --radius-xl: 1rem;
-            --radius-2xl: 1.5rem;
-            --radius-full: 9999px;
-            
-            /* Z-index Scale */
-            --z-hide: -1;
-            --z-base: 0;
-            --z-docked: 10;
-            --z-dropdown: 1000;
-            --z-sticky: 1100;
-            --z-banner: 1200;
-            --z-overlay: 1300;
-            --z-modal: 1400;
-            --z-popover: 1500;
-            --z-skipLink: 1600;
-            --z-toast: 1700;
-            --z-tooltip: 1800;
-        }
-
-        /* === RESET & BASE === */
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: var(--space-20);
-            -webkit-text-size-adjust: 100%;
-            tab-size: 4;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            font-size: var(--text-base);
-            line-height: 1.6;
-            color: var(--text-primary);
-            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-            font-feature-settings: 'kern' 1;
-        }
-
-        /* Enhanced Scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-secondary);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--brand-primary);
-            border-radius: var(--radius-full);
-            transition: background var(--duration-fast) var(--ease-out);
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--brand-primary-light);
-        }
-
-        ::selection {
-            background: var(--brand-primary);
-            color: var(--text-inverse);
-        }
-
-        :focus {
-            outline: none;
-        }
-
-        :focus-visible {
-            outline: 2px solid var(--brand-primary);
-            outline-offset: 2px;
-            border-radius: var(--radius-sm);
-        }
-
-        /* === SKIP LINKS === */
-        .skip-links {
-            position: fixed;
-            top: var(--space-4);
-            left: var(--space-4);
-            z-index: var(--z-skipLink);
-        }
-
-        .skip-link {
-            position: absolute;
-            transform: translateY(-100%);
-            background: var(--brand-primary);
-            color: var(--text-inverse);
-            padding: var(--space-3) var(--space-6);
-            text-decoration: none;
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            font-size: var(--text-sm);
-            transition: transform var(--duration-fast) var(--ease-out);
-            white-space: nowrap;
-        }
-
-        .skip-link:focus {
-            transform: translateY(0);
-        }
-
-        /* === NAVIGATION === */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--bg-overlay);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            z-index: var(--z-sticky);
-            padding: var(--space-4) 0;
-            border-bottom: 1px solid var(--border-subtle);
-            transition: all var(--duration-normal) var(--ease-out);
-            will-change: background-color, padding;
-        }
-
-        .navbar.scrolled {
-            background: var(--bg-overlay);
-            box-shadow: var(--shadow-md);
-            padding: var(--space-3) 0;
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 var(--space-6);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-serif);
-            font-size: var(--text-xl);
-            font-weight: 700;
-            color: var(--text-primary);
-            text-decoration: none;
-            transition: color var(--duration-fast) var(--ease-out);
-        }
-
-        .logo:hover,
-        .logo:focus-visible {
-            color: var(--brand-primary);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: var(--space-6);
-            align-items: center;
-        }
-
-        .nav-menu a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: var(--text-sm);
-            padding: var(--space-2) var(--space-4);
-            border-radius: var(--radius-md);
-            transition: all var(--duration-fast) var(--ease-out);
-            position: relative;
-        }
-
-        .nav-menu a::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: var(--bg-glass);
-            border-radius: var(--radius-md);
-            opacity: 0;
-            transition: opacity var(--duration-fast) var(--ease-out);
-        }
-
-        .nav-menu a:hover::before,
-        .nav-menu a:focus-visible::before {
-            opacity: 1;
-        }
-
-        .nav-menu a:hover,
-        .nav-menu a:focus-visible,
-        .nav-menu a.active {
-            color: var(--brand-primary);
-        }
-
-        .nav-menu a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 4px;
-            background: var(--brand-primary);
-            border-radius: 50%;
-        }
-
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-primary);
-            font-size: var(--text-lg);
-            cursor: pointer;
-            padding: var(--space-2);
-            border-radius: var(--radius-md);
-            transition: all var(--duration-fast) var(--ease-out);
-            position: relative;
-            z-index: var(--z-popover);
-        }
-
-        .nav-toggle:hover,
-        .nav-toggle:focus-visible {
-            color: var(--brand-primary);
-            background: var(--bg-glass);
-        }
-
-        /* === MAIN CONTENT === */
-        main {
-            padding-top: var(--space-20);
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 var(--space-6);
-        }
-
-        .section {
-            padding: var(--space-20) 0;
-            position: relative;
-        }
-
-        .section-alt {
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border-subtle);
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: var(--space-16);
-        }
-
-        .section-title {
-            font-family: var(--font-serif);
-            font-size: var(--text-3xl);
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: var(--space-4);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: calc(-1 * var(--space-2));
-            left: 50%;
-            transform: translateX(-50%);
-            width: var(--space-12);
-            height: 2px;
-            background: var(--brand-primary);
-            border-radius: var(--radius-full);
-        }
-
-        .section-subtitle {
-            font-size: var(--text-lg);
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.5;
-        }
-
-        /* === REFLECTION ARTICLES === */
+        /* === REFLECTION SPECIFIC STYLES === */
         .reflection-intro {
             max-width: 800px;
-            margin: 0 auto var(--space-16);
+            margin: 0 auto var(--space-4xl);
             text-align: center;
         }
 
         .reflection-intro p {
             font-size: var(--text-lg);
-            line-height: 1.7;
-            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+            color: var(--color-text-secondary);
             font-style: italic;
         }
 
+        /* === REFLECTION ARTICLES === */
+
         .articles-grid {
             display: grid;
-            gap: var(--space-12);
-            margin-top: var(--space-16);
+            gap: var(--space-3xl);
+            margin-top: var(--space-4xl);
         }
 
         .article-card {
-            background: var(--bg-tertiary);
-            border-radius: var(--radius-2xl);
-            border: 1px solid var(--border-subtle);
+            background: var(--color-surface);
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(233, 230, 223, 0.1);
             overflow: hidden;
-            transition: all var(--duration-normal) var(--ease-out);
+            transition: all var(--duration-slow) var(--ease-out);
+            box-shadow: var(--shadow-md);
         }
 
         .article-card:hover {
-            border-color: var(--border-brand);
-            box-shadow: var(--shadow-lg);
+            border-color: rgba(201, 166, 70, 0.2);
+            box-shadow: var(--shadow-xl);
+            transform: translateY(-8px);
         }
 
         .article-content {
-            padding: var(--space-10);
+            padding: var(--space-xl);
         }
 
         .article-category {
             font-size: var(--text-xs);
-            color: var(--brand-primary);
-            font-weight: 600;
+            color: var(--color-accent-base);
+            font-weight: var(--weight-semibold);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: var(--space-3);
+            letter-spacing: var(--tracking-wide);
+            margin-bottom: var(--space-sm);
         }
 
         .article-title {
             font-family: var(--font-serif);
             font-size: var(--text-2xl);
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: var(--space-4);
-            line-height: 1.2;
+            font-weight: var(--weight-medium);
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-md);
+            line-height: var(--leading-tight);
         }
 
         .article-excerpt {
             font-size: var(--text-lg);
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: var(--space-6);
+            color: var(--color-text-secondary);
+            line-height: var(--leading-relaxed);
+            margin-bottom: var(--space-lg);
             font-style: italic;
         }
 
         .article-body {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: var(--space-8);
+            color: var(--color-text-primary);
+            line-height: var(--leading-relaxed);
+            margin-bottom: var(--space-xl);
         }
 
         .article-body p {
-            margin-bottom: var(--space-6);
+            margin-bottom: var(--space-lg);
         }
 
         .article-body p:last-child {
@@ -514,13 +115,13 @@
         }
 
         .article-quote {
-            background: var(--bg-glass);
-            border-left: 4px solid var(--brand-primary);
-            padding: var(--space-6);
-            margin: var(--space-8) 0;
-            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+            background: var(--color-accent-alpha-light);
+            border-left: 3px solid var(--color-accent-base);
+            padding: var(--space-lg) var(--space-xl);
+            margin: var(--space-xl) 0;
+            border-radius: var(--radius-md);
             font-style: italic;
-            color: var(--text-primary);
+            color: var(--color-text-primary);
             position: relative;
         }
 
@@ -528,50 +129,50 @@
             content: '"';
             font-family: var(--font-serif);
             font-size: var(--text-4xl);
-            color: var(--brand-primary);
+            color: var(--color-accent-base);
             position: absolute;
-            top: var(--space-2);
-            left: var(--space-4);
+            top: var(--space-sm);
+            left: var(--space-md);
             line-height: 1;
         }
 
         .article-quote p {
-            margin-left: var(--space-8);
+            margin-left: var(--space-xl);
             margin-bottom: 0;
         }
 
         .article-meta {
             display: flex;
             align-items: center;
-            gap: var(--space-4);
+            gap: var(--space-md);
             font-size: var(--text-sm);
-            color: var(--text-muted);
-            border-top: 1px solid var(--border-subtle);
-            padding-top: var(--space-6);
+            color: var(--color-text-muted);
+            border-top: 1px solid rgba(233, 230, 223, 0.1);
+            padding-top: var(--space-lg);
         }
 
         .article-meta-item {
             display: flex;
             align-items: center;
-            gap: var(--space-1);
+            gap: var(--space-xs);
         }
 
         /* === FEATURED QUOTE === */
         .featured-quote {
-            background: var(--bg-glass);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-2xl);
-            padding: var(--space-12);
+            background: var(--color-accent-alpha-light);
+            border: 1px solid rgba(233, 230, 223, 0.1);
+            border-radius: var(--radius-xl);
+            padding: var(--space-3xl);
             text-align: center;
             position: relative;
-            margin: var(--space-16) 0;
+            margin: var(--space-4xl) 0;
         }
 
         .featured-quote::before {
             content: '"';
             font-family: var(--font-serif);
             font-size: clamp(4rem, 8vw, 8rem);
-            color: var(--brand-primary);
+            color: var(--color-accent-base);
             position: absolute;
             top: -2rem;
             left: 50%;
@@ -584,34 +185,35 @@
             font-family: var(--font-serif);
             font-size: var(--text-xl);
             font-style: italic;
-            color: var(--text-primary);
-            line-height: 1.6;
-            margin-bottom: var(--space-4);
+            color: var(--color-text-primary);
+            line-height: var(--leading-relaxed);
+            margin-bottom: var(--space-md);
         }
 
         .featured-quote-author {
             font-size: var(--text-sm);
-            color: var(--brand-primary);
-            font-weight: 600;
+            color: var(--color-accent-base);
+            font-weight: var(--weight-semibold);
         }
 
         /* === THEMES GRID === */
         .themes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-8);
-            margin-top: var(--space-16);
+            gap: var(--space-xl);
+            margin-top: var(--space-4xl);
         }
 
         .theme-card {
-            background: var(--bg-glass);
-            border: 1px solid var(--border-subtle);
+            background: var(--color-surface);
+            border: 1px solid rgba(233, 230, 223, 0.1);
             border-radius: var(--radius-xl);
-            padding: var(--space-8);
+            padding: var(--space-xl);
             text-align: center;
-            transition: all var(--duration-normal) var(--ease-out);
+            transition: all var(--duration-slow) var(--ease-out);
             position: relative;
             overflow: hidden;
+            box-shadow: var(--shadow-md);
         }
 
         .theme-card::before {
@@ -621,14 +223,14 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: var(--brand-primary);
+            background: var(--color-accent-base);
             transform: scaleX(0);
-            transition: transform var(--duration-normal) var(--ease-out);
+            transition: transform var(--duration-slow) var(--ease-out);
         }
 
         .theme-card:hover {
             transform: translateY(-4px);
-            border-color: var(--border-brand);
+            border-color: rgba(201, 166, 70, 0.2);
             box-shadow: var(--shadow-lg);
         }
 
@@ -638,179 +240,22 @@
 
         .theme-icon {
             font-size: var(--text-3xl);
-            color: var(--brand-primary);
-            margin-bottom: var(--space-4);
+            color: var(--color-accent-base);
+            margin-bottom: var(--space-md);
         }
 
         .theme-title {
             font-family: var(--font-serif);
             font-size: var(--text-xl);
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: var(--space-3);
+            font-weight: var(--weight-semibold);
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-sm);
         }
 
         .theme-description {
-            color: var(--text-secondary);
-            line-height: 1.6;
+            color: var(--color-text-secondary);
+            line-height: var(--leading-relaxed);
             font-size: var(--text-sm);
-        }
-
-        /* === FOOTER === */
-        .footer {
-            background: var(--bg-secondary);
-            padding: var(--space-20) 0 var(--space-8);
-            border-top: 1px solid var(--border-subtle);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: var(--text-sm);
-        }
-
-        .footer-bottom a {
-            color: var(--brand-primary);
-            text-decoration: none;
-            transition: color var(--duration-fast) var(--ease-out);
-        }
-
-        .footer-bottom a:hover {
-            color: var(--brand-primary-light);
-        }
-
-        /* === ANIMATIONS === */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all var(--duration-slower) var(--ease-out);
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .slide-in-left {
-            opacity: 0;
-            transform: translateX(-30px);
-            transition: all var(--duration-slower) var(--ease-out);
-        }
-
-        .slide-in-left.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .slide-in-right {
-            opacity: 0;
-            transform: translateX(30px);
-            transition: all var(--duration-slower) var(--ease-out);
-        }
-
-        .slide-in-right.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        /* === RESPONSIVE === */
-        @media (max-width: 768px) {
-            .nav-menu {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--bg-overlay);
-                backdrop-filter: blur(16px);
-                flex-direction: column;
-                gap: 0;
-                padding: var(--space-6) 0;
-                box-shadow: var(--shadow-xl);
-                border-top: 1px solid var(--border-subtle);
-                transform: translateY(-10px);
-                opacity: 0;
-                visibility: hidden;
-                transition: all var(--duration-normal) var(--ease-out);
-            }
-            
-            .nav-menu.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-            
-            .nav-menu a {
-                padding: var(--space-4) var(--space-6);
-                border-bottom: 1px solid var(--border-subtle);
-                text-align: center;
-                width: 100%;
-            }
-
-            .nav-menu a:last-child {
-                border-bottom: none;
-            }
-            
-            .nav-toggle {
-                display: block;
-            }
-
-            .themes-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-6);
-            }
-
-            .article-content {
-                padding: var(--space-8);
-            }
-
-            .featured-quote {
-                padding: var(--space-8);
-            }
-
-            .container {
-                padding: 0 var(--space-4);
-            }
-
-            .nav-container {
-                padding: 0 var(--space-4);
-            }
-
-            .section {
-                padding: var(--space-16) 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .article-content {
-                padding: var(--space-6);
-            }
-
-            .featured-quote {
-                padding: var(--space-6);
-            }
-
-            .theme-card {
-                padding: var(--space-6);
-            }
-        }
-
-        /* === ACCESSIBILITY === */
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-
-            .fade-in,
-            .slide-in-left,
-            .slide-in-right {
-                opacity: 1 !important;
-                transform: none !important;
-            }
         }
 
         .sr-only {
@@ -825,90 +270,102 @@
             border: 0;
         }
 
-        .text-balance {
-            text-wrap: balance;
+        /* === MOBILE RESPONSIVE === */
+        @media (max-width: 767px) {
+            .article-content {
+                padding: var(--space-lg);
+            }
+
+            .featured-quote {
+                padding: var(--space-xl);
+            }
+
+            .theme-card {
+                padding: var(--space-lg);
+            }
         }
 
-        .text-pretty {
-            text-wrap: pretty;
-        }
     </style>
 </head>
 
 <body>
-    <!-- Skip Links -->
-    <div class="skip-links">
-        <a href="#main-content" class="skip-link">Aller au contenu principal</a>
-        <a href="#navigation" class="skip-link">Aller à la navigation</a>
-        <a href="#reflections" class="skip-link">Aller aux réflexions</a>
-    </div>
-
     <!-- Navigation -->
-    <nav class="navbar" id="navigation" role="navigation" aria-label="Navigation principale">
-        <div class="nav-container">
-            <a href="index.html" class="logo" aria-label="Jean-David Waeber - Retour à l'accueil">
-                Jean-David Waeber
-            </a>
-            
-            <button class="nav-toggle" 
-                    id="nav-toggle" 
-                    aria-label="Ouvrir le menu de navigation" 
-                    aria-expanded="false"
-                    aria-controls="nav-menu">
-                <i class="fas fa-bars" aria-hidden="true"></i>
-            </button>
-            
-            <ul class="nav-menu" id="nav-menu" role="menubar">
-                <li role="none">
-                    <a href="index.html" role="menuitem">Accueil</a>
-                </li>
-                <li role="none">
-                    <a href="events.html" role="menuitem">Agenda</a>
-                </li>
-                <li role="none">
-                    <a href="gallery.html" role="menuitem">Galerie</a>
-                </li>
-                <li role="none">
-                    <a href="about.html" role="menuitem">Biographie</a>
-                </li>
-                <li role="none">
-                    <a href="contact.html" role="menuitem">Contact</a>
-                </li>
-                <li role="none">
-                    <a href="media.html" role="menuitem">Média</a>
-                </li>
-                <li role="none">
-                    <a href="reflection.html" class="active" role="menuitem" aria-current="page">Réflexion autour de...</a>
-                </li>
-                <li role="none">
-                    <a href="ensembles.html" role="menuitem">Ensembles</a>
-                </li>
-            </ul>
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo" aria-label="Jean-David Waeber - Retour à l'accueil">
+                    Jean-David Waeber
+                </a>
+                
+                <button class="btn btn-ghost visible-mobile" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-menu hidden-mobile" role="menubar">
+                    <li role="none">
+                        <a href="index.html" class="nav-link" role="menuitem">Accueil</a>
+                    </li>
+                    <li role="none">
+                        <a href="events.html" class="nav-link" role="menuitem">Agenda</a>
+                    </li>
+                    <li role="none">
+                        <a href="gallery.html" class="nav-link" role="menuitem">Galerie</a>
+                    </li>
+                    <li role="none">
+                        <a href="about.html" class="nav-link" role="menuitem">Biographie</a>
+                    </li>
+                    <li role="none">
+                        <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+                    </li>
+                    <li role="none">
+                        <a href="media.html" class="nav-link" role="menuitem">Média</a>
+                    </li>
+                    <li role="none">
+                        <a href="reflection.html" class="nav-link active" role="menuitem" aria-current="page">Réflexion</a>
+                    </li>
+                    <li role="none">
+                        <a href="ensembles.html" class="nav-link" role="menuitem">Ensembles</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main id="main-content" role="main">
-        <!-- Reflection Header Section -->
-        <section class="section" id="reflections" aria-labelledby="reflection-title">
-            <div class="container">
-                <header class="section-header">
-                    <h1 class="section-title text-balance" id="reflection-title">Réflexion autour de...</h1>
-                    <p class="section-subtitle text-pretty">
-                        Pensées et méditations sur la musique sacrée, l'art de l'interprétation et la spiritualité dans la création musicale.
-                    </p>
-                </header>
-
-                <div class="reflection-intro fade-in">
-                    <p class="text-pretty">
-                        « La musique sacrée n'est pas seulement un art, c'est un pont entre l'humain et le divin, 
-                        un langage universel qui transcende les mots et touche directement l'âme. »
-                    </p>
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="hero" style="min-height: 60vh;" aria-labelledby="reflection-title">
+            <img src="images/optimized-final/bio-portrait.jpg" alt="" class="hero-background">
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content">
+                <div class="hero-badge fade-in">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    </svg>
+                    <span>Réflexions & Pensées</span>
                 </div>
+                
+                <h1 class="hero-title fade-in" id="reflection-title">
+                    Réflexion autour de...
+                    <span class="hero-subtitle">Pensées • Méditations • Art musical</span>
+                </h1>
+                
+                <p class="hero-description fade-in">
+                    « La musique sacrée n'est pas seulement un art, c'est un pont entre l'humain et le divin, 
+                    un langage universel qui transcende les mots et touche directement l'âme. »
+                </p>
+            </div>
+        </section>
+
+        <!-- Reflection Content Section -->
+        <section class="section" aria-labelledby="content-title">
+            <div class="container">
 
                 <!-- Featured Quote -->
                 <div class="featured-quote fade-in">
-                    <p class="featured-quote-text text-balance">
+                    <p class="featured-quote-text">
                         La tradition n'est pas la préservation de cendres mortes, mais la transmission d'un feu vivant qui éclaire chaque génération nouvelle.
                     </p>
                     <p class="featured-quote-author">Jean-David Waeber</p>
@@ -920,8 +377,8 @@
                     <article class="article-card fade-in">
                         <div class="article-content">
                             <div class="article-category">Spiritualité</div>
-                            <h2 class="article-title text-balance">Le Silence et la Résonance</h2>
-                            <p class="article-excerpt text-pretty">
+                            <h2 class="article-title">Le Silence et la Résonance</h2>
+                            <p class="article-excerpt">
                                 Dans l'art musical sacré, le silence n'est pas une absence mais une présence intense, 
                                 un espace où l'âme peut rencontrer l'ineffable.
                             </p>
@@ -953,11 +410,19 @@
                             </div>
                             <div class="article-meta">
                                 <div class="article-meta-item">
-                                    <i class="fas fa-calendar" aria-hidden="true"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
                                     <span>Janvier 2025</span>
                                 </div>
                                 <div class="article-meta-item">
-                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
                                     <span>5 min de lecture</span>
                                 </div>
                             </div>
@@ -965,11 +430,11 @@
                     </article>
 
                     <!-- Article 2: La Transmission -->
-                    <article class="article-card slide-in-left">
+                    <article class="article-card fade-in">
                         <div class="article-content">
                             <div class="article-category">Transmission</div>
-                            <h2 class="article-title text-balance">L'Art de Transmettre : Entre Tradition et Innovation</h2>
-                            <p class="article-excerpt text-pretty">
+                            <h2 class="article-title">L'Art de Transmettre : Entre Tradition et Innovation</h2>
+                            <p class="article-excerpt">
                                 Comment former les jeunes musiciens d'aujourd'hui à un patrimoine millénaire 
                                 tout en gardant vivante la flamme créatrice ?
                             </p>
@@ -1003,11 +468,19 @@
                             </div>
                             <div class="article-meta">
                                 <div class="article-meta-item">
-                                    <i class="fas fa-calendar" aria-hidden="true"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
                                     <span>Décembre 2024</span>
                                 </div>
                                 <div class="article-meta-item">
-                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
                                     <span>6 min de lecture</span>
                                 </div>
                             </div>
@@ -1015,11 +488,11 @@
                     </article>
 
                     <!-- Article 3: L'Interprétation -->
-                    <article class="article-card slide-in-right">
+                    <article class="article-card fade-in">
                         <div class="article-content">
                             <div class="article-category">Interprétation</div>
-                            <h2 class="article-title text-balance">Au-delà des Notes : L'Âme de l'Interprétation</h2>
-                            <p class="article-excerpt text-pretty">
+                            <h2 class="article-title">Au-delà des Notes : L'Âme de l'Interprétation</h2>
+                            <p class="article-excerpt">
                                 Qu'est-ce qui différencie une simple exécution musicale d'une véritable interprétation ? 
                                 Réflexions sur l'art de donner vie à la partition.
                             </p>
@@ -1053,11 +526,19 @@
                             </div>
                             <div class="article-meta">
                                 <div class="article-meta-item">
-                                    <i class="fas fa-calendar" aria-hidden="true"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
                                     <span>Novembre 2024</span>
                                 </div>
                                 <div class="article-meta-item">
-                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
                                     <span>4 min de lecture</span>
                                 </div>
                             </div>
@@ -1068,11 +549,11 @@
         </section>
 
         <!-- Themes Section -->
-        <section class="section section-alt" aria-labelledby="themes-title">
+        <section class="section" style="background: var(--color-surface);" aria-labelledby="themes-title">
             <div class="container">
                 <header class="section-header">
-                    <h2 class="section-title text-balance" id="themes-title">Thèmes de Réflexion</h2>
-                    <p class="section-subtitle text-pretty">
+                    <h2 class="section-title" id="themes-title">Thèmes de Réflexion</h2>
+                    <p class="section-subtitle">
                         Les grandes questions qui nourrissent ma pratique musicale et ma recherche artistique
                     </p>
                 </header>
@@ -1080,7 +561,9 @@
                 <div class="themes-grid">
                     <div class="theme-card fade-in">
                         <div class="theme-icon">
-                            <i class="fas fa-dove" aria-hidden="true"></i>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2L2 22h20L12 2zm0 16a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm1-4h-2v-6h2v6z"/>
+                            </svg>
                         </div>
                         <h3 class="theme-title">Spiritualité & Art</h3>
                         <p class="theme-description">
@@ -1091,7 +574,10 @@
 
                     <div class="theme-card fade-in">
                         <div class="theme-icon">
-                            <i class="fas fa-seedling" aria-hidden="true"></i>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M12 22c0-6 4-10 4-10s-4 4-4 10z"/>
+                                <path d="M4 22c0-6 4-10 4-10s-4 4-4 10z"/>
+                            </svg>
                         </div>
                         <h3 class="theme-title">Tradition Vivante</h3>
                         <p class="theme-description">
@@ -1102,7 +588,9 @@
 
                     <div class="theme-card fade-in">
                         <div class="theme-icon">
-                            <i class="fas fa-heart" aria-hidden="true"></i>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
                         </div>
                         <h3 class="theme-title">Émotion & Technique</h3>
                         <p class="theme-description">
@@ -1113,7 +601,12 @@
 
                     <div class="theme-card fade-in">
                         <div class="theme-icon">
-                            <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
                         </div>
                         <h3 class="theme-title">Communauté & Solitude</h3>
                         <p class="theme-description">
@@ -1124,7 +617,9 @@
 
                     <div class="theme-card fade-in">
                         <div class="theme-icon">
-                            <i class="fas fa-infinity" aria-hidden="true"></i>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
                         </div>
                         <h3 class="theme-title">Temporel & Éternel</h3>
                         <p class="theme-description">
@@ -1135,7 +630,11 @@
 
                     <div class="theme-card fade-in">
                         <div class="theme-icon">
-                            <i class="fas fa-globe" aria-hidden="true"></i>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
                         </div>
                         <h3 class="theme-title">Local & Universel</h3>
                         <p class="theme-description">
@@ -1149,270 +648,38 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
+    <footer class="section" style="background: var(--color-primary-darker); border-top: 1px solid rgba(233, 230, 223, 0.1);" role="contentinfo">
         <div class="container">
-            <div class="footer-bottom">
-                <p>
-                    &copy; 2025 Jean-David Waeber. Tous droits réservés. | 
-                    <a href="#mentions-legales" aria-label="Consulter les mentions légales">Mentions légales</a> | 
-                    <a href="#politique-confidentialite" aria-label="Consulter la politique de confidentialité">Politique de confidentialité</a>
-                </p>
+            <div class="grid grid-cols-1">
+                <div class="text-center">
+                    <div class="nav-logo mb-md">Jean-David Waeber</div>
+                    <p class="text-muted mb-lg">Organiste professionnel, Chef de chœur, Enseignant</p>
+                    
+                    <div class="flex justify-center gap-md mb-lg">
+                        <a href="mailto:info@jdwaeber.ch" class="btn btn-ghost" aria-label="Envoyer un email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            info@jdwaeber.ch
+                        </a>
+                        <a href="tel:+41276221231" class="btn btn-ghost" aria-label="Téléphoner">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            +41 (0)27 622 12 31
+                        </a>
+                    </div>
+                    
+                    <div class="text-small text-muted">
+                        <p>&copy; 2025 Jean-David Waeber. Tous droits réservés.</p>
+                        <p>Cathédrale de Sion • Place de la Cathédrale • 1950 Sion, Valais, Suisse</p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scroll to top button -->
-    <button class="scroll-to-top" id="scroll-to-top" aria-label="Retour en haut de page" style="position: fixed; bottom: var(--space-8); right: var(--space-8); width: 48px; height: 48px; background: var(--brand-primary); color: var(--text-inverse); border: none; border-radius: 50%; cursor: pointer; font-size: var(--text-lg); transition: all var(--duration-normal) var(--ease-out); z-index: var(--z-banner); opacity: 0; visibility: hidden; transform: translateY(20px) scale(0.8); box-shadow: var(--shadow-lg);">
-        <i class="fas fa-chevron-up" aria-hidden="true"></i>
-    </button>
-
-    <script>
-        /**
-         * REFLECTION PAGE ARCHITECTURE - JEAN-DAVID WAEBER
-         * Performance-first, accessibility-compliant
-         */
-        
-        class ReflectionPageHandler {
-            constructor() {
-                this.navbar = document.querySelector('.navbar');
-                this.navToggle = document.getElementById('nav-toggle');
-                this.navMenu = document.getElementById('nav-menu');
-                this.scrollToTopBtn = document.getElementById('scroll-to-top');
-                
-                this.state = {
-                    isMenuOpen: false,
-                    reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-                };
-                
-                this.init();
-            }
-
-            init() {
-                this.setupNavigation();
-                this.setupScrollEffects();
-                this.setupAnimations();
-                this.setupReadingEnhancements();
-            }
-
-            setupNavigation() {
-                if (this.navToggle && this.navMenu) {
-                    this.navToggle.addEventListener('click', this.handleMenuToggle.bind(this));
-                    
-                    document.addEventListener('click', (e) => {
-                        if (this.state.isMenuOpen && !this.navToggle.contains(e.target) && !this.navMenu.contains(e.target)) {
-                            this.closeMenu();
-                        }
-                    });
-
-                    document.addEventListener('keydown', (e) => {
-                        if (e.key === 'Escape' && this.state.isMenuOpen) {
-                            this.closeMenu();
-                            this.navToggle.focus();
-                        }
-                    });
-                }
-
-                window.addEventListener('scroll', () => {
-                    if (this.navbar) {
-                        if (window.scrollY > 50) {
-                            this.navbar.classList.add('scrolled');
-                        } else {
-                            this.navbar.classList.remove('scrolled');
-                        }
-                    }
-                }, { passive: true });
-            }
-
-            handleMenuToggle(e) {
-                e.preventDefault();
-                this.state.isMenuOpen = !this.state.isMenuOpen;
-                
-                this.navMenu.classList.toggle('active', this.state.isMenuOpen);
-                this.navToggle.setAttribute('aria-expanded', this.state.isMenuOpen);
-                document.body.style.overflow = this.state.isMenuOpen ? 'hidden' : '';
-                
-                const icon = this.navToggle.querySelector('i');
-                if (icon) {
-                    icon.className = this.state.isMenuOpen ? 'fas fa-times' : 'fas fa-bars';
-                }
-            }
-
-            closeMenu() {
-                this.state.isMenuOpen = false;
-                this.navMenu.classList.remove('active');
-                this.navToggle.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-                
-                const icon = this.navToggle.querySelector('i');
-                if (icon) {
-                    icon.className = 'fas fa-bars';
-                }
-            }
-
-            setupScrollEffects() {
-                if (this.scrollToTopBtn) {
-                    this.scrollToTopBtn.addEventListener('click', () => {
-                        window.scrollTo({
-                            top: 0,
-                            behavior: this.state.reducedMotion ? 'auto' : 'smooth'
-                        });
-                    });
-
-                    window.addEventListener('scroll', () => {
-                        if (window.scrollY > 300) {
-                            this.scrollToTopBtn.style.opacity = '1';
-                            this.scrollToTopBtn.style.visibility = 'visible';
-                            this.scrollToTopBtn.style.transform = 'translateY(0) scale(1)';
-                        } else {
-                            this.scrollToTopBtn.style.opacity = '0';
-                            this.scrollToTopBtn.style.visibility = 'hidden';
-                            this.scrollToTopBtn.style.transform = 'translateY(20px) scale(0.8)';
-                        }
-                    }, { passive: true });
-                }
-            }
-
-            setupAnimations() {
-                if (this.state.reducedMotion) {
-                    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
-                        el.classList.add('visible');
-                    });
-                    return;
-                }
-
-                if ('IntersectionObserver' in window) {
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach((entry, index) => {
-                            if (entry.isIntersecting) {
-                                setTimeout(() => {
-                                    entry.target.classList.add('visible');
-                                }, index * 150);
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-                    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
-                        observer.observe(el);
-                    });
-                } else {
-                    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
-                        el.classList.add('visible');
-                    });
-                }
-            }
-
-            setupReadingEnhancements() {
-                // Add reading progress for long articles
-                const articles = document.querySelectorAll('.article-card');
-                articles.forEach(article => {
-                    this.addReadingTime(article);
-                });
-
-                // Add smooth hover effects for theme cards
-                const themeCards = document.querySelectorAll('.theme-card');
-                themeCards.forEach(card => {
-                    card.addEventListener('mouseenter', () => {
-                        if (!this.state.reducedMotion) {
-                            card.style.willChange = 'transform';
-                        }
-                    });
-
-                    card.addEventListener('mouseleave', () => {
-                        card.style.willChange = 'auto';
-                    });
-                });
-
-                // Add interactive quote highlighting
-                const quotes = document.querySelectorAll('.article-quote, .featured-quote');
-                quotes.forEach(quote => {
-                    quote.addEventListener('click', () => {
-                        this.highlightQuote(quote);
-                    });
-                });
-            }
-
-            addReadingTime(article) {
-                const content = article.querySelector('.article-body');
-                if (!content) return;
-
-                const text = content.textContent || content.innerText;
-                const wordsPerMinute = 200;
-                const words = text.trim().split(/\s+/).length;
-                const readingTime = Math.ceil(words / wordsPerMinute);
-
-                const metaItem = article.querySelector('.article-meta-item:last-child');
-                if (metaItem && !metaItem.textContent.includes('lecture')) {
-                    metaItem.innerHTML = `
-                        <i class="fas fa-clock" aria-hidden="true"></i>
-                        <span>${readingTime} min de lecture</span>
-                    `;
-                }
-            }
-
-            highlightQuote(quote) {
-                // Visual feedback for quote interaction
-                quote.style.transform = 'scale(1.02)';
-                quote.style.boxShadow = '0 8px 25px rgba(212, 175, 55, 0.2)';
-                
-                setTimeout(() => {
-                    quote.style.transform = '';
-                    quote.style.boxShadow = '';
-                }, 300);
-
-                // Copy quote to clipboard (if supported)
-                if (navigator.clipboard) {
-                    const quoteText = quote.textContent.trim();
-                    navigator.clipboard.writeText(quoteText).then(() => {
-                        this.showToast('Citation copiée dans le presse-papiers');
-                    }).catch(() => {
-                        // Silent fail
-                    });
-                }
-            }
-
-            showToast(message) {
-                // Create and show toast notification
-                const toast = document.createElement('div');
-                toast.textContent = message;
-                toast.style.cssText = `
-                    position: fixed;
-                    bottom: 2rem;
-                    right: 2rem;
-                    background: var(--brand-primary);
-                    color: var(--text-inverse);
-                    padding: 1rem 1.5rem;
-                    border-radius: 0.5rem;
-                    font-size: 0.875rem;
-                    font-weight: 500;
-                    z-index: 10000;
-                    opacity: 0;
-                    transform: translateY(20px);
-                    transition: all 0.3s ease-out;
-                `;
-
-                document.body.appendChild(toast);
-
-                setTimeout(() => {
-                    toast.style.opacity = '1';
-                    toast.style.transform = 'translateY(0)';
-                }, 100);
-
-                setTimeout(() => {
-                    toast.style.opacity = '0';
-                    toast.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        if (toast.parentNode) {
-                            toast.parentNode.removeChild(toast);
-                        }
-                    }, 300);
-                }, 3000);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            new ReflectionPageHandler();
-        });
-    </script>
+    <!-- JavaScript -->\n    <script>\n        // Mobile Navigation\n        class MobileNav {\n            constructor() {\n                this.toggle = document.getElementById('nav-toggle');\n                this.menu = document.querySelector('.nav-menu');\n                \n                if (this.toggle && this.menu) {\n                    this.init();\n                }\n            }\n            \n            init() {\n                this.toggle.addEventListener('click', () => {\n                    const isOpen = this.toggle.getAttribute('aria-expanded') === 'true';\n                    this.toggle.setAttribute('aria-expanded', !isOpen);\n                    this.menu.classList.toggle('hidden-mobile');\n                    this.menu.classList.toggle('visible-mobile');\n                });\n            }\n        }\n        \n        // Initialize on DOM ready\n        document.addEventListener('DOMContentLoaded', () => {\n            new MobileNav();\n            \n            // Intersection Observer for animations\n            const observerOptions = {\n                threshold: 0.1,\n                rootMargin: '0px 0px -50px 0px'\n            };\n            \n            const observer = new IntersectionObserver((entries) => {\n                entries.forEach(entry => {\n                    if (entry.isIntersecting) {\n                        entry.target.style.animationDelay = '0s';\n                        entry.target.classList.add('slide-up');\n                        observer.unobserve(entry.target);\n                    }\n                });\n            }, observerOptions);\n            \n            document.querySelectorAll('.fade-in').forEach(el => {\n                observer.observe(el);\n            });\n        });\n    </script>\n\n    <!-- Additional Styles -->\n    <style>\n        .hamburger {\n            display: block;\n            width: 20px;\n            height: 2px;\n            background: var(--color-text-primary);\n            position: relative;\n        }\n        \n        .hamburger::before,\n        .hamburger::after {\n            content: '';\n            position: absolute;\n            width: 100%;\n            height: 2px;\n            background: var(--color-text-primary);\n            transition: all var(--duration-normal) var(--ease-out);\n        }\n        \n        .hamburger::before { top: -6px; }\n        .hamburger::after { bottom: -6px; }\n        \n        @media (max-width: 767px) {\n            .nav-menu {\n                position: absolute;\n                top: 100%;\n                left: 0;\n                width: 100%;\n                background: var(--color-surface);\n                flex-direction: column;\n                padding: var(--space-lg);\n                border-top: 1px solid rgba(233, 230, 223, 0.1);\n            }\n        }\n    </style>
 </body>
 </html>
