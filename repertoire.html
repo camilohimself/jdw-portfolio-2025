@@ -662,7 +662,12 @@
             async loadWorks() {
                 // Utilisation des données réelles du CSV (406 œuvres authentiques)
                 if (typeof repertoireData === 'undefined') {
-                    throw new Error('Les données du répertoire ne sont pas disponibles');
+                    console.error('repertoireData undefined - tentative de rechargement');
+                    // Petit délai pour laisser le temps au script de se charger
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                    if (typeof repertoireData === 'undefined') {
+                        throw new Error('Les données du répertoire ne sont pas disponibles');
+                    }
                 }
                 
                 // Chargement des 406 œuvres authentiques
@@ -892,9 +897,18 @@
             }
         }
         
-        // Initialize the application
+        // Initialize the application avec vérification robuste
         document.addEventListener('DOMContentLoaded', () => {
-            new RepertoireManager();
+            // Attendre que repertoireData soit disponible
+            const initRepertoire = () => {
+                if (typeof repertoireData !== 'undefined') {
+                    new RepertoireManager();
+                } else {
+                    console.log('Attente de repertoireData...');
+                    setTimeout(initRepertoire, 100);
+                }
+            };
+            initRepertoire();
         });
     </script>
     <script src="assets/js/scroll-animations.js"></script>
