@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="assets/css/tokens.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/visual-enhancements.css">
 </head>
 
 <body data-page="media">
@@ -88,7 +89,7 @@
     <!-- Main Content -->
     <main role="main" id="main-content">
         <!-- Hero Section -->
-        <section class="hero" style="min-height: 60vh;" aria-labelledby="media-title">
+        <section class="hero fade-up-element" style="min-height: 60vh;" aria-labelledby="media-title">
             <img src="images/optimized-final/media-technique.jpg" alt="" class="hero-background">
             <div class="hero-overlay"></div>
             
@@ -113,7 +114,7 @@
         </section>
 
         <!-- Media Filters -->
-        <section class="section section-sm" style="background: var(--color-surface);">
+        <section class="section section-sm fade-up-element" style="background: var(--color-surface);">
             <div class="container">
                 <div class="flex justify-center gap-md mb-xl">
                     <button class="btn btn-ghost active" data-filter="all" aria-pressed="true">
@@ -133,7 +134,7 @@
         </section>
 
         <!-- Media Grid -->
-        <section class="section">
+        <section class="section fade-up-element">
             <div class="container">
                 <!-- Audio Section -->
                 <div class="mb-4xl">
@@ -694,5 +695,6 @@
             }
         }
     </style>
+    <script src="assets/js/scroll-animations.js"></script>
 </body>
 </html>

@@ -617,7 +617,7 @@
 
         .gallery-item {
             position: relative;
-            aspect-ratio: 4/3;
+            aspect-ratio: 1; /* Ratio carré uniforme */
             overflow: hidden;
             border-radius: var(--radius-xl);
             cursor: pointer;
@@ -627,7 +627,7 @@
         }
 
         .gallery-item:hover {
-            transform: translateY(-4px);
+            transform: translateY(-8px) scale(1.02);
             box-shadow: var(--shadow-lg);
         }
 
@@ -658,7 +658,7 @@
         }
 
         .gallery-item:hover .gallery-image {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
         .gallery-overlay {
@@ -765,7 +765,7 @@
         .masonry-item:nth-child(9) { grid-row: span 15; }
 
         .masonry-item:hover {
-            transform: translateY(-4px);
+            transform: translateY(-8px) scale(1.02);
             box-shadow: var(--shadow-lg);
         }
 
@@ -1114,6 +1114,7 @@
     <link rel="stylesheet" href="assets/css/tokens.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/visual-enhancements.css">
 </head>
 
 <body data-page="galerie">
@@ -1170,7 +1171,7 @@
     <!-- Main Content -->
     <main id="main-content" role="main">
         <!-- Hero Section -->
-        <section class="hero" id="galerie" aria-labelledby="hero-title">
+        <section class="hero fade-up-element" id="galerie" aria-labelledby="hero-title">
             <div class="hero-content">
                 <div class="hero-badge">
                     <i class="fas fa-camera" aria-hidden="true"></i>
@@ -1195,7 +1196,7 @@
         </section>
 
         <!-- Filter Section -->
-        <section class="section" id="filter-section">
+        <section class="section fade-up-element" id="filter-section">
             <div class="container">
                 <div class="gallery-filters" role="tablist" aria-label="Filtrer les photos">
                     <button class="gallery-filter active" 
@@ -1238,7 +1239,7 @@
         </section>
 
         <!-- Gallery Section -->
-        <section class="section section-alt" id="photo-gallery" aria-labelledby="gallery-title">
+        <section class="section section-alt fade-up-element" id="photo-gallery" aria-labelledby="gallery-title">
             <div class="container">
                         <!-- Header/Hero unifié -->
         <header class="page-header" role="banner">
@@ -1483,7 +1484,7 @@
         </section>
 
         <!-- Photo Credits Section -->
-        <section class="section" id="credits">
+        <section class="section fade-up-element" id="credits">
             <div class="container">
                 <header class="section-header">
                     <h2 class="section-title text-balance">Crédits photographiques</h2>
@@ -2040,5 +2041,6 @@
             }
         });
     </script>
+    <script src="assets/js/scroll-animations.js"></script>
 </body>
 </html>

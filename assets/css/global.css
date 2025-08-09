@@ -233,12 +233,23 @@ a:focus {
 /* === HEADER/HERO UNIFIÉ === */
 .page-header {
     position: relative;
-    min-height: 60vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-top: 80px; /* Compense la nav fixe */
+    margin-top: 0;
+    background: var(--color-background);
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--color-background);
 }
 
 .page-header-background {

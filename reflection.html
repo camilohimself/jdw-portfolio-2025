@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="assets/css/tokens.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/visual-enhancements.css">
     
     <!-- Additional Styles for Reflection Content -->
     <style>
@@ -344,7 +345,7 @@
     <!-- Main Content -->
     <main role="main" id="main-content">
         <!-- Hero Section -->
-        <section class="hero" style="min-height: 60vh;" aria-labelledby="reflection-title">
+        <section class="hero fade-up-element" style="min-height: 60vh;" aria-labelledby="reflection-title">
             <img src="images/optimized-final/bio-portrait.jpg" alt="" class="hero-background">
             <div class="hero-overlay"></div>
             
@@ -370,7 +371,7 @@
         </section>
 
         <!-- Reflection Content Section -->
-        <section class="section" aria-labelledby="content-title">
+        <section class="section fade-up-element" aria-labelledby="content-title">
             <div class="container">
 
                 <!-- Featured Quote -->
@@ -559,7 +560,7 @@
         </section>
 
         <!-- Themes Section -->
-        <section class="section" style="background: var(--color-surface);" aria-labelledby="themes-title">
+        <section class="section fade-up-element" style="background: var(--color-surface);" aria-labelledby="themes-title">
             <div class="container">
                         <!-- Header/Hero unifié -->
         <header class="page-header" role="banner">
@@ -699,5 +700,6 @@
     </footer>
 
     <!-- JavaScript -->\n    <script>\n        // Mobile Navigation\n        class MobileNav {\n            constructor() {\n                this.toggle = document.getElementById('nav-toggle');\n                this.menu = document.querySelector('.nav-menu');\n                \n                if (this.toggle && this.menu) {\n                    this.init();\n                }\n            }\n            \n            init() {\n                this.toggle.addEventListener('click', () => {\n                    const isOpen = this.toggle.getAttribute('aria-expanded') === 'true';\n                    this.toggle.setAttribute('aria-expanded', !isOpen);\n                    this.menu.classList.toggle('hidden-mobile');\n                    this.menu.classList.toggle('visible-mobile');\n                });\n            }\n        }\n        \n        // Initialize on DOM ready\n        document.addEventListener('DOMContentLoaded', () => {\n            new MobileNav();\n            \n            // Intersection Observer for animations\n            const observerOptions = {\n                threshold: 0.1,\n                rootMargin: '0px 0px -50px 0px'\n            };\n            \n            const observer = new IntersectionObserver((entries) => {\n                entries.forEach(entry => {\n                    if (entry.isIntersecting) {\n                        entry.target.style.animationDelay = '0s';\n                        entry.target.classList.add('slide-up');\n                        observer.unobserve(entry.target);\n                    }\n                });\n            }, observerOptions);\n            \n            document.querySelectorAll('.fade-in').forEach(el => {\n                observer.observe(el);\n            });\n        });\n    </script>\n\n    <!-- Additional Styles -->\n    <style>\n        .hamburger {\n            display: block;\n            width: 20px;\n            height: 2px;\n            background: var(--color-text-primary);\n            position: relative;\n        }\n        \n        .hamburger::before,\n        .hamburger::after {\n            content: '';\n            position: absolute;\n            width: 100%;\n            height: 2px;\n            background: var(--color-text-primary);\n            transition: all var(--duration-normal) var(--ease-out);\n        }\n        \n        .hamburger::before { top: -6px; }\n        .hamburger::after { bottom: -6px; }\n        \n        @media (max-width: 767px) {\n            .nav-menu {\n                position: absolute;\n                top: 100%;\n                left: 0;\n                width: 100%;\n                background: var(--color-surface);\n                flex-direction: column;\n                padding: var(--space-lg);\n                border-top: 1px solid rgba(233, 230, 223, 0.1);\n            }\n        }\n    </style>
+    <script src="assets/js/scroll-animations.js"></script>
 </body>
 </html>
