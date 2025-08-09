@@ -1207,7 +1207,7 @@
                             <span>Concert</span>
                         </div>
                         <time class="event-date">
-                            ${event.jour}
+                            ${event.date}
                         </time>
                         <h3 class="event-title">${event.titre}</h3>
                         <div class="event-location">
@@ -1219,6 +1219,9 @@
                         <div class="event-meta">
                             <div class="event-meta-item">
                                 <span>${event.heure}</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <span>${event.qui}</span>
                             </div>
                         </div>
                     </article>
@@ -1241,6 +1244,7 @@
                     navToggle.setAttribute('aria-expanded', !isOpen);
                     navMenu.classList.toggle('active');
                 });
+            }
         });
     </script>
     <script src="assets/js/scroll-animations.js"></script>
