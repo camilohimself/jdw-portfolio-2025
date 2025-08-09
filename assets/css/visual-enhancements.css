@@ -88,8 +88,8 @@
 
 /* Classes pour animations d'entrée */
 .fade-up-element {
-    opacity: 0;
-    transform: translateY(40px);
+    opacity: 1; /* TEMPORAIRE: Visible par défaut pour debug */
+    transform: translateY(0); /* TEMPORAIRE: Pas de décalage pour debug */
     transition: all var(--duration-slow) var(--ease-out);
     will-change: opacity, transform;
 }
