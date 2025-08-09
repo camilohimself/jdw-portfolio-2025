@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jean-David Waeber - Organiste & Chef de Chœur</title>
-    <meta name="description" content="Jean-David Waeber, organiste professionnel et chef de chœur. Découvrez ses concerts, enseignement et compositions musicales.">
+    <meta name="description" content="Jean-David Waeber, organiste professionnel, chef de chœur et enseignant. Direction, Interprétation, Enseignement - Cathédrale de Sion.">
     <meta name="keywords" content="organiste, chef de chœur, enseignant, Sion, cathédrale, musique sacrée, chant grégorien">
     <meta name="author" content="Jean-David Waeber">
     <meta name="robots" content="index, follow">
@@ -408,11 +408,72 @@
             align-items: center;
             position: relative;
             padding: var(--space-24) 0 var(--space-16);
-            background: 
-                linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%),
-                url('images/171111_1045.jpg') center/cover no-repeat,
-                var(--bg-primary);
             overflow: hidden;
+        }
+        
+        /* === HERO SLIDER === */
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+        
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        
+        .hero-slide.active {
+            opacity: 1;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+            z-index: 1;
+        }
+        
+        /* === HERO SLIDER NAVIGATION === */
+        .hero-slider-nav {
+            position: absolute;
+            bottom: var(--space-8);
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: var(--space-3);
+            z-index: 10;
+        }
+        
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .slider-dot:hover,
+        .slider-dot.active {
+            background: var(--brand-primary);
+            border-color: var(--brand-primary);
+            transform: scale(1.2);
         }
         
         .hero::before {
@@ -1449,6 +1510,16 @@
     <main id="main-content" role="main">
         <!-- Hero Section -->
         <section class="hero" id="accueil" aria-labelledby="hero-title">
+            <!-- Hero Image Slider -->
+            <div class="hero-slider" aria-hidden="true">
+                <div class="hero-slide active" style="background-image: url('images/optimized-final/hero-slide-1.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('images/optimized-final/hero-slide-2.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('images/optimized-final/hero-slide-3.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('images/optimized-final/hero-slide-4.jpg');"></div>
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <!-- Hero Content -->
             <div class="hero-content">
                 <div class="hero-badge">
                     <i class="fas fa-music" aria-hidden="true"></i>
@@ -1456,10 +1527,10 @@
                 </div>
                 <h1 class="hero-title text-balance" id="hero-title">
                     Jean-David Waeber
-                    <span class="hero-subtitle">Organiste virtuose & Chef de chœur</span>
+                    <span class="hero-subtitle">Organiste professionnel & Chef de chœur</span>
                 </h1>
                 <p class="hero-description text-pretty">
-                    Plus de 15 ans d'expérience dans la direction musicale sacrée. 
+                    Direction, Interprétation, Enseignement - Passionné par la transmission de la musique sacrée. 
                     Spécialiste du répertoire grégorien et de la musique baroque.
                     <strong>Prochain concert : 29 Août 2025 - Souffle sacré</strong>
                 </p>
@@ -1483,6 +1554,14 @@
                 <div id="hero-cta-desc" class="sr-only">
                     Écouter des extraits des concerts de Jean-David Waeber
                 </div>
+            </div>
+            
+            <!-- Slider Navigation -->
+            <div class="hero-slider-nav">
+                <button class="slider-dot active" data-slide="0" aria-label="Afficher la première image"></button>
+                <button class="slider-dot" data-slide="1" aria-label="Afficher la deuxième image"></button>
+                <button class="slider-dot" data-slide="2" aria-label="Afficher la troisième image"></button>
+                <button class="slider-dot" data-slide="3" aria-label="Afficher la quatrième image"></button>
             </div>
         </section>
 
@@ -1804,6 +1883,12 @@
                 this.navMenu = document.getElementById('nav-menu');
                 this.scrollToTopBtn = document.getElementById('scroll-to-top');
                 
+                // Hero Slider Elements
+                this.heroSlides = document.querySelectorAll('.hero-slide');
+                this.sliderDots = document.querySelectorAll('.slider-dot');
+                this.currentSlide = 0;
+                this.slideInterval = null;
+                
                 // State Management
                 this.state = {
                     isMenuOpen: false,
@@ -1827,6 +1912,7 @@
                     this.setupScrollEffects();
                     this.setupAnimations();
                     this.setupAccessibility();
+                    this.setupHeroSlider();
                 } catch (error) {
                     console.error('UX Architecture initialization failed:', error);
                     this.initializeFallback();
@@ -2056,6 +2142,72 @@
                         }
                     });
                 });
+            }
+            
+            // === HERO SLIDER METHODS ===
+            setupHeroSlider() {
+                if (!this.heroSlides.length) return;
+                
+                // Auto-advance slides
+                this.startSlideShow();
+                
+                // Dot navigation
+                this.sliderDots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        this.goToSlide(index);
+                        this.resetSlideShow();
+                    });
+                });
+                
+                // Pause on hover
+                const heroSection = document.querySelector('.hero');
+                if (heroSection) {
+                    heroSection.addEventListener('mouseenter', () => {
+                        this.pauseSlideShow();
+                    });
+                    
+                    heroSection.addEventListener('mouseleave', () => {
+                        this.startSlideShow();
+                    });
+                }
+            }
+            
+            goToSlide(index) {
+                // Remove active class from current slide and dot
+                this.heroSlides[this.currentSlide]?.classList.remove('active');
+                this.sliderDots[this.currentSlide]?.classList.remove('active');
+                
+                // Update current slide
+                this.currentSlide = index;
+                
+                // Add active class to new slide and dot
+                this.heroSlides[this.currentSlide]?.classList.add('active');
+                this.sliderDots[this.currentSlide]?.classList.add('active');
+            }
+            
+            nextSlide() {
+                const nextIndex = (this.currentSlide + 1) % this.heroSlides.length;
+                this.goToSlide(nextIndex);
+            }
+            
+            startSlideShow() {
+                if (this.state.reducedMotion) return; // Respect user preferences
+                
+                this.slideInterval = setInterval(() => {
+                    this.nextSlide();
+                }, 5000); // 5 seconds per slide
+            }
+            
+            pauseSlideShow() {
+                if (this.slideInterval) {
+                    clearInterval(this.slideInterval);
+                    this.slideInterval = null;
+                }
+            }
+            
+            resetSlideShow() {
+                this.pauseSlideShow();
+                this.startSlideShow();
             }
 
             throttle(func, limit) {
