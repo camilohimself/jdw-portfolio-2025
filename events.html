@@ -973,55 +973,58 @@
             text-wrap: pretty;
         }
     </style>
+    <!-- Design System -->
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/global.css">
 </head>
 
-<body>
-    <!-- Skip Links for Enhanced Accessibility -->
-    <div class="skip-links">
-        <a href="#main-content" class="skip-link">Aller au contenu principal</a>
-        <a href="#navigation" class="skip-link">Aller à la navigation</a>
-        <a href="#contact" class="skip-link">Aller aux informations de contact</a>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navigation" role="navigation" aria-label="Navigation principale">
+<body data-page="agenda">
+        <!-- Skip Link pour accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Navigation principale -->
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
         <div class="nav-container">
-            <a href="index.html" class="logo" aria-label="Jean-David Waeber - Retour à l'accueil">
+            <a href="index.html" class="nav-logo" aria-label="Jean-David Waeber - Retour à l'accueil">
                 Jean-David Waeber
             </a>
             
-            <button class="nav-toggle" 
-                    id="nav-toggle" 
-                    aria-label="Ouvrir le menu de navigation" 
-                    aria-expanded="false"
-                    aria-controls="nav-menu">
-                <i class="fas fa-bars" aria-hidden="true"></i>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
             </button>
             
-            <ul class="nav-menu" id="nav-menu" role="menubar">
+            <ul class="nav-menu" role="menubar" id="nav-menu">
                 <li role="none">
-                    <a href="index.html" role="menuitem">Accueil</a>
+                    <a href="index.html" class="nav-link" role="menuitem" data-page="accueil">Accueil</a>
                 </li>
                 <li role="none">
-                    <a href="events.html" class="active" role="menuitem" aria-current="page">Agenda</a>
+                    <a href="events.html" class="nav-link" role="menuitem" data-page="agenda">Agenda</a>
                 </li>
                 <li role="none">
-                    <a href="gallery.html" role="menuitem">Galerie</a>
+                    <a href="gallery.html" class="nav-link" role="menuitem" data-page="galerie">Galerie</a>
                 </li>
                 <li role="none">
-                    <a href="about.html" role="menuitem">Biographie</a>
+                    <a href="about.html" class="nav-link" role="menuitem" data-page="biographie">Biographie</a>
                 </li>
                 <li role="none">
-                    <a href="contact.html" role="menuitem">Contact</a>
+                    <a href="ensembles.html" class="nav-link" role="menuitem" data-page="ensembles">Ensembles</a>
                 </li>
                 <li role="none">
-                    <a href="media.html" role="menuitem">Média</a>
+                    <a href="reflection.html" class="nav-link" role="menuitem" data-page="reflexion">Réflexion</a>
                 </li>
                 <li role="none">
-                    <a href="reflection.html" role="menuitem">Réflexion autour de...</a>
+                    <a href="media.html" class="nav-link" role="menuitem" data-page="media">Média</a>
                 </li>
                 <li role="none">
-                    <a href="ensembles.html" role="menuitem">Ensembles</a>
+                    <a href="repertoire.html" class="nav-link" role="menuitem" data-page="repertoire">Répertoire</a>
+                </li>
+                <li role="none">
+                    <a href="contact.html" class="nav-link" role="menuitem" data-page="contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -1100,12 +1103,20 @@
         <!-- Events Timeline -->
         <section class="section section-alt" id="upcoming-events" aria-labelledby="events-title">
             <div class="container">
-                <header class="section-header">
-                    <h2 class="section-title text-balance" id="events-title">Calendrier des événements</h2>
-                    <p class="section-subtitle text-pretty">
-                        Chronologie complète de mes prestations et événements musicaux
-                    </p>
-                </header>
+                        <!-- Header/Hero unifié -->
+        <header class="page-header" role="banner">
+            <img 
+                class="page-header-background" 
+                src="images/optimized-final/agenda-concert.jpg"
+                alt="Salle de concert lors d'un événement"
+                loading="lazy"
+            >
+            <div class="page-header-overlay" aria-hidden="true"></div>
+            <div class="page-header-content">
+                <h1 class="page-header-title">Agenda</h1>
+                <p class="page-header-subtitle">Concerts, récitals et événements musicaux</p>
+            </div>
+        </header>
                 
                 <div class="timeline" id="events-panel" role="tabpanel" aria-labelledby="events-title">
                     <!-- Août 2025 -->
@@ -1307,7 +1318,7 @@
                         <p style="margin-bottom: var(--space-6); color: var(--text-secondary);">
                             Recevez en avant-première les annonces de concerts, nouvelles compositions et événements spéciaux.
                         </p>
-                        <a href="mailto:contact@jdwaeber.ch?subject=Inscription Newsletter" class="btn btn-secondary">
+                        <a href="mailto:info@jdwaeber.ch?subject=Inscription Newsletter" class="btn btn-secondary">
                             <i class="fas fa-envelope-open" aria-hidden="true"></i>
                             <span>S'inscrire à la newsletter</span>
                         </a>
@@ -1328,10 +1339,10 @@
                         Place de la Cathédrale<br>
                         1950 Sion, Valais, Suisse
                     </p>
-                    <a href="mailto:contact@jdwaeber.ch" 
+                    <a href="mailto:info@jdwaeber.ch" 
                        aria-label="Envoyer un email à Jean-David Waeber">
                         <i class="fas fa-envelope" aria-hidden="true"></i>
-                        <span>contact@jdwaeber.ch</span>
+                        <span>info@jdwaeber.ch</span>
                     </a>
                     <a href="tel:+41276221231" 
                        aria-label="Appeler Jean-David Waeber">
@@ -1363,7 +1374,7 @@
                         <i class="fab fa-linkedin" aria-hidden="true"></i>
                         <span>LinkedIn</span>
                     </a>
-                    <a href="mailto:contact@jdwaeber.ch?subject=Newsletter" 
+                    <a href="mailto:info@jdwaeber.ch?subject=Newsletter" 
                        aria-label="S'abonner à la newsletter par email">
                         <i class="fas fa-envelope-open" aria-hidden="true"></i>
                         <span>Newsletter</span>

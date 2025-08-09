@@ -30,53 +30,63 @@
     <!-- Design System -->
     <link rel="stylesheet" href="assets/css/tokens.css">
     <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/global.css">
 </head>
 
-<body>
+<body data-page="media">
     <!-- Navigation -->
+        <!-- Skip Link pour accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Navigation principale -->
     <nav class="nav" role="navigation" aria-label="Navigation principale">
-        <div class="container">
-            <div class="nav-container">
-                <a href="index.html" class="nav-logo" aria-label="Jean-David Waeber - Retour à l'accueil">
-                    Jean-David Waeber
-                </a>
-                
-                <button class="btn btn-ghost visible-mobile" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-                    <span class="hamburger"></span>
-                </button>
-                
-                <ul class="nav-menu hidden-mobile" role="menubar">
-                    <li role="none">
-                        <a href="index.html" class="nav-link" role="menuitem">Accueil</a>
-                    </li>
-                    <li role="none">
-                        <a href="events.html" class="nav-link" role="menuitem">Agenda</a>
-                    </li>
-                    <li role="none">
-                        <a href="gallery.html" class="nav-link" role="menuitem">Galerie</a>
-                    </li>
-                    <li role="none">
-                        <a href="about.html" class="nav-link" role="menuitem">Biographie</a>
-                    </li>
-                    <li role="none">
-                        <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
-                    </li>
-                    <li role="none">
-                        <a href="media.html" class="nav-link active" role="menuitem" aria-current="page">Média</a>
-                    </li>
-                    <li role="none">
-                        <a href="reflection.html" class="nav-link" role="menuitem">Réflexion</a>
-                    </li>
-                    <li role="none">
-                        <a href="ensembles.html" class="nav-link" role="menuitem">Ensembles</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Jean-David Waeber - Retour à l'accueil">
+                Jean-David Waeber
+            </a>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            
+            <ul class="nav-menu" role="menubar" id="nav-menu">
+                <li role="none">
+                    <a href="index.html" class="nav-link" role="menuitem" data-page="accueil">Accueil</a>
+                </li>
+                <li role="none">
+                    <a href="events.html" class="nav-link" role="menuitem" data-page="agenda">Agenda</a>
+                </li>
+                <li role="none">
+                    <a href="gallery.html" class="nav-link" role="menuitem" data-page="galerie">Galerie</a>
+                </li>
+                <li role="none">
+                    <a href="about.html" class="nav-link" role="menuitem" data-page="biographie">Biographie</a>
+                </li>
+                <li role="none">
+                    <a href="ensembles.html" class="nav-link" role="menuitem" data-page="ensembles">Ensembles</a>
+                </li>
+                <li role="none">
+                    <a href="reflection.html" class="nav-link" role="menuitem" data-page="reflexion">Réflexion</a>
+                </li>
+                <li role="none">
+                    <a href="media.html" class="nav-link" role="menuitem" data-page="media">Média</a>
+                </li>
+                <li role="none">
+                    <a href="repertoire.html" class="nav-link" role="menuitem" data-page="repertoire">Répertoire</a>
+                </li>
+                <li role="none">
+                    <a href="contact.html" class="nav-link" role="menuitem" data-page="contact">Contact</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main role="main">
+    <main role="main" id="main-content">
         <!-- Hero Section -->
         <section class="hero" style="min-height: 60vh;" aria-labelledby="media-title">
             <img src="images/optimized-final/media-technique.jpg" alt="" class="hero-background">
@@ -127,12 +137,20 @@
             <div class="container">
                 <!-- Audio Section -->
                 <div class="mb-4xl">
-                    <header class="section-header">
-                        <h2 class="section-title">Enregistrements audio</h2>
-                        <p class="section-subtitle">
-                            Sélection d'extraits de concerts et enregistrements studio
-                        </p>
-                    </header>
+                            <!-- Header/Hero unifié -->
+        <header class="page-header" role="banner">
+            <img 
+                class="page-header-background" 
+                src="images/optimized-final/media-technique.jpg"
+                alt="Matériel d'enregistrement professionnel"
+                loading="lazy"
+            >
+            <div class="page-header-overlay" aria-hidden="true"></div>
+            <div class="page-header-content">
+                <h1 class="page-header-title">Média</h1>
+                <p class="page-header-subtitle">Enregistrements, vidéos et ressources</p>
+            </div>
+        </header>
                     
                     <div class="media-grid">
                         <article class="media-card fade-in" data-category="audio">

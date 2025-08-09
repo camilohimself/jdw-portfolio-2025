@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Jean-David Waeber | Organiste & Chef de Chœur</title>
-    <meta name="description" content="Contactez Jean-David Waeber pour vos projets musicaux, concerts, formations ou collaborations. Maître de chapelle de la cathédrale de Sion.">
+    <meta name="description" content="Contactez Jean-David Waeber pour vos projets musicaux, concerts, formations ou collaborations. Organiste professionnel et chef de chœur à la cathédrale de Sion.">
     <meta name="keywords" content="contact, organiste, chef de chœur, Sion, cathédrale, collaboration musicale">
     <meta name="author" content="Jean-David Waeber">
     <meta name="robots" content="index, follow">
@@ -729,55 +729,58 @@
             text-wrap: pretty;
         }
     </style>
+    <!-- Design System -->
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/global.css">
 </head>
 
-<body>
-    <!-- Skip Links -->
-    <div class="skip-links">
-        <a href="#main-content" class="skip-link">Aller au contenu principal</a>
-        <a href="#navigation" class="skip-link">Aller à la navigation</a>
-        <a href="#contact-form" class="skip-link">Aller au formulaire de contact</a>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navigation" role="navigation" aria-label="Navigation principale">
+<body data-page="contact">
+        <!-- Skip Link pour accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Navigation principale -->
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
         <div class="nav-container">
-            <a href="index.html" class="logo" aria-label="Jean-David Waeber - Retour à l'accueil">
+            <a href="index.html" class="nav-logo" aria-label="Jean-David Waeber - Retour à l'accueil">
                 Jean-David Waeber
             </a>
             
-            <button class="nav-toggle" 
-                    id="nav-toggle" 
-                    aria-label="Ouvrir le menu de navigation" 
-                    aria-expanded="false"
-                    aria-controls="nav-menu">
-                <i class="fas fa-bars" aria-hidden="true"></i>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
             </button>
             
-            <ul class="nav-menu" id="nav-menu" role="menubar">
+            <ul class="nav-menu" role="menubar" id="nav-menu">
                 <li role="none">
-                    <a href="index.html" role="menuitem">Accueil</a>
+                    <a href="index.html" class="nav-link" role="menuitem" data-page="accueil">Accueil</a>
                 </li>
                 <li role="none">
-                    <a href="events.html" role="menuitem">Agenda</a>
+                    <a href="events.html" class="nav-link" role="menuitem" data-page="agenda">Agenda</a>
                 </li>
                 <li role="none">
-                    <a href="gallery.html" role="menuitem">Galerie</a>
+                    <a href="gallery.html" class="nav-link" role="menuitem" data-page="galerie">Galerie</a>
                 </li>
                 <li role="none">
-                    <a href="about.html" role="menuitem">Biographie</a>
+                    <a href="about.html" class="nav-link" role="menuitem" data-page="biographie">Biographie</a>
                 </li>
                 <li role="none">
-                    <a href="contact.html" class="active" role="menuitem" aria-current="page">Contact</a>
+                    <a href="ensembles.html" class="nav-link" role="menuitem" data-page="ensembles">Ensembles</a>
                 </li>
                 <li role="none">
-                    <a href="media.html" role="menuitem">Média</a>
+                    <a href="reflection.html" class="nav-link" role="menuitem" data-page="reflexion">Réflexion</a>
                 </li>
                 <li role="none">
-                    <a href="reflection.html" role="menuitem">Réflexion autour de...</a>
+                    <a href="media.html" class="nav-link" role="menuitem" data-page="media">Média</a>
                 </li>
                 <li role="none">
-                    <a href="ensembles.html" role="menuitem">Ensembles</a>
+                    <a href="repertoire.html" class="nav-link" role="menuitem" data-page="repertoire">Répertoire</a>
+                </li>
+                <li role="none">
+                    <a href="contact.html" class="nav-link" role="menuitem" data-page="contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -785,6 +788,20 @@
 
     <!-- Main Content -->
     <main id="main-content" role="main">
+        <!-- Header/Hero unifié -->
+        <header class="page-header" role="banner">
+            <img 
+                class="page-header-background" 
+                src="images/optimized-final/hero-slide-3.jpg"
+                alt="Jean-David Waeber accueillant le public"
+                loading="lazy"
+            >
+            <div class="page-header-overlay" aria-hidden="true"></div>
+            <div class="page-header-content">
+                <h1 class="page-header-title">Contact</h1>
+                <p class="page-header-subtitle">Prenez contact pour vos projets musicaux</p>
+            </div>
+        </header>
         <!-- Contact Section -->
         <section class="section" id="contact" aria-labelledby="contact-title">
             <div class="container">
@@ -824,9 +841,9 @@
                             <div class="contact-details">
                                 <h4>Email</h4>
                                 <p>
-                                    <a href="mailto:contact@jdwaeber.ch" 
+                                    <a href="mailto:info@jdwaeber.ch" 
                                        aria-label="Envoyer un email à Jean-David Waeber">
-                                        contact@jdwaeber.ch
+                                        info@jdwaeber.ch
                                     </a>
                                 </p>
                                 <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: var(--space-2);">
@@ -891,7 +908,7 @@
                                        aria-label="Chaîne YouTube de Jean-David Waeber">
                                         <i class="fab fa-youtube" aria-hidden="true"></i> YouTube
                                     </a><br>
-                                    <a href="mailto:contact@jdwaeber.ch?subject=Newsletter" 
+                                    <a href="mailto:info@jdwaeber.ch?subject=Newsletter" 
                                        aria-label="S'abonner à la newsletter">
                                         <i class="fas fa-envelope-open" aria-hidden="true"></i> Newsletter
                                     </a>

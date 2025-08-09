@@ -459,49 +459,79 @@
             }
         }
     </style>
+    <!-- Design System -->
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/global.css">
 </head>
 
-<body>
+<body data-page="repertoire">
     <!-- Navigation -->
-    <nav class="navbar">
+        <!-- Skip Link pour accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Navigation principale -->
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
         <div class="nav-container">
-            <a href="index.html" class="logo">Jean-David Waeber</a>
-            <a href="index.html" class="nav-back">
-                <i class="fas fa-arrow-left"></i>
-                <span>Retour à l'accueil</span>
+            <a href="index.html" class="nav-logo" aria-label="Jean-David Waeber - Retour à l'accueil">
+                Jean-David Waeber
             </a>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            
+            <ul class="nav-menu" role="menubar" id="nav-menu">
+                <li role="none">
+                    <a href="index.html" class="nav-link" role="menuitem" data-page="accueil">Accueil</a>
+                </li>
+                <li role="none">
+                    <a href="events.html" class="nav-link" role="menuitem" data-page="agenda">Agenda</a>
+                </li>
+                <li role="none">
+                    <a href="gallery.html" class="nav-link" role="menuitem" data-page="galerie">Galerie</a>
+                </li>
+                <li role="none">
+                    <a href="about.html" class="nav-link" role="menuitem" data-page="biographie">Biographie</a>
+                </li>
+                <li role="none">
+                    <a href="ensembles.html" class="nav-link" role="menuitem" data-page="ensembles">Ensembles</a>
+                </li>
+                <li role="none">
+                    <a href="reflection.html" class="nav-link" role="menuitem" data-page="reflexion">Réflexion</a>
+                </li>
+                <li role="none">
+                    <a href="media.html" class="nav-link" role="menuitem" data-page="media">Média</a>
+                </li>
+                <li role="none">
+                    <a href="repertoire.html" class="nav-link" role="menuitem" data-page="repertoire">Répertoire</a>
+                </li>
+                <li role="none">
+                    <a href="contact.html" class="nav-link" role="menuitem" data-page="contact">Contact</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
-            <h1 class="page-title">Répertoire Musical</h1>
-            <p class="page-subtitle">
-                Explorez une collection complète d'œuvres du répertoire sacré et profane,
-                du Médiéval au Contemporain
-            </p>
-            
-            <div class="stats-grid" id="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number" id="total-works">406</span>
-                    <span class="stat-label">Œuvres</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" id="total-periods">-</span>
-                    <span class="stat-label">Périodes</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" id="total-genres">-</span>
-                    <span class="stat-label">Genres</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" id="total-formations">-</span>
-                    <span class="stat-label">Formations</span>
-                </div>
+            <!-- Header/Hero unifié -->
+        <header class="page-header" role="banner">
+            <img 
+                class="page-header-background" 
+                src="images/optimized-final/hero-slide-4.jpg"
+                alt="Partitions et répertoire musical"
+                loading="lazy"
+            >
+            <div class="page-header-overlay" aria-hidden="true"></div>
+            <div class="page-header-content">
+                <h1 class="page-header-title">Répertoire</h1>
+                <p class="page-header-subtitle">Collection complète de 406 œuvres musicales</p>
             </div>
-        </div>
-    </header>
+        </header>
 
     <!-- Filters Section -->
     <section class="filters-section">
@@ -559,7 +589,7 @@
     </section>
 
     <!-- Works Section -->
-    <main class="works-section">
+    <main class="works-section" id="main-content">
         <div class="container">
             <div class="loading" id="loading">
                 <div class="loading-spinner"></div>

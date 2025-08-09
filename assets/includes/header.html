@@ -1,0 +1,118 @@
+<!-- Skip Link pour accessibilité -->
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+<!-- Navigation principale -->
+<nav class="nav" role="navigation" aria-label="Navigation principale">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo" aria-label="Jean-David Waeber - Retour à l'accueil">
+            Jean-David Waeber
+        </a>
+        
+        <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        
+        <ul class="nav-menu" role="menubar" id="nav-menu">
+            <li role="none">
+                <a href="index.html" class="nav-link" role="menuitem" data-page="accueil">Accueil</a>
+            </li>
+            <li role="none">
+                <a href="events.html" class="nav-link" role="menuitem" data-page="agenda">Agenda</a>
+            </li>
+            <li role="none">
+                <a href="gallery.html" class="nav-link" role="menuitem" data-page="galerie">Galerie</a>
+            </li>
+            <li role="none">
+                <a href="about.html" class="nav-link" role="menuitem" data-page="biographie">Biographie</a>
+            </li>
+            <li role="none">
+                <a href="ensembles.html" class="nav-link" role="menuitem" data-page="ensembles">Ensembles</a>
+            </li>
+            <li role="none">
+                <a href="reflection.html" class="nav-link" role="menuitem" data-page="reflexion">Réflexion</a>
+            </li>
+            <li role="none">
+                <a href="media.html" class="nav-link" role="menuitem" data-page="media">Média</a>
+            </li>
+            <li role="none">
+                <a href="repertoire.html" class="nav-link" role="menuitem" data-page="repertoire">Répertoire</a>
+            </li>
+            <li role="none">
+                <a href="contact.html" class="nav-link" role="menuitem" data-page="contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+// Navigation mobile toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            navMenu.classList.toggle('active');
+            
+            // Accessibility: focus management
+            if (!isExpanded) {
+                navMenu.querySelector('.nav-link').focus();
+            }
+        });
+        
+        // Fermer le menu mobile si on clique en dehors
+        document.addEventListener('click', function(e) {
+            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navToggle.setAttribute('aria-expanded', 'false');
+                navMenu.classList.remove('active');
+            }
+        });
+        
+        // Fermer le menu mobile avec Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                navToggle.setAttribute('aria-expanded', 'false');
+                navMenu.classList.remove('active');
+                navToggle.focus();
+            }
+        });
+    }
+    
+    // Détection de la page active et scroll
+    const currentPage = document.body.dataset.page;
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Marquer le lien actif
+    navLinks.forEach(link => {
+        if (link.dataset.page === currentPage) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+        }
+    });
+    
+    // Effet scroll sur la navigation
+    let lastScrollY = window.scrollY;
+    const nav = document.querySelector('.nav');
+    
+    function handleNavScroll() {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > 100) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+        
+        lastScrollY = currentScrollY;
+    }
+    
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
+});
+</script>

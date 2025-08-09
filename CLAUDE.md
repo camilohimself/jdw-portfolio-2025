@@ -112,3 +112,21 @@ https://github.com/camilohimself/jdw-portfolio-2025.git
 ---
 
 **SESSION TERMINÉE** : 6 Août 2025 | **DURÉE** : Session complète | **RÉSULTAT** : Portfolio V1 professionnel finalisé
+
+---
+
+## 🤖 **CONFIGURATION ÉQUIPE - Session 9 Août 2025**
+
+### **RÔLES DÉFINIS**
+- **Camilo** : DPM (Digital Project Manager) - Direction générale du projet
+- **Claude** : Dev Master - Développement technique, suit les ordres à la perfection
+- **Agent 5** : Designer Assistant - Idées et suggestions pour la partie esthétique/design
+
+### **WORKFLOW COLLABORATIF**
+- **Camilo** donne les ordres généraux et la direction
+- **Agent 5** propose des idées de prompts pour l'esthétique et le design
+- **Claude** implémente techniquement et peut optimiser/contribuer aux suggestions design
+- **Focus** : Besoin de renfort sur la partie design/esthétique car Camilo = DPM pas web designer
+
+### **OBJECTIF SESSION**
+Travailler toute la journée avec inspiration et énergie maximale ! 🔥
